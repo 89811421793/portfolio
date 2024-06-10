@@ -27,14 +27,15 @@ export const Main: React.FC = () => {
     
       </FlexWrapper>
       <Quotation>
-With great power comes great electricity bill
-</Quotation>
+<p style={{border: "2px solid #ABB2BF"}}>With great power comes great electricity bill</p>
 <Cite><span>- Dr. Who</span></Cite>
+</Quotation>
+
     </StyledMain>
   );
 };
 
-const StyledMain = styled.div`
+const StyledMain = styled.section`
   min-height: 100vh;
   background-color: moccasin;
 `;
@@ -50,8 +51,8 @@ const MainTitle = styled.h1`
 
 const Quotation = styled.blockquote`
 position: relative;
-border: 2px solid #ABB2BF;
 padding: 32px;
+max-width: 712px;
 
 &: before {
   position: absolute;
