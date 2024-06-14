@@ -20,7 +20,7 @@ export const Main: React.FC = () => {
 <figure>
         <MainImage src={mainimg} alt="" />
         <figcaption style={{border:"2px solid #ABB2BF", padding: 8}}>
-            <span></span>
+            <span style={{display:'inline-block', width:"20px",height:20,backgroundColor: 'crimson',marginRight: 5}}></span>
             Currently working on <span style={{color:"#FFF"}}>Portfolio</span>
             </figcaption>
         </figure>
@@ -39,6 +39,7 @@ const StyledMain = styled.section`
   min-height: 100vh;
   background-color: moccasin;
 `;
+
 
 const MainImage = styled.img`
   width: 457px;

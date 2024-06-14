@@ -27,10 +27,12 @@ const StyledProject = styled.div`
 const ProjectImage = styled.img`
   width: 100%;
   height: 200px;
-  object-fit: cover;
+ 
 `;
 
-const TechnologyList = styled.div``;
+const TechnologyList = styled.div`
+border: 2px solid navy;
+`;
 
 const ProjectTitle = styled.h3``;
 
