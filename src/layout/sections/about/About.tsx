@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { SectionTitle } from "../../../components/SectionTitle";
 import aboutimg from "../../../assets/images/AboutImg.png";
+import { Button } from "../../../components/Button";
 
 export const About:React.FC = () => {
   return (
@@ -20,7 +21,7 @@ export const About:React.FC = () => {
           establish their presence online. I always strive to learn about the
           newest technologies and frameworks.
         </p>
-        <button>Read more -</button>
+        <Button>Read more -</Button>
       </div>
 <AboutImage src={aboutimg} alt=''/>
     </StyledAbout>

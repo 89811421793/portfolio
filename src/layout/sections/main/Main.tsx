@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import mainimg from "../../../assets/images/MainImg.png";
 import { FlexWrapper } from "../../../components/FlexWrapper";
+import { Button } from "../../../components/Button";
 
 export const Main: React.FC = () => {
   return (
@@ -15,7 +16,7 @@ export const Main: React.FC = () => {
           <p>
             He crafts responsive websites where technologies meet creativity
           </p>
-          <button>Contact me!!</button>
+          <Button>Contact me!!</Button>
         </div>
         <figure>
           <MainImage src={mainimg} alt="" />
