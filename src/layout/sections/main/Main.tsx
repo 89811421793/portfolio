@@ -3,46 +3,49 @@ import styled from "styled-components";
 import mainimg from "../../../assets/images/MainImg.png";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Button } from "../../../components/Button";
+import { Container } from "../../../components/Container";
 
 export const Main: React.FC = () => {
   return (
     <StyledMain>
-      <FlexWrapper align="center" justify="space-around">
-        <div>
-          <MainTitle>
-            Elias is a <span style={{ color: "fuchsia" }}>web designer</span>{" "}
-            and <span style={{ color: "fuchsia" }}>front-end developer</span>
-          </MainTitle>
-          <p>
-            He crafts responsive websites where technologies meet creativity
+      <Container>
+        <FlexWrapper align="center" justify="space-around">
+          <div>
+            <MainTitle>
+              Elias is a <span style={{ color: "fuchsia" }}>web designer</span>{" "}
+              and <span style={{ color: "fuchsia" }}>front-end developer</span>
+            </MainTitle>
+            <p>
+              He crafts responsive websites where technologies meet creativity
+            </p>
+            <Button>Contact me!!</Button>
+          </div>
+          <figure>
+            <MainImage src={mainimg} alt="" />
+            <figcaption style={{ border: "2px solid #ABB2BF", padding: 8 }}>
+              <span
+                style={{
+                  display: "inline-block",
+                  width: "20px",
+                  height: 20,
+                  backgroundColor: "crimson",
+                  marginRight: 5,
+                }}
+              ></span>
+              Currently working on{" "}
+              <span style={{ color: "#FFF" }}>Portfolio</span>
+            </figcaption>
+          </figure>
+        </FlexWrapper>
+        <Quotation>
+          <p style={{ border: "2px solid #ABB2BF" }}>
+            With great power comes great electricity bill
           </p>
-          <Button>Contact me!!</Button>
-        </div>
-        <figure>
-          <MainImage src={mainimg} alt="" />
-          <figcaption style={{ border: "2px solid #ABB2BF", padding: 8 }}>
-            <span
-              style={{
-                display: "inline-block",
-                width: "20px",
-                height: 20,
-                backgroundColor: "crimson",
-                marginRight: 5,
-              }}
-            ></span>
-            Currently working on{" "}
-            <span style={{ color: "#FFF" }}>Portfolio</span>
-          </figcaption>
-        </figure>
-      </FlexWrapper>
-      <Quotation>
-        <p style={{ border: "2px solid #ABB2BF" }}>
-          With great power comes great electricity bill
-        </p>
-        <Cite>
-          <span>- Dr. Who</span>
-        </Cite>
-      </Quotation>
+          <Cite>
+            <span>- Dr. Who</span>
+          </Cite>
+        </Quotation>
+      </Container>
     </StyledMain>
   );
 };

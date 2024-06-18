@@ -10,7 +10,7 @@ export const Contacts = () => {
     <StyledContacts>
         <Container>
       <SectionTitle>#contacts</SectionTitle>
-      <FlexWrapper>
+      <FlexWrapper justify={'space-between'}>
         <p style={{maxWidth: "500px"}}>
           I’m interested in freelance opportunities. However, if you have other
           request or question, don’t hesitate to contact me
