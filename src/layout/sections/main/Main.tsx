@@ -17,20 +17,31 @@ export const Main: React.FC = () => {
           </p>
           <button>Contact me!!</button>
         </div>
-<figure>
-        <MainImage src={mainimg} alt="" />
-        <figcaption style={{border:"2px solid #ABB2BF", padding: 8}}>
-            <span style={{display:'inline-block', width:"20px",height:20,backgroundColor: 'crimson',marginRight: 5}}></span>
-            Currently working on <span style={{color:"#FFF"}}>Portfolio</span>
-            </figcaption>
+        <figure>
+          <MainImage src={mainimg} alt="" />
+          <figcaption style={{ border: "2px solid #ABB2BF", padding: 8 }}>
+            <span
+              style={{
+                display: "inline-block",
+                width: "20px",
+                height: 20,
+                backgroundColor: "crimson",
+                marginRight: 5,
+              }}
+            ></span>
+            Currently working on{" "}
+            <span style={{ color: "#FFF" }}>Portfolio</span>
+          </figcaption>
         </figure>
-    
       </FlexWrapper>
       <Quotation>
-<p style={{border: "2px solid #ABB2BF"}}>With great power comes great electricity bill</p>
-<Cite><span>- Dr. Who</span></Cite>
-</Quotation>
-
+        <p style={{ border: "2px solid #ABB2BF" }}>
+          With great power comes great electricity bill
+        </p>
+        <Cite>
+          <span>- Dr. Who</span>
+        </Cite>
+      </Quotation>
     </StyledMain>
   );
 };
@@ -39,7 +50,6 @@ const StyledMain = styled.section`
   min-height: 100vh;
   background-color: moccasin;
 `;
-
 
 const MainImage = styled.img`
   width: 457px;
@@ -51,18 +61,17 @@ const MainTitle = styled.h1`
 `;
 
 const Quotation = styled.blockquote`
-position: relative;
-padding: 32px;
-max-width: 712px;
+  position: relative;
+  padding: 32px;
+  max-width: 712px;
 
-&: before {
-  position: absolute;
+  &: before {
+    position: absolute;
+  }
+`;
 
-}
-`
-
-const Cite= styled.cite`
-border: 2px solid #ABB2BF;
-padding: 16px;
-font-style: normal;
-`
+const Cite = styled.cite`
+  border: 2px solid #abb2bf;
+  padding: 16px;
+  font-style: normal;
+`;
