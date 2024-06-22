@@ -10,17 +10,17 @@ const items = ["#home", "#works", "#about-me", "#contacts"];
 
 export const Header: React.FC = () => {
   return (
-    <Styledheader>
+    <StyledHeader>
       <Container>
       <FlexWrapper justify='space-between'>
       <Logo />
       <Menu menuItems={items} />
       </FlexWrapper>
       </Container>
-    </Styledheader>
+    </StyledHeader>
   );
 };
 
-const Styledheader = styled.header`
+const StyledHeader = styled.header`
   background-color: salmon;
 `;
