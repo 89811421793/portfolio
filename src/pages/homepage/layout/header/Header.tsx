@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { Logo } from "../../components/logo/Logo";
-import { Menu } from "../../components/menu/Menu";
-import { FlexWrapper } from "../../components/FlexWrapper";
-import { Container } from "../../components/Container";
+import { Container } from "../../../../components/Container";
+import { FlexWrapper } from "../../../../components/FlexWrapper";
+import { Menu } from "../../../../components/menu/Menu";
+import { Logo } from "../../../../components/logo/Logo";
+
 
 
 const items = ["#home", "#works", "#about-me", "#contacts"];

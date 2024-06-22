@@ -1,9 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import { SectionTitle } from "../../../components/SectionTitle";
-import { Icon } from "../../../components/icon/Icon";
-import { FlexWrapper } from "../../../components/FlexWrapper";
-import { Container } from "../../../components/Container";
+
+
+
+import { Container } from "../../../../../components/Container";
+import { FlexWrapper } from "../../../../../components/FlexWrapper";
+import { Icon } from "../../../../../components/icon/Icon";
+import { SectionTitle } from "../../../../../components/SectionTitle";
+
 
 export const Contacts = () => {
   return (

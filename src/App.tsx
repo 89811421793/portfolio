@@ -1,17 +1,17 @@
 import "./App.css";
-import { Footer } from "./layout/footer/Footer";
-import { Header } from "./layout/header/Header";
-import { About } from "./layout/sections/about/About";
-import { Contacts } from "./layout/sections/contacts/Contacts";
-import { Main } from "./layout/sections/main/Main";
-import { Projects } from "./layout/sections/projects/Projects";
-import { Skills } from "./layout/sections/skills/Skills";
+import { Footer } from "./pages/homepage/layout/footer/Footer";
+import { Header } from "./pages/homepage/layout/header/Header";
+import { Main } from "./pages/homepage/layout/sections/main/Main";
+import { Projects } from "./pages/homepage/layout/sections/projects/Projects";
+import { Skills } from "./pages/homepage/layout/sections/skills/Skills";
+import { About } from "./pages/homepage/layout/sections/about/About";
+import { Contacts } from "./pages/homepage/layout/sections/contacts/Contacts";
 
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Header/>
       <Main/>
       <Projects/>
       <Skills/>

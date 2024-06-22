@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import mainimg from "../../../assets/images/MainImg.png";
-import { FlexWrapper } from "../../../components/FlexWrapper";
-import { Button } from "../../../components/Button";
-import { Container } from "../../../components/Container";
+import mainimg from "../../../../../assets/images/MainImg.png";
+import { FlexWrapper } from "../../../../../components/FlexWrapper";
+import { Button } from "../../../../../components/Button";
+import { Container } from "../../../../../components/Container";
 
 export const Main: React.FC = () => {
   return (

@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import { SectionTitle } from "../../../components/SectionTitle";
-import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Project } from "./project/Project";
-import chertNodes from "./../../../assets/images/chert.jpeg";
-import protectX from "./../../../assets/images/protectX.jpeg";
-import kahoot from "./../../../assets/images/kahoot.png";
-import cat from "./../../../assets/images/kotik.png";
-import elias from "./../../../assets/images/Elias.png";
-import { Container } from "../../../components/Container";
+import chertNodes from "./../../../../../assets/images/chert.jpeg";
+import protectX from "./../../../../../assets/images/protectX.jpeg";
+import kahoot from "./../../../../../assets/images/kahoot.png";
+import cat from "./../../../../../assets/images/kotik.png";
+import elias from "./../../../../../assets/images/Elias.png"
+import { SectionTitle } from "../../../../../components/SectionTitle";
+import { FlexWrapper } from "../../../../../components/FlexWrapper";
+import { Container } from "../../../../../components/Container";
 
 export const Projects: React.FC = () => {
   return (
