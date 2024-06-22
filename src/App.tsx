@@ -7,7 +7,6 @@ import { Skills } from "./pages/homepage/layout/sections/skills/Skills";
 import { About } from "./pages/homepage/layout/sections/about/About";
 import { Contacts } from "./pages/homepage/layout/sections/contacts/Contacts";
 
-
 function App() {
   return (
     <div className="App">

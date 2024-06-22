@@ -35,7 +35,6 @@ export const Skills: React.FC = () => {
 };
 
 const StyledSkills = styled.section`
-  min-height: 40vh;
   background-color: lavender;
 `;
 

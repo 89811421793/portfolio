@@ -35,7 +35,6 @@ export const About: React.FC = () => {
 };
 
 const StyledAbout = styled.section`
-  min-height: 50vh;
   background-color: beige;
 `;
 
