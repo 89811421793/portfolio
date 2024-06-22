@@ -6,6 +6,8 @@ import { Project } from "./project/Project";
 import chertNodes from "./../../../assets/images/chert.jpeg";
 import protectX from "./../../../assets/images/protectX.jpeg";
 import kahoot from "./../../../assets/images/kahoot.png";
+import cat from "./../../../assets/images/kotik.png";
+import elias from "./../../../assets/images/Elias.png";
 import { Container } from "../../../components/Container";
 
 export const Projects: React.FC = () => {
@@ -14,7 +16,7 @@ export const Projects: React.FC = () => {
       <Container>
         <SectionTitle>#projects</SectionTitle>
         <a href="#">View all ~~</a>
-        <FlexWrapper justify={"space-evenly"}>
+        <FlexWrapper justify={"space-evenly"} wrap="wrap">
           <Project
             src={chertNodes}
             list={"HTML SCSS Python Flask"}
@@ -32,6 +34,18 @@ export const Projects: React.FC = () => {
             list={"CSS Express Node.js"}
             title={"Kahoot Answers Viewer"}
             desc="Get answers to your kahoot quiz"
+          />
+          <Project
+            src={cat}
+            list={"HTML CSS JS"}
+            title={"Kotik Bot"}
+            desc="Multi-functional discord bot"
+          />
+          <Project
+            src={elias}
+            list={"Vue TS Less"}
+            title={"Portfolio"}
+            desc="You’re using it rn"
           />
         </FlexWrapper>
       </Container>
