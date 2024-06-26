@@ -22,7 +22,6 @@ export const Project = (props: ProjectPropsType) => {
 };
 
 const StyledProject = styled.div`
-  background-color: olive;
   margin-right: 10px;
 `;
 const ProjectImage = styled.img`

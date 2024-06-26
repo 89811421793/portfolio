@@ -51,7 +51,6 @@ export const Main: React.FC = () => {
 };
 
 const StyledMain = styled.section`
-  background-color: moccasin;
 `;
 
 const MainImage = styled.img`

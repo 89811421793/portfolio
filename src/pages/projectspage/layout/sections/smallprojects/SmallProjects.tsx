@@ -67,5 +67,4 @@ export const SmallProjects: React.FC = () => {
 };
 
 const StyledProjects = styled.section`
-  background-color: lime;
 `;

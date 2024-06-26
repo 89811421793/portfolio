@@ -40,5 +40,4 @@ export const Projects: React.FC = () => {
 };
 
 const StyledProjects = styled.section`
-  background-color: lime;
 `;

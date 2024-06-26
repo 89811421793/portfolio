@@ -19,5 +19,4 @@ export const AllMedia = () => {
 };
 
 const StyledMedia = styled.section`
-background-color: forestgreen;
 `;

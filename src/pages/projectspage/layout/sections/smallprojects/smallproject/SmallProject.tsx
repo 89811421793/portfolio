@@ -20,7 +20,6 @@ export const SmallProject = (props: ProjectPropsType) => {
 };
 
 const StyledProject = styled.div`
-  background-color: olive;
   margin-right: 10px;
 `;
 

@@ -34,7 +34,6 @@ export const Skills: React.FC = () => {
 };
 
 const StyledSkills = styled.section`
-  background-color: lavender;
 `;
 
 const SkillsGroup = styled.div``;

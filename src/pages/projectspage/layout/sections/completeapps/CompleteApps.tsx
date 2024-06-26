@@ -55,5 +55,4 @@ export const CompleteApps: React.FC = () => {
 
 const StyledProjects = styled.section`
   min-height: 40vh;
-  background-color: lime;
 `;

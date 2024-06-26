@@ -47,7 +47,6 @@ export const Footer: React.FC = () => {
 };
 
 const StyledFooter = styled.footer`
-  background-color: orange;
 `;
 
 const MediaList = styled.ul`

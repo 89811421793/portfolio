@@ -35,7 +35,6 @@ export const About: React.FC = () => {
 };
 
 const StyledAbout = styled.section`
-  background-color: beige;
 `;
 
 const AboutImage = styled.img`

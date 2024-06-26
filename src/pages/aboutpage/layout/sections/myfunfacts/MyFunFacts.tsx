@@ -21,7 +21,6 @@ export const MyFunFacts: React.FC = () => {
 };
 
 const StyledFacts = styled.section`
-  background-color: aqua;
 `;
 
 const Fact = styled.span`

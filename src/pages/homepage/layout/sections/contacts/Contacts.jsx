@@ -37,7 +37,6 @@ export const Contacts = () => {
 };
 
 const StyledContacts = styled.section`
-  background-color: turquoise;
 `;
 
 const MyContacts = styled.div`
