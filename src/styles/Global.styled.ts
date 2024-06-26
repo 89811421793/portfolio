@@ -29,6 +29,4 @@ button {
     cursor: pointer;
     color: ${theme.colors.font};
 }
-
-
 `;
