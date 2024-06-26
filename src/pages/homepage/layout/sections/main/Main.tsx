@@ -4,6 +4,7 @@ import mainimg from "../../../../../assets/images/MainImg.png";
 import { FlexWrapper } from "../../../../../components/FlexWrapper";
 import { Button } from "../../../../../components/Button";
 import { Container } from "../../../../../components/Container";
+import { theme } from "../../../../../styles/Theme";
 
 export const Main: React.FC = () => {
   return (
@@ -12,8 +13,8 @@ export const Main: React.FC = () => {
         <FlexWrapper align="center" justify="space-around">
           <div>
             <MainTitle>
-              Elias is a <span style={{ color: "fuchsia" }}>web designer</span>{" "}
-              and <span style={{ color: "fuchsia" }}>front-end developer</span>
+              Elias is a <span style={{ color: 'fuchsia' }}>web designer</span>{" "}
+              and <span style={{ color: 'fuchsia' }}>front-end developer</span>
             </MainTitle>
             <p>
               He crafts responsive websites where technologies meet creativity
@@ -23,15 +24,7 @@ export const Main: React.FC = () => {
           <figure>
             <MainImage src={mainimg} alt="" />
             <figcaption style={{ border: "2px solid #ABB2BF", padding: 8 }}>
-              <span
-                style={{
-                  display: "inline-block",
-                  width: "20px",
-                  height: 20,
-                  backgroundColor: "crimson",
-                  marginRight: 5,
-                }}
-              ></span>
+              <Square></Square>
               Currently working on{" "}
               <span style={{ color: "#FFF" }}>Portfolio</span>
             </figcaption>
@@ -50,8 +43,7 @@ export const Main: React.FC = () => {
   );
 };
 
-const StyledMain = styled.section`
-`;
+const StyledMain = styled.section``;
 
 const MainImage = styled.img`
   width: 457px;
@@ -77,3 +69,13 @@ const Cite = styled.cite`
   padding: 16px;
   font-style: normal;
 `;
+
+const Square = styled.span`
+background-color: ${theme.colors.accent};
+display: inline-block;
+width: 20px;
+height: 20px;
+margin-right: 10px;
+vertical-align: middle;
+`
+

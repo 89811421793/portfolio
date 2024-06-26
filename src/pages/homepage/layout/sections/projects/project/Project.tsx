@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { theme } from "../../../../../../styles/Theme";
 
 type ProjectPropsType = {
   src: string;
@@ -23,6 +24,7 @@ export const Project = (props: ProjectPropsType) => {
 
 const StyledProject = styled.div`
   margin-right: 10px;
+  border: 2px solid ${theme.colors.borderColor};
 `;
 const ProjectImage = styled.img`
   width: 100%;
@@ -31,7 +33,7 @@ const ProjectImage = styled.img`
 `;
 
 const TechnologyList = styled.div`
-border: 2px solid navy;
+border: 2px solid ${theme.colors.borderColor};
 `;
 
 const ProjectTitle = styled.h3``;

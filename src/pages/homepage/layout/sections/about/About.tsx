@@ -10,9 +10,9 @@ export const About: React.FC = () => {
   return (
     <StyledAbout>
       <Container>
-        <FlexWrapper justify='space-between'>
-        <div>
           <SectionTitle>#about-me</SectionTitle>
+          <FlexWrapper justify='space-between'>
+          <AboutInfo>
           <span>Hello, i’m Elias!</span>
           <p style={{maxWidth:'515px'}}>
             I’m a self-taught front-end developer based in Kyiv, Ukraine. I can
@@ -26,7 +26,7 @@ export const About: React.FC = () => {
             newest technologies and frameworks.
           </p>
           <Button>Read more -</Button>
-        </div>
+        </AboutInfo>
         <AboutImage src={aboutimg} alt="" />
         </FlexWrapper>
       </Container>
@@ -35,6 +35,12 @@ export const About: React.FC = () => {
 };
 
 const StyledAbout = styled.section`
+`;
+
+const AboutInfo = styled.div`
+display:flex;
+flex-direction: column;
+align-self:center;
 `;
 
 const AboutImage = styled.img`

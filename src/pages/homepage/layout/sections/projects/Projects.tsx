@@ -12,8 +12,10 @@ export const Projects: React.FC = () => {
   return (
     <StyledProjects>
       <Container>
+        <FlexWrapper justify={'space-between'}>
         <SectionTitle>#projects</SectionTitle>
         <a href="#">View all ~~</a>
+        </FlexWrapper>
         <FlexWrapper justify={"space-evenly"}>
           <Project
             src={chertNodes}

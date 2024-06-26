@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { theme } from "../../../../../../styles/Theme";
 
 type SkillPropsType = {
   title: string
@@ -15,8 +16,13 @@ export const Skill = (props: SkillPropsType) => {
   );
 };
 
-const SkillBox = styled.div``;
+const SkillBox = styled.div`
+border: 2px solid ${theme.colors.borderColor};
+`;
+
 const SkillTitle = styled.h3`
   color: #fff;
 `;
-const StyledSkill = styled.div``;
+const StyledSkill = styled.div`
+border: 2px solid ${theme.colors.borderColor};
+`;

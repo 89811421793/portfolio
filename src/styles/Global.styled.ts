@@ -16,6 +16,7 @@ body {
   }
 
 a {
+    color: ${theme.colors.borderColor};
     text-decoration: unset;
     cursor: pointer;
 }
@@ -28,5 +29,9 @@ button {
     background-color: unset;
     cursor: pointer;
     color: ${theme.colors.font};
+}
+
+section {
+margin-bottom: 40px;
 }
 `;

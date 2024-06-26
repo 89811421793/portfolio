@@ -4,6 +4,7 @@ import { FlexWrapper } from "../../../../components/FlexWrapper";
 import { Icon } from "../../../../components/icon/Icon";
 import { Logo } from "../../../../components/logo/Logo";
 import { Container } from "../../../../components/Container";
+import { theme } from "../../../../styles/Theme";
 
 export const Footer: React.FC = () => {
   return (
@@ -47,10 +48,10 @@ export const Footer: React.FC = () => {
 };
 
 const StyledFooter = styled.footer`
+ border-top: 2px solid ${theme.colors.borderColor};
 `;
 
 const MediaList = styled.ul`
-  list-style: none;
 `;
 
 const MediaItem = styled.li``;
