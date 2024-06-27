@@ -40,4 +40,7 @@ const ProjectTitle = styled.h3``;
 
 const ProjectDescription = styled.p``;
 
-const Link = styled.a``;
+const Link = styled.a`
+border: 2px solid ${theme.colors.accent};
+margin-right: 10px;
+`;

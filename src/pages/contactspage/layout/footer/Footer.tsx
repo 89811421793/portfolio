@@ -47,6 +47,7 @@ export const Footer: React.FC = () => {
 };
 
 const StyledFooter = styled.footer`
+min-height:20vh;
 `;
 
 const MediaList = styled.ul`

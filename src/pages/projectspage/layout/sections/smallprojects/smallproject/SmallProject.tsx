@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { theme } from "../../../../../../styles/Theme";
 
 type ProjectPropsType = {
   list: string;
@@ -21,14 +22,17 @@ export const SmallProject = (props: ProjectPropsType) => {
 
 const StyledProject = styled.div`
   margin-right: 10px;
+  border: 2px solid ${theme.colors.borderColor};
 `;
 
 const TechnologyList = styled.div`
-border: 2px solid navy;
+border: 2px solid ${theme.colors.borderColor};
 `;
 
 const ProjectTitle = styled.h3``;
 
 const ProjectDescription = styled.p``;
 
-const Link = styled.a``;
+const Link = styled.a`
+border: 2px solid ${theme.colors.accent};
+`;

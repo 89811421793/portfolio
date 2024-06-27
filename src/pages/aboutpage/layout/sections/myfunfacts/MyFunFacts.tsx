@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { SectionTitle } from "../../../../../components/SectionTitle";
 import { Container } from "../../../../../components/Container";
+import { theme } from "../../../../../styles/Theme";
 
 export const MyFunFacts: React.FC = () => {
   return (
@@ -24,5 +25,7 @@ const StyledFacts = styled.section`
 `;
 
 const Fact = styled.span`
-  border: 2px solid chocolate;
+  border: 2px solid ${theme.colors.borderColor};
+  display: inline-block;
+  margin: 10px;
 `;
