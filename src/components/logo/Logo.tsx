@@ -5,7 +5,7 @@ export const Logo = () => {
   return (
     <div>
       <a href="">
-        <Icon iconId={"figma"} />
+        <Icon iconId={"union"} />
       </a>
       <span>Elias</span>
     </div>
