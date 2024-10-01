@@ -1,6 +1,28 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
+
+export const Langswitcher: React.FC = () => {
+  const [selectedLang, setSelectedLang] = useState("en");
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleLangChange = (lang: string) => {
+    setSelectedLang(lang);
+    setIsOpen(false);
+  };
+
+  return (
+    <Container onClick={() => setIsOpen(!isOpen)}>
+      {selectedLang.toUpperCase()}
+      <ArrowDown>{'▼'}</ArrowDown> {/* Символ ">" */}
+      <Dropdown isOpen={isOpen}>
+        <Option onClick={() => handleLangChange("en")}>EN</Option>
+        <Option onClick={() => handleLangChange("ru")}>RU</Option>
+      </Dropdown>
+    </Container>
+  );
+};
+
 const Container = styled.div`
   width: 45px; 
   height: 30px; 
@@ -38,24 +60,3 @@ const Option = styled.div`
     background-color: #3c4043; 
   }
 `;
-
-export const Langswitcher: React.FC = () => {
-  const [selectedLang, setSelectedLang] = useState("en");
-  const [isOpen, setIsOpen] = useState(false);
-
-  const handleLangChange = (lang: string) => {
-    setSelectedLang(lang);
-    setIsOpen(false);
-  };
-
-  return (
-    <Container onClick={() => setIsOpen(!isOpen)}>
-      {selectedLang.toUpperCase()}
-      <ArrowDown>{'▼'}</ArrowDown> {/* Символ ">" */}
-      <Dropdown isOpen={isOpen}>
-        <Option onClick={() => handleLangChange("en")}>EN</Option>
-        <Option onClick={() => handleLangChange("ru")}>RU</Option>
-      </Dropdown>
-    </Container>
-  );
-};
