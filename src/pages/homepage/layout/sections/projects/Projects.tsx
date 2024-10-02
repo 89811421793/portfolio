@@ -17,7 +17,7 @@ export const Projects: React.FC = () => {
           <SectionTitle>
             <StyledHash>#</StyledHash>projects
           </SectionTitle>
-          <a href="#">View all ~~</a>
+          <a href="#">View all ~~&gt;</a>
         </FlexWrapper>
         <FlexWrapper justify={"space-evenly"}>
         <Project

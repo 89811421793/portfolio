@@ -7,7 +7,7 @@ type ProjectPropsType = {
   list: string;
   title: string;
   desc: string;
-  showCached: boolean; // Новый пропс
+  showCached: boolean;
 };
 
 export const Project = (props: ProjectPropsType) => {
@@ -17,8 +17,8 @@ export const Project = (props: ProjectPropsType) => {
       <TechnologyList>{props.list}</TechnologyList>
       <ProjectTitle>{props.title}</ProjectTitle>
       <ProjectDescription>{props.desc}</ProjectDescription>
-      <Link href="#">Live ~</Link>
-      {props.showCached && <CachedLink href="#">Cached =</CachedLink>} {/* Условный рендеринг */}
+      <Link href="#">Live &lt;~&gt;</Link>
+      {props.showCached && <CachedLink href="#">Cached &gt;=</CachedLink>} {/* Условный рендеринг */}
     </StyledProject>
   );
 };
@@ -47,7 +47,7 @@ const Link = styled.a`
 `;
 
 const CachedLink = styled.a`
-  color: ${theme.colors.borderColor}; // Замените на нужный вам цвет
-  border: 2px solid ${theme.colors.borderColor}; // Замените на нужный вам цвет
+  color: ${theme.colors.borderColor}; 
+  border: 2px solid ${theme.colors.borderColor}; 
   margin-right: 10px;
 `;
