@@ -10,37 +10,36 @@ export const Footer: React.FC = () => {
   return (
     <StyledFooter>
       <Container>
-        <FlexWrapper justify="space-between">
-          <div>
-            <Logo />
-            <a href="#">elias@elias-dev.ml</a>
-            <h3>Web designer and front-end developer</h3>
-          </div>
-          <div>
-            <span>Media</span>
-            <MediaList>
-              <FlexWrapper>
-                <MediaItem>
-                  <MediaLink href="#">
-                    <Icon iconId={"github"} />
-                  </MediaLink>
-                </MediaItem>
-
-                <MediaItem>
-                  <MediaLink href="#">
-                    <Icon iconId={"figma"} />
-                  </MediaLink>
-                </MediaItem>
-
-                <MediaItem>
-                  <MediaLink href="#">
-                    <Icon iconId={"discord"} />
-                  </MediaLink>
-                </MediaItem>
-              </FlexWrapper>
-            </MediaList>
-          </div>
-        </FlexWrapper>
+        <FooterContent>
+          <InfoWrapper>
+            <FlexAligner>
+              <StyledLogoWrapper>
+                <Logo />
+              </StyledLogoWrapper>
+              <MailLink href="#">elias@elias-dev.ml</MailLink>
+            </FlexAligner>
+            <StyledH3>Web designer and front-end developer</StyledH3>
+          </InfoWrapper>
+          <MediaList>
+            <FlexWrapper>
+              <MediaItem>
+                <MediaLink href="#">
+                  <Icon iconId={"github"} />
+                </MediaLink>
+              </MediaItem>
+              <MediaItem>
+                <MediaLink href="#">
+                  <Icon iconId={"figma"} />
+                </MediaLink>
+              </MediaItem>
+              <MediaItem>
+                <MediaLink href="#">
+                  <Icon iconId={"discord"} />
+                </MediaLink>
+              </MediaItem>
+            </FlexWrapper>
+          </MediaList>
+        </FooterContent>
         <Copyright>© Copyright 2022. Made by Elias</Copyright>
       </Container>
     </StyledFooter>
@@ -48,14 +47,53 @@ export const Footer: React.FC = () => {
 };
 
 const StyledFooter = styled.footer`
- border-top: 2px solid ${theme.colors.borderColor};
+  border-top: 2px solid ${theme.colors.borderColor};
+`;
+
+const FooterContent = styled.div`
+  display: flex;
+  justify-content: space-between; 
+  align-items: flex-start; 
+  margin-bottom: 8px; 
+`;
+
+const InfoWrapper = styled.div`
+  display: flex;
+  flex-direction: column; 
+  gap: 5px; 
+`;
+
+const FlexAligner = styled.div`
+  display: flex;
+  align-items: center; 
+`;
+
+const StyledLogoWrapper = styled.div`
+  display: flex;
+  align-items: center; 
 `;
 
 const MediaList = styled.ul`
+  list-style: none;
+  padding: 0;
+  margin: 0;
 `;
 
 const MediaItem = styled.li``;
 
 const MediaLink = styled.a``;
 
-const Copyright = styled.small``;
+const Copyright = styled.small`
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: ${theme.colors.borderColor};
+`;
+
+const MailLink = styled.a`
+margin-left: 60px;
+`;
+
+const StyledH3 = styled.h3`
+font-weight: 400;
+`
