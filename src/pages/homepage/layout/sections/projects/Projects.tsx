@@ -13,33 +13,33 @@ export const Projects: React.FC = () => {
   return (
     <StyledProjects>
       <Container>
-        <FlexWrapper justify={"space-between"}>
+        <FlexContainer>
           <SectionTitle>
             <StyledHash>#</StyledHash>projects
           </SectionTitle>
           <a href="#">View all ~~&gt;</a>
-        </FlexWrapper>
+        </FlexContainer>
         <FlexWrapper justify={"space-evenly"}>
         <Project
   src={chertNodes}
   list={"HTML SCSS Python Flask"}
   title={"ChertNodes"}
   desc="Minecraft servers hosting "
-  showCached={true} // Кнопка Cached не отображается
+  showCached={true} 
 />
 <Project
   src={protectX}
   list={"React Express Discord.js Node.js HTML SCSS Python Flask"}
   title={"ProtectX"}
   desc="Discord anti-crash bot"
-  showCached={false} // Кнопка Cached отображается
+  showCached={false} 
 />
 <Project
   src={kahoot}
   list={"CSS Express Node.js"}
   title={"Kahoot Answers Viewer"}
   desc="Get answers to your kahoot quiz"
-  showCached={false} // Кнопка Cached не отображается
+  showCached={false} 
 />
         </FlexWrapper>
       </Container>
@@ -48,3 +48,11 @@ export const Projects: React.FC = () => {
 };
 
 const StyledProjects = styled.section``;
+
+const FlexContainer = styled.div`
+  display: flex;
+  padding-right: 20px; 
+  align-items: center; 
+  justify-content: space-between;
+  margin-bottom:15px;
+`;

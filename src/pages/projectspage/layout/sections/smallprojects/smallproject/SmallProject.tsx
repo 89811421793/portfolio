@@ -26,13 +26,16 @@ const StyledProject = styled.div`
 `;
 
 const TechnologyList = styled.div`
-border: 2px solid ${theme.colors.borderColor};
+  border: 2px solid ${theme.colors.borderColor};
+  color: ${theme.colors.borderColor};
 `;
 
 const ProjectTitle = styled.h3``;
 
-const ProjectDescription = styled.p``;
+const ProjectDescription = styled.p`
+  color: ${theme.colors.borderColor};
+`;
 
 const Link = styled.a`
-border: 2px solid ${theme.colors.accent};
+  border: 2px solid ${theme.colors.accent};
 `;

@@ -26,7 +26,9 @@ export const Project = (props: ProjectPropsType) => {
 const StyledProject = styled.div`
   margin-right: 10px;
   border: 2px solid ${theme.colors.borderColor};
+  padding-bottom: 15px; 
 `;
+
 const ProjectImage = styled.img`
   width: 100%;
   height: 200px;
@@ -34,16 +36,26 @@ const ProjectImage = styled.img`
 
 const TechnologyList = styled.div`
   border: 2px solid ${theme.colors.borderColor};
+  color: ${theme.colors.borderColor};
+  padding: 10px;
 `;
 
-const ProjectTitle = styled.h3``;
+const ProjectTitle = styled.h3`
+  padding: 10px;
+`;
 
-const ProjectDescription = styled.p``;
+const ProjectDescription = styled.p`
+  color: ${theme.colors.borderColor};
+  margin-bottom: 10px;
+  padding: 10px;
+`;
 
 const Link = styled.a`
   border: 2px solid ${theme.colors.accent};
   margin-right: 10px;
+  margin-left: 11px;
   color: ${theme.colors.font};
+  margin-top: 15px; /* Добавляем отступ сверху для кнопки Live */
 `;
 
 const CachedLink = styled.a`
