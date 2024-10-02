@@ -19,10 +19,10 @@ export const Contacts: React.FC = () => {
             other request or question, don’t hesitate to contact me
           </MessageInvitation>
           <MyContacts>
-            <span>Message me here</span>
+            <StyledMes>Message me here</StyledMes>
             <DiscordContact>
               <Icon iconId={"discord"} />
-              <a href="">!Elias#3519</a>
+              <MailLink href="">!Elias#3519</MailLink>
             </DiscordContact>
             <EmailContact>
               <Icon iconId={"email"} />
@@ -55,16 +55,32 @@ const MyContacts = styled.div`
 const DiscordContact = styled.div`
   display: flex; 
   align-items: center; 
-  margin-bottom: 10px;
-  margin-top: 10px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+
+   & > :first-child {
+    margin-right: 5px; 
 `;
 
 const EmailContact = styled.div`
   display: flex; 
   align-items: center; 
+
+  & > :first-child {
+    margin-right: 5px; 
+  }
 `;
 
 const MessageInvitation = styled.p`
 max-width: 500px;
 color:${theme.colors.borderColor};
 `;
+
+const StyledMes = styled.span`
+
+`;
+
+const MailLink = styled.a`
+
+`;
+
