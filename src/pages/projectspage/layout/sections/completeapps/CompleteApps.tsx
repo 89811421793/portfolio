@@ -24,18 +24,21 @@ export const CompleteApps: React.FC = () => {
             list={"HTML SCSS Python Flask"}
             title={"ChertNodes"}
             desc="Minecraft servers hosting "
+            showCached={true}
           />
           <Project
             src={kahoot}
             list={"CSS Express Node.js"}
             title={"Kahoot Answers Viewer"}
             desc="Get answers to your kahoot quiz"
+            showCached={true}
           />
           <Project
             src={protectX}
             list={"React Express Discord.js Node.js HTML SCSS Python Flask"}
             title={"ProtectX"}
             desc="Discord anti-crash bot"
+            showCached={true}
           />
 
           <Project
@@ -43,12 +46,14 @@ export const CompleteApps: React.FC = () => {
             list={"HTML CSS JS"}
             title={"Kotik Bot"}
             desc="Multi-functional discord bot"
+            showCached={true}
           />
           <Project
             src={elias}
             list={"Vue TS Less"}
             title={"Portfolio"}
             desc="You’re using it rn"
+            showCached={true}
           />
         </FlexWrapper>
       </Container>

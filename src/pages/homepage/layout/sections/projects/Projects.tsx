@@ -20,24 +20,27 @@ export const Projects: React.FC = () => {
           <a href="#">View all ~~</a>
         </FlexWrapper>
         <FlexWrapper justify={"space-evenly"}>
-          <Project
-            src={chertNodes}
-            list={"HTML SCSS Python Flask"}
-            title={"ChertNodes"}
-            desc="Minecraft servers hosting "
-          />
-          <Project
-            src={protectX}
-            list={"React Express Discord.js Node.js HTML SCSS Python Flask"}
-            title={"ProtectX"}
-            desc="Discord anti-crash bot"
-          />
-          <Project
-            src={kahoot}
-            list={"CSS Express Node.js"}
-            title={"Kahoot Answers Viewer"}
-            desc="Get answers to your kahoot quiz"
-          />
+        <Project
+  src={chertNodes}
+  list={"HTML SCSS Python Flask"}
+  title={"ChertNodes"}
+  desc="Minecraft servers hosting "
+  showCached={true} // Кнопка Cached не отображается
+/>
+<Project
+  src={protectX}
+  list={"React Express Discord.js Node.js HTML SCSS Python Flask"}
+  title={"ProtectX"}
+  desc="Discord anti-crash bot"
+  showCached={false} // Кнопка Cached отображается
+/>
+<Project
+  src={kahoot}
+  list={"CSS Express Node.js"}
+  title={"Kahoot Answers Viewer"}
+  desc="Get answers to your kahoot quiz"
+  showCached={false} // Кнопка Cached не отображается
+/>
         </FlexWrapper>
       </Container>
     </StyledProjects>
