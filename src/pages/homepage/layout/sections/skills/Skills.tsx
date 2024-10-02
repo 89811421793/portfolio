@@ -4,12 +4,15 @@ import { Skill } from "./skill/Skill";
 import { SectionTitle } from "../../../../../components/SectionTitle";
 import { FlexWrapper } from "../../../../../components/FlexWrapper";
 import { Container } from "../../../../../components/Container";
+import { StyledHash } from "../../../../../components/StyledHash";
 
 export const Skills: React.FC = () => {
   return (
     <StyledSkills>
       <Container>
-        <SectionTitle>#skills</SectionTitle>
+        <SectionTitle>
+          <StyledHash>#</StyledHash>skills
+        </SectionTitle>
         <FlexWrapper align={"center"} justify={"space-around"}>
           <SkillsDecor></SkillsDecor>
           <SkillsGroup>
@@ -34,9 +37,7 @@ export const Skills: React.FC = () => {
   );
 };
 
-const StyledSkills = styled.section`
-
-`;
+const StyledSkills = styled.section``;
 
 const SkillsGroup = styled.div``;
 

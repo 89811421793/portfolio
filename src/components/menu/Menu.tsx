@@ -41,5 +41,5 @@ const StyledLink = styled.a`
 
 const StyledHash = styled.span`
   color: ${theme.colors.accent};
-  margin-right: 5px; 
+  margin-right: 1px; 
 `;

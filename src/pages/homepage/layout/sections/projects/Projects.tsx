@@ -7,14 +7,17 @@ import kahoot from "./../../../../../assets/images/kahoot.png";
 import { SectionTitle } from "../../../../../components/SectionTitle";
 import { FlexWrapper } from "../../../../../components/FlexWrapper";
 import { Container } from "../../../../../components/Container";
+import { StyledHash } from "../../../../../components/StyledHash";
 
 export const Projects: React.FC = () => {
   return (
     <StyledProjects>
       <Container>
-        <FlexWrapper justify={'space-between'}>
-        <SectionTitle>#projects</SectionTitle>
-        <a href="#">View all ~~</a>
+        <FlexWrapper justify={"space-between"}>
+          <SectionTitle>
+            <StyledHash>#</StyledHash>projects
+          </SectionTitle>
+          <a href="#">View all ~~</a>
         </FlexWrapper>
         <FlexWrapper justify={"space-evenly"}>
           <Project
@@ -41,5 +44,4 @@ export const Projects: React.FC = () => {
   );
 };
 
-const StyledProjects = styled.section`
-`;
+const StyledProjects = styled.section``;

@@ -3,12 +3,15 @@ import styled from "styled-components";
 import { SectionTitle } from "../../../../../components/SectionTitle";
 import { Container } from "../../../../../components/Container";
 import { theme } from "../../../../../styles/Theme";
+import { StyledHash } from "../../../../../components/StyledHash";
 
 export const MyFunFacts: React.FC = () => {
   return (
     <StyledFacts>
       <Container>
-        <SectionTitle>#my-fun-facts</SectionTitle>
+        <SectionTitle>
+          <StyledHash>#</StyledHash>my-fun-facts
+        </SectionTitle>
         <Fact>I like winter more than summer</Fact>
         <Fact>I often bike with my friends</Fact>
         <Fact>I like pizza and pasta</Fact>
@@ -21,8 +24,7 @@ export const MyFunFacts: React.FC = () => {
   );
 };
 
-const StyledFacts = styled.section`
-`;
+const StyledFacts = styled.section``;
 
 const Fact = styled.span`
   border: 2px solid ${theme.colors.borderColor};
