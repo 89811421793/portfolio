@@ -11,33 +11,36 @@ export const Main: React.FC = () => {
     <StyledMain>
       <Container>
         <FlexWrapper align="center" justify="space-around">
-          <div>
+          <ContentWrapper>
             <MainTitle>
               Elias is a <Skill>web designer</Skill>{" "}
               and <Skill>front-end developer</Skill>
             </MainTitle>
-            <p>
+            <Description>
               He crafts responsive websites where technologies meet creativity
-            </p>
-            <Button>Contact me!!</Button>
-          </div>
+            </Description>
+            <StyledButton>Contact me!!</StyledButton>
+          </ContentWrapper>
           <figure>
             <MainImage src={mainimg} alt="" />
-            <figcaption style={{ border: "2px solid #ABB2BF", padding: 8 }}>
+            <StyledFigcaption>
               <Square></Square>
-              Currently working on{" "}
-              <span style={{ color: "#FFF" }}>Portfolio</span>
-            </figcaption>
+              <Status>Currently working on</Status>{" "}
+              <Portfolio>Portfolio</Portfolio>
+            </StyledFigcaption>
           </figure>
         </FlexWrapper>
-        <Quotation>
-          <p style={{ border: "2px solid #ABB2BF" }}>
-            With great power comes great electricity bill
-          </p>
-          <Cite>
+
+        <QuoteGrid>
+          <Quotation>
+            <QuoteMark/>
+            <p>With great power comes great electricity bill</p>
+          </Quotation>
+          <AuthorCite>
+            <CiteMark/>
             <span>- Dr. Who</span>
-          </Cite>
-        </Quotation>
+          </AuthorCite>
+        </QuoteGrid>
       </Container>
     </StyledMain>
   );
@@ -51,35 +54,101 @@ const MainImage = styled.img`
 `;
 
 const MainTitle = styled.h1`
-  maxwidth: "450px";
+  max-width: 450px;
+  margin-bottom: 30px;
+`;
+
+const Description = styled.p`
+  margin: 30px 0;
+  color: ${theme.colors.borderColor};
+`;
+
+const StyledButton = styled(Button)`
+  margin-top: 30px;
+`;
+
+const ContentWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+`;
+
+const QuoteGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr; // Одна колонка для цитаты и автора
+  max-width: 712px; // Максимальная ширина блока
+  margin: 20px auto; // Центрируем блок
+  margin-top:80px;
 `;
 
 const Quotation = styled.blockquote`
   position: relative;
-  padding: 32px;
-  max-width: 712px;
+  padding: 32px 30px;
+  border: 2px solid #ABB2BF;
+  text-align: left; 
 
-  &: before {
+  &:before {
+    content: '';
     position: absolute;
+    top: -16px;
+    left: 16px;
+    font-size: 40px;
+    color: ${theme.colors.accent};
   }
 `;
 
-const Cite = styled.cite`
+const AuthorCite = styled.cite`
   border: 2px solid #abb2bf;
-  padding: 16px;
+  padding: 15px 30px;
   font-style: normal;
+  display: block;
+  text-align: right; 
+  position: relative; 
+  width: fit-content; 
+  margin-left: auto; 
+  padding-left: 8px; 
+`;
+
+const QuoteMark = styled.span`
+  position: absolute;
+  top: -16px;
+  left: 16px;
+  font-size: 40px;
+  color: ${theme.colors.accent};
+`;
+
+const CiteMark = styled.span`
+  position: absolute;
+  top: -16px;
+  right: 16px;
+  font-size: 40px;
+  color: ${theme.colors.accent};
+`;
+
+const StyledFigcaption = styled.figcaption`
+  border: 2px solid #ABB2BF;
+  padding: 8px;
 `;
 
 const Square = styled.span`
-background-color: ${theme.colors.accent};
-display: inline-block;
-width: 20px;
-height: 20px;
-margin-right: 10px;
-vertical-align: middle;
-`
+  background-color: ${theme.colors.accent};
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  vertical-align: middle;
+`;
 
 const Skill = styled.span`
-color: ${theme.colors.accent};
-`
+  color: ${theme.colors.accent};
+`;
 
+const Portfolio = styled.span`
+  color: "#FFF";
+`;
+
+const Status = styled.span`
+  color: ${theme.colors.borderColor};
+`;
