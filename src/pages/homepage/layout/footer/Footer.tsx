@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { FlexWrapper } from "../../../../components/FlexWrapper";
 import { Icon } from "../../../../components/icon/Icon";
 import { Logo } from "../../../../components/logo/Logo";
 import { Container } from "../../../../components/Container";
@@ -21,7 +20,8 @@ export const Footer: React.FC = () => {
             <StyledH3>Web designer and front-end developer</StyledH3>
           </InfoWrapper>
           <MediaList>
-            <FlexWrapper>
+            <MediaTitle>Media</MediaTitle>
+            <MediaIconsWrapper>
               <MediaItem>
                 <MediaLink href="#">
                   <Icon iconId={"github"} />
@@ -37,7 +37,7 @@ export const Footer: React.FC = () => {
                   <Icon iconId={"discord"} />
                 </MediaLink>
               </MediaItem>
-            </FlexWrapper>
+            </MediaIconsWrapper>
           </MediaList>
         </FooterContent>
         <Copyright>© Copyright 2022. Made by Elias</Copyright>
@@ -52,29 +52,45 @@ const StyledFooter = styled.footer`
 
 const FooterContent = styled.div`
   display: flex;
-  justify-content: space-between; 
-  align-items: flex-start; 
-  margin-bottom: 8px; 
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
 `;
 
 const InfoWrapper = styled.div`
   display: flex;
-  flex-direction: column; 
-  gap: 5px; 
+  flex-direction: column;
+  gap: 5px;
 `;
 
 const FlexAligner = styled.div`
   display: flex;
-  align-items: center; 
+  align-items: center;
 `;
 
 const StyledLogoWrapper = styled.div`
   display: flex;
-  align-items: center; 
+  align-items: center;
 `;
 
-const MediaList = styled.ul`
+const MediaList = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   list-style: none;
+  padding: 0;
+  margin: 0;
+`;
+
+const MediaTitle = styled.h4`
+  margin-bottom: 10px;
+  text-align: left;
+  width: 100%;
+`;
+
+const MediaIconsWrapper = styled.ul`
+  display: flex;
+  gap: 10px;
   padding: 0;
   margin: 0;
 `;
@@ -91,9 +107,9 @@ const Copyright = styled.small`
 `;
 
 const MailLink = styled.a`
-margin-left: 60px;
+  margin-left: 60px;
 `;
 
 const StyledH3 = styled.h3`
-font-weight: 400;
-`
+  font-weight: 400;
+`;
