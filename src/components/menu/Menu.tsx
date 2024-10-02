@@ -28,6 +28,7 @@ export const Menu = (props: { menuItems: Array<string> }) => {
 const StyledMenu = styled.nav`
   ul {
     display: flex;
+    align-items: center;
     gap: 25px;
   }
 `;
