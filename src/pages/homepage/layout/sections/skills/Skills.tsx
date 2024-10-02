@@ -21,11 +21,11 @@ export const Skills: React.FC = () => {
               list={"TypeScript Lua Python JavaScript"}
             />
             <Skill title={"Databases"} list={"SQLite PostgreSQL Mongo"} />
+            <Skill title={"Other"} list={"HTML CSS EJS SCSS REST Jinja"} />
             <Skill
               title={"Tools"}
-              list={"VSCode Neovim Linux Figma XFCE Arch Git  Font Awesome"}
+              list={"VSCode Neovim Linux Figma XFCE Arch Git Font Awesome"}
             />
-            <Skill title={"Other"} list={"HTML CSS EJS SCSS REST Jinja"} />
             <Skill
               title={"Frameworks"}
               list={"React Vue Disnake Discord.js Flask Express.js"}
@@ -39,7 +39,33 @@ export const Skills: React.FC = () => {
 
 const StyledSkills = styled.section``;
 
-const SkillsGroup = styled.div``;
+const SkillsGroup = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 15px;
+
+  & > :nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  & > :nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  & > :nth-child(3) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  & > :nth-child(4) {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  & > :nth-child(5) {
+    grid-column: 3;
+    grid-row: 2;
+  }
+`;
 
 const SkillsDecor = styled.div`
   min-width: 350px;

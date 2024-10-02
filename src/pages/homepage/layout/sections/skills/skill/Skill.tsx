@@ -22,7 +22,8 @@ border: 2px solid ${theme.colors.borderColor};
 
 const SkillTitle = styled.h3`
   color: #fff;
+  border: 1px solid ${theme.colors.borderColor};
 `;
 const StyledSkill = styled.div`
-border: 2px solid ${theme.colors.borderColor};
+color: ${theme.colors.borderColor};
 `;
