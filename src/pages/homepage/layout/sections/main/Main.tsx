@@ -5,6 +5,7 @@ import { FlexWrapper } from "../../../../../components/FlexWrapper";
 import { Button } from "../../../../../components/Button";
 import { Container } from "../../../../../components/Container";
 import { theme } from "../../../../../styles/Theme";
+import { Icon } from "../../../../../components/icon/Icon";
 
 export const Main: React.FC = () => {
   return (
@@ -33,11 +34,15 @@ export const Main: React.FC = () => {
 
         <QuoteGrid>
           <Quotation>
-            <QuoteMark/>
+            <QuoteMark>
+              <Icon iconId="quotes" width="40" height="40" />
+            </QuoteMark>
             <p>With great power comes great electricity bill</p>
           </Quotation>
           <AuthorCite>
-            <CiteMark/>
+            <CiteMark>
+              <Icon iconId="quotes" width="40" height="40" />
+            </CiteMark>
             <span>- Dr. Who</span>
           </AuthorCite>
         </QuoteGrid>
