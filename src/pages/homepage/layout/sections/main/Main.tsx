@@ -13,8 +13,8 @@ export const Main: React.FC = () => {
         <FlexWrapper align="center" justify="space-around">
           <div>
             <MainTitle>
-              Elias is a <span style={{ color: 'fuchsia' }}>web designer</span>{" "}
-              and <span style={{ color: 'fuchsia' }}>front-end developer</span>
+              Elias is a <Skill>web designer</Skill>{" "}
+              and <Skill>front-end developer</Skill>
             </MainTitle>
             <p>
               He crafts responsive websites where technologies meet creativity
@@ -77,5 +77,9 @@ width: 20px;
 height: 20px;
 margin-right: 10px;
 vertical-align: middle;
+`
+
+const Skill = styled.span`
+color: ${theme.colors.accent};
 `
 
