@@ -55,11 +55,13 @@ const Link = styled.a`
   margin-right: 10px;
   margin-left: 11px;
   color: ${theme.colors.font};
-  margin-top: 15px; /* Добавляем отступ сверху для кнопки Live */
+  margin-top: 15px; 
+  padding: 5px 10px;
 `;
 
 const CachedLink = styled.a`
   color: ${theme.colors.borderColor}; 
   border: 2px solid ${theme.colors.borderColor}; 
   margin-right: 10px;
+  padding: 5px 10px;
 `;

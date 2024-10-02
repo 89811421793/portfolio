@@ -42,8 +42,8 @@ const StyledSkills = styled.section``;
 const SkillsGroup = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, auto);
   gap: 15px;
+  align-items: start;
 
   & > :nth-child(1) {
     grid-column: 1;
@@ -56,6 +56,7 @@ const SkillsGroup = styled.div`
   & > :nth-child(3) {
     grid-column: 2;
     grid-row: 2;
+    margin-top: -20px; /* Уменьшение расстояния между other и databases */
   }
   & > :nth-child(4) {
     grid-column: 3;
@@ -71,4 +72,5 @@ const SkillsDecor = styled.div`
   min-width: 350px;
   height: 282px;
   border: 1px dashed;
+  margin-right: 50px;
 `;

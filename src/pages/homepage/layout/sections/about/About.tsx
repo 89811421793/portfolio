@@ -28,7 +28,7 @@ export const About: React.FC = () => {
               establish their presence online. I always strive to learn about
               the newest technologies and frameworks.
             </p>
-            <Button>Read more -</Button>
+            <Button>Read more &rarr;</Button>
           </AboutInfo>
           <AboutImage src={aboutimg} alt="" />
         </FlexWrapper>
