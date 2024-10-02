@@ -37,7 +37,8 @@ export const Skills: React.FC = () => {
   );
 };
 
-const StyledSkills = styled.section``;
+const StyledSkills = styled.section`
+`;
 
 const SkillsGroup = styled.div`
   display: grid;
