@@ -1,7 +1,6 @@
 import "./App.css";
-import { AboutInfo } from "./pages/aboutpage/layout/sections/aboutinfo/AboutInfo";
-import { MyFunFacts } from "./pages/aboutpage/layout/sections/myfunfacts/MyFunFacts";
-import { Skills } from "./pages/aboutpage/layout/sections/skills/Skills";
+import { CompleteApps } from "./pages/projectspage/layout/sections/completeapps/CompleteApps";
+import { SmallProjects } from "./pages/projectspage/layout/sections/smallprojects/SmallProjects";
 
 // import { Main } from "./pages/homepage/layout/sections/main/Main";
 // import { Projects } from "./pages/homepage/layout/sections/projects/Projects";
@@ -20,10 +19,8 @@ function App() {
       <About/>
       <Contacts/> */}
 
-      <AboutInfo/>
-      <Skills/>
-      <MyFunFacts/>
-      
+     <CompleteApps/>
+     <SmallProjects/>
 
     </div>
   );

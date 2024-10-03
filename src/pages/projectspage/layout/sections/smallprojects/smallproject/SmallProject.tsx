@@ -21,7 +21,7 @@ export const SmallProject = (props: ProjectPropsType) => {
 };
 
 const StyledProject = styled.div`
-  margin-right: 10px;
+  margin-right: 5px;
   border: 2px solid ${theme.colors.borderColor};
 `;
 
