@@ -73,6 +73,7 @@ const ProjectsContainer = styled.div`
   grid-template-columns: repeat(3, 33%); 
   row-gap: 12px; 
   column-gap: 2px;
+  margin-top: 40px;
 `;
 
 const ProjectsListText = styled.span`
