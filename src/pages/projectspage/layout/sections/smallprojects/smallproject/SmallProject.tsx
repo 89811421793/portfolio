@@ -29,6 +29,7 @@ const StyledProject = styled.div`
   display: flex; 
   flex-direction: column; 
   max-width: 300px; 
+  
 `;
 
 const TechnologyList = styled.div`
@@ -39,6 +40,7 @@ const TechnologyList = styled.div`
 
 const ProjectTitle = styled.h3`
   margin-bottom: 10px;
+  font-weight: 800;
 `;
 
 const ProjectDescription = styled.p`
