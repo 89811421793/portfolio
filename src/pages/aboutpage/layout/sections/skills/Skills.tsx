@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { Skill } from "./skill/Skill";
 import { SectionTitle } from "../../../../../components/SectionTitle";
-import { FlexWrapper } from "../../../../../components/FlexWrapper";
 import { Container } from "../../../../../components/Container";
 import { StyledHash } from "../../../../../components/StyledHash";
 
@@ -13,24 +12,22 @@ export const Skills: React.FC = () => {
         <SectionTitle>
           <StyledHash>#</StyledHash>skills
         </SectionTitle>
-        <FlexWrapper align={"center"} justify={"space-around"}>
-          <SkillsGroup>
-            <Skill
-              title={"Languages"}
-              list={"TypeScript Lua Python JavaScript"}
-            />
-            <Skill title={"Other"} list={"HTML CSS EJS SCSS REST Jinja"} />
-            <Skill
-              title={"Tools"}
-              list={"VSCode Neovim Linux Figma XFCE Arch Git  Font Awesome"}
-            />
-            <Skill title={"Databases"} list={"SQLite PostgreSQL Mongo"} />
-            <Skill
-              title={"Frameworks"}
-              list={"React Vue Disnake Discord.js Flask Express.js"}
-            />
-          </SkillsGroup>
-        </FlexWrapper>
+        <SkillsGroup>
+          <Skill
+            title={"Languages"}
+            list={"TypeScript Lua Python JavaScript"}
+          />
+          <Skill title={"Other"} list={"HTML CSS EJS SCSS REST Jinja"} />
+          <Skill
+            title={"Tools"}
+            list={"VSCode Neovim Linux Figma XFCE Arch Git Font Awesome"}
+          />
+          <Skill title={"Databases"} list={"SQLite PostgreSQL Mongo"} />
+          <Skill
+            title={"Frameworks"}
+            list={"React Vue Disnake Discord.js Flask Express.js"}
+          />
+        </SkillsGroup>
       </Container>
     </StyledSkills>
   );
@@ -38,4 +35,11 @@ export const Skills: React.FC = () => {
 
 const StyledSkills = styled.section``;
 
-const SkillsGroup = styled.div``;
+const SkillsGroup = styled.div`
+  display: flex;
+  flex-wrap: nowrap; 
+  justify-content: space-between; 
+  align-items: flex-start; 
+  overflow-x: auto; 
+  margin-top: 30px;
+`;
