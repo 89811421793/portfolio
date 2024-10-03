@@ -57,6 +57,7 @@ export const CompleteApps: React.FC = () => {
             title={"Portfolio"}
             desc="You’re using it rn"
             showCached={false}
+            showGithub={true}
           />
         </ProjectsContainer>
       </Container>

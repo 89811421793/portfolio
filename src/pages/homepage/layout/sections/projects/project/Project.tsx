@@ -8,6 +8,7 @@ type ProjectPropsType = {
   title: string;
   desc: string;
   showCached: boolean;
+  showGithub?: boolean;
 };
 
 export const Project = (props: ProjectPropsType) => {
@@ -17,7 +18,11 @@ export const Project = (props: ProjectPropsType) => {
       <TechnologyList>{props.list}</TechnologyList>
       <ProjectTitle>{props.title}</ProjectTitle>
       <ProjectDescription>{props.desc}</ProjectDescription>
-      <Link href="#">Live &lt;~&gt;</Link>
+      {props.showGithub ? ( // Условный рендеринг для кнопки GitHub
+        <Link href="#">GitHub &lt;~&gt;</Link>
+      ) : (
+        <Link href="#">Live &lt;~&gt;</Link>
+      )}
       {props.showCached && <CachedLink href="#">Cached &gt;=</CachedLink>} {/* Условный рендеринг */}
     </StyledProject>
   );
