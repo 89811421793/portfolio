@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { SectionTitle } from "../../../../../components/SectionTitle";
-import { FlexWrapper } from "../../../../../components/FlexWrapper";
 import { Container } from "../../../../../components/Container";
 import { SmallProject } from "./smallproject/SmallProject";
 import { StyledHash } from "../../../../../components/StyledHash";
@@ -13,7 +12,7 @@ export const SmallProjects: React.FC = () => {
         <SectionTitle>
           <StyledHash>#</StyledHash>small-projects
         </SectionTitle>
-        <FlexWrapper wrap="wrap">
+        <FlexContainer>
           <SmallProject
             list={"Discord.js TS JS"}
             title={"Bot boilerplate"}
@@ -32,7 +31,6 @@ export const SmallProjects: React.FC = () => {
             desc="Figma landing page about service for viewing chess tournaments"
             to="Figma <~>"
           />
-
           <SmallProject
             list={"Figma"}
             title={"Crash protect website"}
@@ -41,7 +39,7 @@ export const SmallProjects: React.FC = () => {
           />
           <SmallProject
             list={"HTML CSS"}
-            title={"CSS expirements"}
+            title={"CSS experiments"}
             desc="Collection of my different little projects in css"
             to="Live <~>"
           />
@@ -63,10 +61,17 @@ export const SmallProjects: React.FC = () => {
             desc="Figma template website for my school"
             to="Figma <~>"
           />
-        </FlexWrapper>
+        </FlexContainer>
       </Container>
     </StyledProjects>
   );
 };
 
 const StyledProjects = styled.section``;
+
+const FlexContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; 
+  margin-top: 35px;
+`;
