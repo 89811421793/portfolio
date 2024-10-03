@@ -12,22 +12,50 @@ export const MyFunFacts: React.FC = () => {
         <SectionTitle>
           <StyledHash>#</StyledHash>my-fun-facts
         </SectionTitle>
-        <Fact>I like winter more than summer</Fact>
-        <Fact>I often bike with my friends</Fact>
-        <Fact>I like pizza and pasta</Fact>
-        <Fact>I was in Egypt, Poland and Turkey</Fact>
-        <Fact>My favorite movie is The Green Mile</Fact>
-        <Fact>I am still in school</Fact>
-        <Fact>I don’t have any siblings</Fact>
+        <FactsGrid>
+          <Fact className="div1">I like winter more than summer</Fact>
+          <Fact className="div2">I often bike with my friends</Fact>
+          <Fact className="div3">I like pizza and pasta</Fact>
+          <Fact className="div4">I was in Egypt, Poland and Turkey</Fact>
+          <Fact className="div5">My favorite movie is The Green Mile</Fact>
+          <Fact className="div6">I am still in school</Fact>
+          <Fact className="div7">I don’t have any siblings</Fact>
+        </FactsGrid>
       </Container>
     </StyledFacts>
   );
 };
 
-const StyledFacts = styled.section``;
+const StyledFacts = styled.section`
+  display: flex;
+  justify-content: flex-start; 
+`;
+
+const FactsGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
+  grid-template-rows: repeat(5, 1fr); 
+  grid-column-gap: 10px; 
+  grid-row-gap: 10px; 
+  max-width: 600px; 
+  margin-top: 25px;
+`;
 
 const Fact = styled.span`
-  border: 2px solid ${theme.colors.borderColor};
-  display: inline-block;
-  margin: 10px;
+border: 2px solid ${theme.colors.borderColor};
+display: flex; 
+align-items: center; 
+padding: 5px 6px; 
+text-align: left; 
+color: ${theme.colors.borderColor};
+
+
+/* Установка grid-area для каждой ячейки */
+&.div1 { grid-area: 1 / 1 / 2 / 4; }
+&.div2 { grid-area: 1 / 4 / 2 / 8; }
+&.div3 { grid-area: 2 / 1 / 3 / 3; }
+&.div4 { grid-area: 2 / 3 / 3 / 6; }
+&.div5 { grid-area: 3 / 1 / 4 / 4; } 
+&.div6 { grid-area: 3 / 4 / 4 / 6; } 
+&.div7 { grid-area: 4 / 1 / 5 / 3; } 
 `;
