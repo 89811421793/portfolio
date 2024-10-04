@@ -1,6 +1,7 @@
 import "./App.css";
-import { Contacts } from "./pages/contactspage/layout/sections/contacts/Contacts";
-import { AllMedia } from "./pages/contactspage/layout/sections/mediasection/AllMedia";
+import { AboutInfo } from "./pages/aboutpage/layout/sections/aboutinfo/AboutInfo";
+import { MyFunFacts } from "./pages/aboutpage/layout/sections/myfunfacts/MyFunFacts";
+import { Skills } from "./pages/aboutpage/layout/sections/skills/Skills";
 
 
 // import { Main } from "./pages/homepage/layout/sections/main/Main";
@@ -19,8 +20,9 @@ function App() {
       <Skills/>
       <About/>
       <Contacts/> */}
-<Contacts/>
-<AllMedia/>
+<AboutInfo/>
+<Skills/>
+<MyFunFacts/>
 
     </div>
   );

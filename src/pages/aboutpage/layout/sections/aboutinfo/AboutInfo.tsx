@@ -41,7 +41,7 @@ const StyledAbout = styled.section``;
 const AboutWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr auto;
-  gap: 20px; /* Оставим отступ между колонками как в примере */
+  gap: 20px;
 `;
 
 const InfoWrapper = styled.div`
@@ -50,16 +50,24 @@ const InfoWrapper = styled.div`
   justify-content: space-between;
   height: 507px;
   color: ${theme.colors.borderColor};
-  padding: 10px 0 50px 0; /* Оставим нижний отступ как в примере */
+  padding: 10px 0 50px 0;
   max-width: 515px;
 `;
 
 const Name = styled.span`
-  margin-top: 100px; /* Оставляем верхний отступ как в примере */
-  margin-bottom: 45px; /* Оставляем нижний отступ как в примере */
+  font-family: Fira Code;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  margin-top: 100px;
+  margin-bottom: 45px;
 `;
 
 const AboutText = styled.p`
+  font-family: Fira Code;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
   max-width: 515px;
   margin-bottom: 50px;
 `;
@@ -70,6 +78,10 @@ const AboutImage = styled.img`
 `;
 
 const WhoAmIText = styled.span`
+  font-family: Fira Code;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
   display: inline-block;
   margin-top: 17px;
 `;

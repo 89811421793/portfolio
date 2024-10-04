@@ -16,10 +16,13 @@ export const MyFunFacts: React.FC = () => {
           <Fact className="div1">I like winter more than summer</Fact>
           <Fact className="div2">I often bike with my friends</Fact>
           <Fact className="div3">
-            I like <FontHighLight>pizza</FontHighLight> and <FontHighLight>pasta</FontHighLight>
+            I like <FontHighLight>pizza</FontHighLight> and{" "}
+            <FontHighLight>pasta</FontHighLight>
           </Fact>
           <Fact className="div4">
-            I was in <FontHighLight>Egypt</FontHighLight>, <FontHighLight>Poland</FontHighLight>, and <FontHighLight>Turkey</FontHighLight>
+            I was in <FontHighLight>Egypt</FontHighLight>,{" "}
+            <FontHighLight>Poland</FontHighLight>, and{" "}
+            <FontHighLight>Turkey</FontHighLight>
           </Fact>
           <Fact className="div5">
             My favorite movie is <FontHighLight>The Green Mile</FontHighLight>
@@ -48,10 +51,14 @@ const FactsGrid = styled.div`
 `;
 
 const Fact = styled.span`
+  font-family: Fira Code;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
   border: 2px solid ${theme.colors.borderColor};
   display: flex;
   align-items: center;
-  padding: 5px 6px;
+  padding: 2px 6px;
   text-align: left;
   color: ${theme.colors.borderColor};
 
