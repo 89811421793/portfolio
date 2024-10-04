@@ -10,17 +10,22 @@ import { Container } from "../../../../../components/Container";
 import { Project } from "../../../../homepage/layout/sections/projects/project/Project";
 import { StyledHash } from "../../../../../components/StyledHash";
 import { StyledSlash } from "../../../../../components/StyledSlash";
+import { theme } from "../../../../../styles/Theme";
 
 export const CompleteApps: React.FC = () => {
   return (
     <StyledProjects>
       <Container>
         <SectionTitle>
-          <StyledSlash>/</StyledSlash>projects
+          <SectionTitleLink href="#">
+            <StyledSlash>/</StyledSlash>projects
+          </SectionTitleLink>
         </SectionTitle>
         <ProjectsListText>List of my projects</ProjectsListText>
         <SectionTitle>
-          <StyledHash>#</StyledHash>complete-apps
+          <SectionTitleLink href="#">
+            <StyledHash>#</StyledHash>complete-apps
+          </SectionTitleLink>
         </SectionTitle>
         <ProjectsContainer>
           <Project
@@ -29,7 +34,6 @@ export const CompleteApps: React.FC = () => {
             title={"ChertNodes"}
             desc="Minecraft servers hosting "
             showCached={true}
-          
           />
           <Project
             src={kahoot}
@@ -37,7 +41,6 @@ export const CompleteApps: React.FC = () => {
             title={"Kahoot Answers Viewer"}
             desc="Get answers to your kahoot quiz"
             showCached={false}
-        
           />
           <Project
             src={protectX}
@@ -46,7 +49,6 @@ export const CompleteApps: React.FC = () => {
             desc="Discord anti-crash bot"
             showCached={true}
             hideLive={true}
-          
           />
           <Project
             src={cat}
@@ -54,7 +56,6 @@ export const CompleteApps: React.FC = () => {
             title={"Kotik Bot"}
             desc="Multi-functional discord bot"
             showCached={false}
-           
           />
           <Project
             src={elias}
@@ -63,7 +64,6 @@ export const CompleteApps: React.FC = () => {
             desc="You’re using it rn"
             showCached={false}
             showGithub={true}
-           
           />
         </ProjectsContainer>
       </Container>
@@ -91,4 +91,8 @@ const ProjectsListText = styled.span`
   display: block;
   margin-top: 10px;
   margin-bottom: 70px;
+`;
+
+const SectionTitleLink = styled.a`
+  color: ${theme.colors.font};
 `;

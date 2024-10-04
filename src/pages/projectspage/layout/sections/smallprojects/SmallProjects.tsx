@@ -4,13 +4,16 @@ import { SectionTitle } from "../../../../../components/SectionTitle";
 import { Container } from "../../../../../components/Container";
 import { SmallProject } from "./smallproject/SmallProject";
 import { StyledHash } from "../../../../../components/StyledHash";
+import { theme } from "../../../../../styles/Theme";
 
 export const SmallProjects: React.FC = () => {
   return (
     <StyledProjects>
       <Container>
         <SectionTitle>
-          <StyledHash>#</StyledHash>small-projects
+          <SectionTitleLink href="#">
+            <StyledHash>#</StyledHash>small-projects
+          </SectionTitleLink>
         </SectionTitle>
         <FlexContainer>
           <SmallProject
@@ -72,6 +75,10 @@ const StyledProjects = styled.section``;
 const FlexContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 16px; 
+  gap: 16px;
   margin-top: 35px;
+`;
+
+const SectionTitleLink = styled.a`
+  color: ${theme.colors.font};
 `;
