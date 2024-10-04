@@ -25,7 +25,9 @@ export const AllMedia = () => {
   );
 };
 
-const StyledMedia = styled.section``;
+const StyledMedia = styled.section`
+  min-height: 30vh;
+`;
 
 const MediaItem = styled.div`
   display: inline;

@@ -1,6 +1,7 @@
 import "./App.css";
-import { CompleteApps } from "./pages/projectspage/layout/sections/completeapps/CompleteApps";
-import { SmallProjects } from "./pages/projectspage/layout/sections/smallprojects/SmallProjects";
+import { Contacts } from "./pages/contactspage/layout/sections/contacts/Contacts";
+import { AllMedia } from "./pages/contactspage/layout/sections/mediasection/AllMedia";
+
 
 // import { Main } from "./pages/homepage/layout/sections/main/Main";
 // import { Projects } from "./pages/homepage/layout/sections/projects/Projects";
@@ -18,9 +19,8 @@ function App() {
       <Skills/>
       <About/>
       <Contacts/> */}
-
-     <CompleteApps/>
-     <SmallProjects/>
+<Contacts/>
+<AllMedia/>
 
     </div>
   );
