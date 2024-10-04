@@ -4,13 +4,16 @@ import { Icon } from "../../../../../components/icon/Icon";
 import { SectionTitle } from "../../../../../components/SectionTitle";
 import { Container } from "../../../../../components/Container";
 import { StyledHash } from "../../../../../components/StyledHash";
+import { theme } from "../../../../../styles/Theme";
 
 export const AllMedia = () => {
   return (
     <StyledMedia>
       <Container>
         <SectionTitle>
+          <SectionTitleLink href='#'>
           <StyledHash>#</StyledHash>all-media
+          </SectionTitleLink>
         </SectionTitle>
         <MediaItem>
           <Icon iconId={"twitter"} />
@@ -42,4 +45,8 @@ const MediaItemLink = styled.a`
   font-size: 16px;
   line-height: 21px;
   margin-left: 5px;
+`;
+
+const SectionTitleLink = styled.a`
+  color: ${theme.colors.font};
 `;

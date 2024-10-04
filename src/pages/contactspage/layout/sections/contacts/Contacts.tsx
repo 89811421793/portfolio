@@ -12,7 +12,9 @@ export const Contacts = () => {
     <StyledContacts>
       <Container>
         <SectionTitle>
-          <StyledSlash>/</StyledSlash>contacts
+          <SectionTitleLink href="#">
+            <StyledSlash>/</StyledSlash>contacts
+          </SectionTitleLink>
         </SectionTitle>
         <WhoAmIText>Who am I?</WhoAmIText>
         <FlexWrapper justify={"space-between"}>
@@ -127,4 +129,8 @@ const EmailLinkText = styled.a`
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
+`;
+
+const SectionTitleLink = styled.a`
+  color: ${theme.colors.font};
 `;

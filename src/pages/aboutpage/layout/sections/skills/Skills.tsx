@@ -4,13 +4,16 @@ import { Skill } from "./skill/Skill";
 import { SectionTitle } from "../../../../../components/SectionTitle";
 import { Container } from "../../../../../components/Container";
 import { StyledHash } from "../../../../../components/StyledHash";
+import { theme } from "../../../../../styles/Theme";
 
 export const Skills: React.FC = () => {
   return (
     <StyledSkills>
       <Container>
         <SectionTitle>
+          <SectionTitleLink href='#'>
           <StyledHash>#</StyledHash>skills
+          </SectionTitleLink>
         </SectionTitle>
         <SkillsGroup>
           <Skill
@@ -42,4 +45,8 @@ const SkillsGroup = styled.div`
   align-items: flex-start; 
   overflow-x: auto; 
   margin-top: 30px;
+`;
+
+const SectionTitleLink = styled.a`
+  color: ${theme.colors.font};
 `;

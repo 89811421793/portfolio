@@ -10,7 +10,9 @@ export const MyFunFacts: React.FC = () => {
     <StyledFacts>
       <Container>
         <SectionTitle>
+          <SectionTitleLink href='#'>
           <StyledHash>#</StyledHash>my-fun-facts
+          </SectionTitleLink>
         </SectionTitle>
         <FactsGrid>
           <Fact className="div1">I like winter more than summer</Fact>
@@ -90,4 +92,8 @@ const FontHighLight = styled.span`
   color: ${theme.colors.font};
   display: inline-block;
   margin: 3px;
+`;
+
+const SectionTitleLink = styled.a`
+  color: ${theme.colors.font};
 `;

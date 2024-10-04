@@ -11,7 +11,9 @@ export const AboutInfo: React.FC = () => {
     <StyledAbout>
       <Container>
         <SectionTitle>
-          <StyledSlash>/</StyledSlash>about-me
+          <SectionTitleLink href="#">
+            <StyledSlash>/</StyledSlash>about-me
+          </SectionTitleLink>
         </SectionTitle>
         <WhoAmIText>Who am I?</WhoAmIText>
         <AboutWrapper>
@@ -84,4 +86,8 @@ const WhoAmIText = styled.span`
   line-height: 21px;
   display: inline-block;
   margin-top: 17px;
+`;
+
+const SectionTitleLink = styled.a`
+  color: ${theme.colors.font};
 `;
