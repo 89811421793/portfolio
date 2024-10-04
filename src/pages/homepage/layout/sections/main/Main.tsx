@@ -14,8 +14,8 @@ export const Main: React.FC = () => {
         <FlexWrapper align="center" justify="space-around">
           <ContentWrapper>
             <MainTitle>
-              Elias is a <Skill>web designer</Skill>{" "}
-              and <Skill>front-end developer</Skill>
+              Elias is a <Skill>web designer</Skill> and{" "}
+              <Skill>front-end developer</Skill>
             </MainTitle>
             <Description>
               He crafts responsive websites where technologies meet creativity
@@ -59,16 +59,29 @@ const MainImage = styled.img`
 `;
 
 const MainTitle = styled.h1`
-  max-width: 450px;
+  font-family: Fira Code;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 42px;
+  max-width: 537px;
   margin-bottom: 30px;
 `;
 
 const Description = styled.p`
-  margin: 30px 0;
+  font-family: Fira Code;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  margin: 15px 0;
   color: ${theme.colors.borderColor};
+  max-width: 465px;
 `;
 
 const StyledButton = styled(Button)`
+  font-family: Fira Code;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
   margin-top: 30px;
 `;
 
@@ -85,35 +98,42 @@ const QuoteGrid = styled.div`
   grid-template-columns: 1fr; // Одна колонка для цитаты и автора
   max-width: 712px; // Максимальная ширина блока
   margin: 20px auto; // Центрируем блок
-  margin-top:80px;
+  margin-top: 80px;
 `;
 
 const Quotation = styled.blockquote`
   position: relative;
   padding: 32px 30px;
-  border: 2px solid #ABB2BF;
-  text-align: left; 
+  border: 2px solid #abb2bf;
+  text-align: left;
 
-  &:before {
-    content: '';
-    position: absolute;
-    top: -16px;
-    left: 16px;
-    font-size: 40px;
-    color: ${theme.colors.accent};
+  p {
+    font-family: Fira Code;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    color: ${theme.colors.font};
   }
 `;
 
 const AuthorCite = styled.cite`
   border: 2px solid #abb2bf;
+  border-top: transparent;
   padding: 15px 30px;
   font-style: normal;
   display: block;
-  text-align: right; 
-  position: relative; 
-  width: fit-content; 
-  margin-left: auto; 
-  padding-left: 8px; 
+  text-align: right;
+  position: relative;
+  width: fit-content;
+  margin-left: auto;
+  padding-left: 8px;
+
+  span {
+    font-family: Fira Code;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+  }
 `;
 
 const QuoteMark = styled.span`
@@ -133,7 +153,7 @@ const CiteMark = styled.span`
 `;
 
 const StyledFigcaption = styled.figcaption`
-  border: 2px solid #ABB2BF;
+  border: 2px solid #abb2bf;
   padding: 8px;
 `;
 
@@ -151,9 +171,17 @@ const Skill = styled.span`
 `;
 
 const Portfolio = styled.span`
+  font-family: Fira Code;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
   color: "#FFF";
 `;
 
 const Status = styled.span`
+  font-family: Fira Code;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
   color: ${theme.colors.borderColor};
 `;
