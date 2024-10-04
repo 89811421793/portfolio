@@ -46,15 +46,15 @@ export const Contacts = () => {
 const StyledContacts = styled.section``;
 
 const DiscordContact = styled.div`
-display: flex;
+  display: flex;
   align-items: center;
   margin-bottom: 10px;
 `;
 
 const EmailContact = styled.div`
-display: flex;
-  align-items: center;`;
-
+  display: flex;
+  align-items: center;
+`;
 
 const SupportBlock = styled.div`
   display: flex;
@@ -65,7 +65,7 @@ const SupportBlock = styled.div`
 `;
 
 const MessageBlock = styled.div`
-display: flex;
+  display: flex;
   flex-direction: column;
   height: 100%;
   border: 2px solid ${theme.colors.borderColor};
@@ -98,7 +98,6 @@ const SupportText = styled.span`
   font-size: 16px;
   line-height: 20px;
   margin-bottom: 5px;
-
 `;
 
 const WalletLink = styled.a`
@@ -117,14 +116,14 @@ const MessageMeText = styled.span`
 `;
 
 const DiscordLinkText = styled.a`
-font-family: Fira Code;
+  font-family: Fira Code;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
 `;
 
 const EmailLinkText = styled.a`
-font-family: Fira Code;
+  font-family: Fira Code;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;

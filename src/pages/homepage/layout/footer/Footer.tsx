@@ -83,6 +83,10 @@ const MediaList = styled.div`
 `;
 
 const MediaTitle = styled.h4`
+font-family: Fira Code;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
   margin-bottom: 10px;
   text-align: left;
   width: 100%;
@@ -100,6 +104,10 @@ const MediaItem = styled.li``;
 const MediaLink = styled.a``;
 
 const Copyright = styled.small`
+  font-family: Fira Code;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
   display: block;
   text-align: center;
   margin-top: 20px;
@@ -107,9 +115,16 @@ const Copyright = styled.small`
 `;
 
 const MailLink = styled.a`
-  margin-left: 60px;
+  font-family: Fira Code;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  margin-left: 30px;
 `;
 
 const StyledH3 = styled.h3`
+  font-family: Fira Code;
   font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
 `;
