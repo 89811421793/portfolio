@@ -3,8 +3,8 @@ import styled from "styled-components";
 import { theme } from "../../../../../../styles/Theme";
 
 type SkillPropsType = {
-  title: string
-  list:string
+  title: string;
+  list: string;
 };
 
 export const Skill = (props: SkillPropsType) => {
@@ -17,15 +17,23 @@ export const Skill = (props: SkillPropsType) => {
 };
 
 const SkillBox = styled.div`
-border: 2px solid ${theme.colors.borderColor};
+  border: 2px solid ${theme.colors.borderColor};
 `;
 
 const SkillTitle = styled.h3`
-  color: #fff;
+  font-family: Fira Code;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 30px;
+  color: ${theme.colors.font};
   border: 1px solid ${theme.colors.borderColor};
   padding: 5px;
 `;
 const StyledSkill = styled.div`
-color: ${theme.colors.borderColor};
-padding: 5px;
+  font-family: Fira Code;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  color: ${theme.colors.borderColor};
+  padding: 5px;
 `;

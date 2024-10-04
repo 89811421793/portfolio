@@ -28,7 +28,7 @@ export const About: React.FC = () => {
               establish their presence online. I always strive to learn about
               the newest technologies and frameworks.
             </AboutText>
-            <Button>Read more &rarr;</Button>
+            <StyledButton>Read more &rarr;</StyledButton>
           </AboutInfo>
           <AboutImage src={aboutimg} alt="" />
         </AboutWrapper>
@@ -41,30 +41,41 @@ const StyledAbout = styled.section``;
 
 const AboutWrapper = styled.div`
   display: grid;
-  grid-template-columns: 1fr auto; 
-  gap: 20px; 
+  grid-template-columns: 1fr auto;
+  gap: 20px;
 `;
 
 const AboutInfo = styled.div`
+  font-family: Fira Code;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; 
-  height: 507px; 
+  justify-content: space-between;
+  height: 507px;
   color: ${theme.colors.borderColor};
   padding: 10px 0 50px 0;
   max-width: 515px;
 `;
 
 const Name = styled.span`
-  margin-top: 30px; 
-  margin-bottom: 38px; 
+  margin-top: 30px;
+  margin-bottom: 38px;
 `;
 
 const AboutText = styled.p`
   max-width: 515px;
-  margin-bottom: 5px; 
-`
+  margin-bottom: 5px;
+`;
 const AboutImage = styled.img`
   width: 339px;
   height: 507px;
+`;
+
+const StyledButton = styled(Button)`
+  font-family: Fira Code;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
 `;

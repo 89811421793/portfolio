@@ -8,6 +8,7 @@ import { SectionTitle } from "../../../../../components/SectionTitle";
 import { FlexWrapper } from "../../../../../components/FlexWrapper";
 import { Container } from "../../../../../components/Container";
 import { StyledHash } from "../../../../../components/StyledHash";
+import { theme } from "../../../../../styles/Theme";
 
 export const Projects: React.FC = () => {
   return (
@@ -17,7 +18,7 @@ export const Projects: React.FC = () => {
           <SectionTitle>
             <StyledHash>#</StyledHash>projects
           </SectionTitle>
-          <a href="#">View all ~~&gt;</a>
+          <ViewAllLink href="#">View all ~~&gt;</ViewAllLink>
         </FlexContainer>
         <FlexWrapper justify={"space-evenly"}>
         <Project
@@ -55,4 +56,12 @@ const FlexContainer = styled.div`
   align-items: center; 
   justify-content: space-between;
   margin-bottom:15px;
+`;
+
+const ViewAllLink = styled.a`
+font-family: Fira Code;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+    color: ${theme.colors.font};
 `;
