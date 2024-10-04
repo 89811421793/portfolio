@@ -20,6 +20,7 @@ const SkillBox = styled.div`
   border: 2px solid ${theme.colors.borderColor};
   display: inline-block;
   margin: 10px;
+  max-width: 192px;
 `;
 const SkillTitle = styled.h3`
   font-family: Fira Code;
@@ -28,14 +29,14 @@ const SkillTitle = styled.h3`
   line-height: 21px;
   color: #fff;
   border: 2px solid ${theme.colors.borderColor};
-  padding: 5px;
+  padding: 14px;
 `;
 const StyledSkill = styled.div`
   font-family: Fira Code;
   font-weight: 400;
   font-size: 16px;
-  line-height: 21px;
+  line-height: 22px;
   color: ${theme.colors.borderColor};
   font-weight: 400;
-  padding: 5px;
+  padding: 14px;
 `;
