@@ -29,6 +29,7 @@ export const CompleteApps: React.FC = () => {
             title={"ChertNodes"}
             desc="Minecraft servers hosting "
             showCached={true}
+          
           />
           <Project
             src={kahoot}
@@ -36,6 +37,7 @@ export const CompleteApps: React.FC = () => {
             title={"Kahoot Answers Viewer"}
             desc="Get answers to your kahoot quiz"
             showCached={false}
+        
           />
           <Project
             src={protectX}
@@ -43,6 +45,8 @@ export const CompleteApps: React.FC = () => {
             title={"ProtectX"}
             desc="Discord anti-crash bot"
             showCached={true}
+            hideLive={true}
+          
           />
           <Project
             src={cat}
@@ -50,6 +54,7 @@ export const CompleteApps: React.FC = () => {
             title={"Kotik Bot"}
             desc="Multi-functional discord bot"
             showCached={false}
+           
           />
           <Project
             src={elias}
@@ -58,6 +63,7 @@ export const CompleteApps: React.FC = () => {
             desc="You’re using it rn"
             showCached={false}
             showGithub={true}
+           
           />
         </ProjectsContainer>
       </Container>

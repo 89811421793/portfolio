@@ -9,6 +9,7 @@ type ProjectPropsType = {
   desc: string;
   showCached: boolean;
   showGithub?: boolean;
+  hideLive?: boolean
 };
 
 export const Project = (props: ProjectPropsType) => {
@@ -21,7 +22,7 @@ export const Project = (props: ProjectPropsType) => {
       {props.showGithub ? ( // Условный рендеринг для кнопки GitHub
         <Link href="#">GitHub &lt;~&gt;</Link>
       ) : (
-        <Link href="#">Live &lt;~&gt;</Link>
+        props.hideLive ? null :<Link href="#">Live &lt;~&gt;</Link>
       )}
       {props.showCached && <CachedLink href="#">Cached &gt;=</CachedLink>}{" "}
       {/* Условный рендеринг */}
@@ -89,5 +90,6 @@ const CachedLink = styled.a`
   color: ${theme.colors.borderColor};
   border: 2px solid ${theme.colors.borderColor};
   margin-right: 10px;
+  margin-left: 10px;
   padding: 5px 10px;
 `;

@@ -77,3 +77,4 @@ const SmallProjectContent = styled.div`
   flex-direction: column;
   height: 100%; /* Позволяет растянуть контент и использовать auto margin для Link */
 `;
+
