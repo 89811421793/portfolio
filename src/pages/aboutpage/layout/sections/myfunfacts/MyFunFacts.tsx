@@ -42,8 +42,8 @@ const StyledFacts = styled.section`
 
 const FactsGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(5, 21%);
+  grid-template-rows: repeat(5, 25%);
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   max-width: 600px;
@@ -58,7 +58,7 @@ const Fact = styled.span`
   border: 2px solid ${theme.colors.borderColor};
   display: flex;
   align-items: center;
-  padding: 2px 6px;
+  padding: 3px 4px;
   text-align: left;
   color: ${theme.colors.borderColor};
 
