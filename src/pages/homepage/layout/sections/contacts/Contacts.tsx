@@ -22,11 +22,11 @@ export const Contacts: React.FC = () => {
             <StyledMes>Message me here</StyledMes>
             <DiscordContact>
               <Icon iconId={"discord"} />
-              <MailLink href="">!Elias#3519</MailLink>
+              <DiscordLink href="">!Elias#3519</DiscordLink>
             </DiscordContact>
             <EmailContact>
               <Icon iconId={"email"} />
-              <a href="">elias@elias.me</a>
+              <EmailLink href="">elias@elias.me</EmailLink>
             </EmailContact>
           </MyContacts>
         </FlexContainer>
@@ -46,7 +46,7 @@ const FlexContainer = styled.div`
 const MyContacts = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start; 
+  align-items: flex-start;
   margin-left: 30px;
   border: 3px solid rgb(171, 178, 191);
   padding: 10px 30px 10px 10px;
@@ -63,24 +63,41 @@ const DiscordContact = styled.div`
 `;
 
 const EmailContact = styled.div`
-  display: flex; 
-  align-items: center; 
+  display: flex;
+  align-items: center;
 
   & > :first-child {
-    margin-right: 5px; 
+    margin-right: 5px;
   }
 `;
 
 const MessageInvitation = styled.p`
-max-width: 500px;
-color:${theme.colors.borderColor};
+  font-family: Fira Code;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  max-width: 500px;
+  color: ${theme.colors.borderColor};
 `;
 
 const StyledMes = styled.span`
-
+  font-family: Fira Code;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+  color: ${theme.colors.font};
 `;
 
-const MailLink = styled.a`
-
+const DiscordLink = styled.a`
+font-family: Fira Code;
+font-weight: 400;
+font-size: 16px;
+line-height: 21px;
 `;
 
+const EmailLink = styled.a`
+font-family: Fira Code;
+font-weight: 400;
+font-size: 16px;
+line-height: 21px;
+`;
