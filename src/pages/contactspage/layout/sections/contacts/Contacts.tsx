@@ -29,11 +29,11 @@ export const Contacts = () => {
               <MessageMeText>Message me here</MessageMeText>
               <DiscordContact>
                 <Icon iconId={"discord"} />
-                <a href="">!Elias#3519</a>
+                <DiscordLinkText href="">!Elias#3519</DiscordLinkText>
               </DiscordContact>
               <EmailContact>
                 <Icon iconId={"email"} />
-                <a href="">elias@elias.me</a>
+                <EmailLinkText href="">elias@elias-dev.ml</EmailLinkText>
               </EmailContact>
             </MessageBlock>
           </FlexWrapper>
@@ -48,6 +48,7 @@ const StyledContacts = styled.section``;
 const DiscordContact = styled.div`
 display: flex;
   align-items: center;
+  margin-bottom: 10px;
 `;
 
 const EmailContact = styled.div`
@@ -64,6 +65,9 @@ const SupportBlock = styled.div`
 `;
 
 const MessageBlock = styled.div`
+display: flex;
+  flex-direction: column;
+  height: 100%;
   border: 2px solid ${theme.colors.borderColor};
   margin-left: 15px;
   padding: 12px;
@@ -109,5 +113,19 @@ const MessageMeText = styled.span`
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
-  
+  margin-bottom: 15px;
+`;
+
+const DiscordLinkText = styled.a`
+font-family: Fira Code;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+`;
+
+const EmailLinkText = styled.a`
+font-family: Fira Code;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
 `;
