@@ -26,29 +26,44 @@ const StyledProject = styled.div`
   margin-right: 10px;
   margin-bottom: 10px;
   border: 2px solid ${theme.colors.borderColor};
-  display: flex; 
-  flex-direction: column; 
-  max-width: 300px; 
-  
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
 `;
 
 const TechnologyList = styled.div`
+  font-family: Fira Code;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
   border-bottom: 2px solid ${theme.colors.borderColor};
   color: ${theme.colors.borderColor};
   padding: 5px;
 `;
 
 const ProjectTitle = styled.h3`
+  font-family: Fira Code;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
   margin-bottom: 10px;
   font-weight: 800;
 `;
 
 const ProjectDescription = styled.p`
+  font-family: Fira Code;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
   color: ${theme.colors.borderColor};
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
 `;
 
 const Link = styled.a`
+  font-family: Fira Code;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
   border: 2px solid ${theme.colors.accent};
   color: ${theme.colors.font};
   padding: 5px 8px;
@@ -57,7 +72,7 @@ const Link = styled.a`
 `;
 
 const SmallProjectContent = styled.div`
-  padding: 15px 20px 21px 20px; 
+  padding: 15px 20px 21px 20px;
   display: flex;
   flex-direction: column;
   height: 100%; /* Позволяет растянуть контент и использовать auto margin для Link */

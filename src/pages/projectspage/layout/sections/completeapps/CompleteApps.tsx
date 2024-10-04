@@ -71,13 +71,17 @@ const StyledProjects = styled.section`
 
 const ProjectsContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 33%); 
-  row-gap: 12px; 
+  grid-template-columns: repeat(3, 33%);
+  row-gap: 12px;
   column-gap: 2px;
   margin-top: 40px;
 `;
 
 const ProjectsListText = styled.span`
+  font-family: Fira Code;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
   display: block;
   margin-top: 10px;
   margin-bottom: 70px;
