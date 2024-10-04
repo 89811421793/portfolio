@@ -14,11 +14,11 @@ export const AllMedia = () => {
         </SectionTitle>
         <MediaItem>
           <Icon iconId={"twitter"} />
-          <a href="">elias@elias.me</a>
+          <MediaItemLink href="">@elias</MediaItemLink>
         </MediaItem>
         <MediaItem>
           <Icon iconId={"twitter"} />
-          <a href="">elias@elias.me</a>
+          <MediaItemLink href="">@elias</MediaItemLink>
         </MediaItem>
       </Container>
     </StyledMedia>
@@ -30,6 +30,16 @@ const StyledMedia = styled.section`
 `;
 
 const MediaItem = styled.div`
-  display: inline;
-  margin-right: 15px;
+  display: inline-flex;
+  align-items: center;
+  margin-top: 30px;
+  margin-right: 25px;
+`;
+
+const MediaItemLink = styled.a`
+  font-family: Fira Code;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  margin-left: 5px;
 `;

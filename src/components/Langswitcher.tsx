@@ -14,7 +14,7 @@ export const Langswitcher: React.FC = () => {
   return (
     <Container onClick={() => setIsOpen(!isOpen)}>
       {selectedLang.toUpperCase()}
-      <ArrowDown>{'▼'}</ArrowDown> {/* Символ ">" */}
+      <ArrowDown>{'▼'}</ArrowDown> 
       <Dropdown isOpen={isOpen}>
         <Option onClick={() => handleLangChange("en")}>EN</Option>
         <Option onClick={() => handleLangChange("ru")}>RU</Option>

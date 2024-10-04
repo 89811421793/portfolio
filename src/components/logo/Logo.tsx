@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Icon } from "../icon/Icon";
 
-export const Logo = () => {
+export const Logo: React.FC = () => {
   return (
     <LogoContainer>
       <a href="">
@@ -15,11 +15,15 @@ export const Logo = () => {
 
 const LogoContainer = styled.div`
   display: flex;
-  align-items: center; 
+  align-items: center;
 `;
 
 const LogoName = styled.span`
-  margin-left: -1px; 
-  font-size:16px;
+  font-family: Fira Code;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  margin-left: -1px;
+  font-size: 16px;
   font-weight: 700;
 `;

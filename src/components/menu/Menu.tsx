@@ -37,6 +37,11 @@ const StyledLink = styled.a`
   text-decoration: none;
   display: flex;
   align-items: center;
+  font-family: Fira Code;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+
 `;
 
 const StyledHash = styled.span`
