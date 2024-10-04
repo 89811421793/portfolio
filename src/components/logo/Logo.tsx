@@ -4,16 +4,14 @@ import { Icon } from "../icon/Icon";
 
 export const Logo: React.FC = () => {
   return (
-    <LogoContainer>
-      <a href="">
-        <Icon iconId={"union"} viewBox="0 0 25 14" />
-      </a>
+    <LogoContainer href="#">
+      <Icon iconId={"union"} viewBox="0 0 25 14" />
       <LogoName>Elias</LogoName>
     </LogoContainer>
   );
 };
 
-const LogoContainer = styled.div`
+const LogoContainer = styled.a`
   display: flex;
   align-items: center;
 `;

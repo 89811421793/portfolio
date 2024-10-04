@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const SectionTitle = styled.h2`
 font-family:Fira Code;
 font-weight: 600;

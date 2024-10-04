@@ -12,7 +12,9 @@ export const About: React.FC = () => {
     <StyledAbout>
       <Container>
         <SectionTitle>
-          <StyledHash>#</StyledHash>about-me
+          <SectionTitleLink href="#">
+            <StyledHash>#</StyledHash>about-me
+          </SectionTitleLink>
         </SectionTitle>
         <AboutWrapper>
           <AboutInfo>
@@ -78,4 +80,8 @@ const StyledButton = styled(Button)`
   font-weight: 500;
   font-size: 16px;
   line-height: 21px;
+`;
+
+const SectionTitleLink = styled.a`
+  color: ${theme.colors.font};
 `;

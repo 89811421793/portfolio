@@ -11,7 +11,10 @@ export const Contacts: React.FC = () => {
     <StyledContacts>
       <Container>
         <SectionTitle>
-          <StyledHash>#</StyledHash>contacts
+          <SectionTitleLink href="#">
+            <StyledHash>#</StyledHash>
+            contacts
+          </SectionTitleLink>
         </SectionTitle>
         <FlexContainer>
           <MessageInvitation>
@@ -89,15 +92,19 @@ const StyledMes = styled.span`
 `;
 
 const DiscordLink = styled.a`
-font-family: Fira Code;
-font-weight: 400;
-font-size: 16px;
-line-height: 21px;
+  font-family: Fira Code;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
 `;
 
 const EmailLink = styled.a`
-font-family: Fira Code;
-font-weight: 400;
-font-size: 16px;
-line-height: 21px;
+  font-family: Fira Code;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+`;
+
+const SectionTitleLink = styled.a`
+  color: ${theme.colors.font};
 `;

@@ -5,13 +5,16 @@ import { SectionTitle } from "../../../../../components/SectionTitle";
 import { FlexWrapper } from "../../../../../components/FlexWrapper";
 import { Container } from "../../../../../components/Container";
 import { StyledHash } from "../../../../../components/StyledHash";
+import { theme } from "../../../../../styles/Theme";
 
 export const Skills: React.FC = () => {
   return (
     <StyledSkills>
       <Container>
         <SectionTitle>
-          <StyledHash>#</StyledHash>skills
+          <SectionTitleLink href="#">
+            <StyledHash>#</StyledHash>skills
+          </SectionTitleLink>
         </SectionTitle>
         <FlexWrapper align={"center"} justify={"space-around"}>
           <SkillsDecor></SkillsDecor>
@@ -37,8 +40,7 @@ export const Skills: React.FC = () => {
   );
 };
 
-const StyledSkills = styled.section`
-`;
+const StyledSkills = styled.section``;
 
 const SkillsGroup = styled.div`
   display: grid;
@@ -74,4 +76,8 @@ const SkillsDecor = styled.div`
   height: 282px;
   border: 1px dashed;
   margin-right: 50px;
+`;
+
+const SectionTitleLink = styled.a`
+  color: ${theme.colors.font};
 `;
