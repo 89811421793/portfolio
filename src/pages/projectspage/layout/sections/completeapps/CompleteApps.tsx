@@ -11,13 +11,16 @@ import { Project } from "../../../../homepage/layout/sections/projects/project/P
 import { StyledHash } from "../../../../../components/StyledHash";
 import { StyledSlash } from "../../../../../components/StyledSlash";
 import { theme } from "../../../../../styles/Theme";
+import { SmallProjects } from "../smallprojects/SmallProjects";
+
 
 export const CompleteApps: React.FC = () => {
+
   return (
     <StyledProjects>
       <Container>
         <SectionTitle>
-          <SectionTitleLink href="#">
+          <SectionTitleLink  href="#">
             <StyledSlash>/</StyledSlash>projects
           </SectionTitleLink>
         </SectionTitle>
@@ -67,9 +70,13 @@ export const CompleteApps: React.FC = () => {
           />
         </ProjectsContainer>
       </Container>
+      <SmallProjects/>
     </StyledProjects>
+    
   );
 };
+
+
 
 const StyledProjects = styled.section`
   min-height: 40vh;

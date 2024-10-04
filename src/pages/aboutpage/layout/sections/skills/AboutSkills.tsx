@@ -6,14 +6,18 @@ import { Container } from "../../../../../components/Container";
 import { StyledHash } from "../../../../../components/StyledHash";
 import { theme } from "../../../../../styles/Theme";
 
-export const Skills: React.FC = () => {
+
+export const AboutSkills: React.FC = () => {
   return (
     <StyledSkills>
       <Container>
         <SectionTitle>
-          <SectionTitleLink href='#'>
-          <StyledHash>#</StyledHash>skills
-          </SectionTitleLink>
+        <SectionTitleLink href='#'>
+            
+              <StyledHash>#</StyledHash>skills
+              </SectionTitleLink> 
+      
+    
         </SectionTitle>
         <SkillsGroup>
           <Skill

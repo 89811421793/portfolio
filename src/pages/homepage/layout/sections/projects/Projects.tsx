@@ -10,15 +10,18 @@ import { Container } from "../../../../../components/Container";
 import { StyledHash } from "../../../../../components/StyledHash";
 import { theme } from "../../../../../styles/Theme";
 
+
 export const Projects: React.FC = () => {
   return (
     <StyledProjects>
       <Container>
         <FlexContainer>
           <SectionTitle>
-            <SectionTitleLink href="#">
-              <StyledHash>#</StyledHash>projects
-            </SectionTitleLink>
+           
+              <SectionTitleLink href="#">
+                <StyledHash>#</StyledHash>projects
+              </SectionTitleLink>
+            
           </SectionTitle>
           <ViewAllLink href="#">View all ~~&gt;</ViewAllLink>
         </FlexContainer>

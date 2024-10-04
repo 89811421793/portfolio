@@ -5,6 +5,8 @@ import { Container } from "../../../../../components/Container";
 import { theme } from "../../../../../styles/Theme";
 import { SectionTitle } from "../../../../../components/SectionTitle";
 import { StyledSlash } from "../../../../../components/StyledSlash";
+import { AboutSkills } from "../skills/AboutSkills";
+import { MyFunFacts } from "../myfunfacts/MyFunFacts";
 
 export const AboutInfo: React.FC = () => {
   return (
@@ -34,6 +36,8 @@ export const AboutInfo: React.FC = () => {
           <AboutImage src={aboutimg} alt="About Elias" />
         </AboutWrapper>
       </Container>
+      <AboutSkills/>
+      <MyFunFacts/>
     </StyledAbout>
   );
 };

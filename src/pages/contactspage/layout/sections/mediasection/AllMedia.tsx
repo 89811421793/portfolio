@@ -6,7 +6,7 @@ import { Container } from "../../../../../components/Container";
 import { StyledHash } from "../../../../../components/StyledHash";
 import { theme } from "../../../../../styles/Theme";
 
-export const AllMedia = () => {
+export const AllMedia: React.FC = () => {
   return (
     <StyledMedia>
       <Container>

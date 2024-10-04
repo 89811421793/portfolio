@@ -6,8 +6,9 @@ import { Icon } from "../../../../../components/icon/Icon";
 import { theme } from "../../../../../styles/Theme";
 import { SectionTitle } from "../../../../../components/SectionTitle";
 import { StyledSlash } from "../../../../../components/StyledSlash";
+import { AllMedia } from "../mediasection/AllMedia";
 
-export const Contacts = () => {
+export const Contacts: React.FC = () => {
   return (
     <StyledContacts>
       <Container>
@@ -41,9 +42,12 @@ export const Contacts = () => {
           </FlexWrapper>
         </FlexWrapper>
       </Container>
-    </StyledContacts>
+      <AllMedia/>
+    </StyledContacts>   
   );
 };
+
+
 
 const StyledContacts = styled.section``;
 
