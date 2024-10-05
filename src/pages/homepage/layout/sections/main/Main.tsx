@@ -6,6 +6,10 @@ import { Button } from "../../../../../components/Button";
 import { Container } from "../../../../../components/Container";
 import { theme } from "../../../../../styles/Theme";
 import { Icon } from "../../../../../components/icon/Icon";
+import { Projects } from "../projects/Projects";
+import { Skills } from "../skills/Skills";
+import { About } from "../about/About";
+import { Contacts } from "../contacts/Contacts";
 
 export const Main: React.FC = () => {
   return (
@@ -47,6 +51,10 @@ export const Main: React.FC = () => {
           </AuthorCite>
         </QuoteGrid>
       </Container>
+      <Projects/>
+      <Skills/>
+      <About/>
+      <Contacts/>
     </StyledMain>
   );
 };

@@ -1,18 +1,12 @@
 import "./App.css";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Main } from "./pages/homepage/layout/sections/main/Main";
-import { Projects } from "./pages/homepage/layout/sections/projects/Projects";
-import { About } from "./pages/homepage/layout/sections/about/About";
-import { Contacts } from "./pages/homepage/layout/sections/contacts/Contacts";
-import { Skills } from "./pages/homepage/layout/sections/skills/Skills";
+// import { CompleteApps } from "./pages/projectspage/layout/sections/completeapps/CompleteApps";
 
 function App() {
   return (
     <div className="App">
       <Main />
-      <Projects />
-      <Skills />
-      <About />
-      <Contacts />
     </div>
   );
 }
