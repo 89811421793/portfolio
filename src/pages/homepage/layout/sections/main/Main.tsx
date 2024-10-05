@@ -46,13 +46,13 @@ export const Main: React.FC = () => {
         <QuoteGrid>
           <Quotation>
             <QuoteMark>
-              <Icon iconId="quotes" width="40" height="40" />
+              <Icon iconId="quotes" width="40" height="40" viewBox="0 0 38 40" />
             </QuoteMark>
             <p>With great power comes great electricity bill</p>
           </Quotation>
           <AuthorCite>
             <CiteMark>
-              <Icon iconId="quotes" width="40" height="40" />
+              <Icon iconId="quotes" width="40" height="40" viewBox="0 0 38 40"/>
             </CiteMark>
             <span>- Dr. Who</span>
           </AuthorCite>
