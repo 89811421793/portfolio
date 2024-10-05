@@ -12,11 +12,11 @@ export const About: React.FC = () => {
   return (
     <StyledAbout>
       <Container>
-        <SectionTitle id='about-me'>
-          <Link to='/about'>
-          <SectionTitleLink href="#">
-            <StyledHash>#</StyledHash>about-me
-          </SectionTitleLink>
+        <SectionTitle id="about-me">
+          <Link to="/about">
+            <SectionTitleLink href="#">
+              <StyledHash>#</StyledHash>about-me
+            </SectionTitleLink>
           </Link>
         </SectionTitle>
         <AboutWrapper>
@@ -33,7 +33,9 @@ export const About: React.FC = () => {
               establish their presence online. I always strive to learn about
               the newest technologies and frameworks.
             </AboutText>
-            <StyledButton>Read more &rarr;</StyledButton>
+            <Link to="/about">
+              <StyledButton>Read more &rarr;</StyledButton>
+            </Link>
           </AboutInfo>
           <AboutImage src={aboutimg} alt="" />
         </AboutWrapper>
