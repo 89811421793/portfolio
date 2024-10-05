@@ -11,25 +11,21 @@ import { StyledHash } from "../../../../../components/StyledHash";
 import { theme } from "../../../../../styles/Theme";
 import { Link } from "react-router-dom";
 
-
-
-
 export const Projects: React.FC = () => {
-
-
-
   return (
     <StyledProjects>
       <Container>
         <FlexContainer>
-          <SectionTitle id='works'>
-          <Link to='/projects'>
+          <SectionTitle id="works">
+            <Link to="/projects">
               <SectionTitleLink href="#">
                 <StyledHash>#</StyledHash>projects
               </SectionTitleLink>
-              </Link>
+            </Link>
           </SectionTitle>
-          <ViewAllLink href="#">View all ~~&gt;</ViewAllLink>
+          <ViewAllLink as={Link} to="/projects">
+            View all ~~&gt;
+          </ViewAllLink>
         </FlexContainer>
         <FlexWrapper justify={"space-evenly"}>
           <Project
