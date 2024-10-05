@@ -11,6 +11,8 @@ import { Skills } from "../skills/Skills";
 import { About } from "../about/About";
 import { Contacts } from "../contacts/Contacts";
 
+
+
 export const Main: React.FC = () => {
   return (
     <StyledMain>

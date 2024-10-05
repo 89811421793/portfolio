@@ -7,13 +7,26 @@ import { theme } from "../../../../../styles/Theme";
 import { SectionTitle } from "../../../../../components/SectionTitle";
 import { StyledSlash } from "../../../../../components/StyledSlash";
 import { AllMedia } from "../mediasection/AllMedia";
+import { useLocation } from 'react-router-dom';
+
 
 export const Contacts: React.FC = () => {
+  const location = useLocation();
+
+  React.useEffect(() => {
+    const sectionTitle = document.getElementById('contacts');
+    if (sectionTitle) {
+      sectionTitle.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [location.pathname]);
+ 
+
+
   return (
     <StyledContacts>
       <Container>
         <SectionTitle>
-          <SectionTitleLink href="#">
+          <SectionTitleLink id="contacts" href="#">
             <StyledSlash>/</StyledSlash>contacts
           </SectionTitleLink>
         </SectionTitle>

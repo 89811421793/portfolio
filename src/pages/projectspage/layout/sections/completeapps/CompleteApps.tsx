@@ -12,15 +12,26 @@ import { StyledHash } from "../../../../../components/StyledHash";
 import { StyledSlash } from "../../../../../components/StyledSlash";
 import { theme } from "../../../../../styles/Theme";
 import { SmallProjects } from "../smallprojects/SmallProjects";
+import { useLocation } from 'react-router-dom';
+
 
 
 export const CompleteApps: React.FC = () => {
+  const location = useLocation();
+
+  React.useLayoutEffect(() => {
+    const sectionTitle = document.getElementById('projects');
+    if (sectionTitle) {
+      sectionTitle.scrollIntoView();
+    }
+  }, [location.pathname]);
+
 
   return (
     <StyledProjects>
       <Container>
         <SectionTitle>
-          <SectionTitleLink  href="#">
+          <SectionTitleLink id="projects" href="#">
             <StyledSlash>/</StyledSlash>projects
           </SectionTitleLink>
         </SectionTitle>

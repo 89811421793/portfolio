@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import aboutimg from "../../../../../assets/images/AboutImg.png";
 import { Container } from "../../../../../components/Container";
@@ -7,13 +7,26 @@ import { SectionTitle } from "../../../../../components/SectionTitle";
 import { StyledSlash } from "../../../../../components/StyledSlash";
 import { AboutSkills } from "../skills/AboutSkills";
 import { MyFunFacts } from "../myfunfacts/MyFunFacts";
+import { useLocation } from 'react-router-dom';
+
 
 export const AboutInfo: React.FC = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    const sectionTitle = document.querySelector('#about-me');
+    if (sectionTitle) {
+      sectionTitle.scrollIntoView();
+    }
+  }, [location.pathname]);
+ 
+
+
   return (
     <StyledAbout>
       <Container>
         <SectionTitle>
-          <SectionTitleLink href="#">
+          <SectionTitleLink  href="#" id="about-me">
             <StyledSlash>/</StyledSlash>about-me
           </SectionTitleLink>
         </SectionTitle>
