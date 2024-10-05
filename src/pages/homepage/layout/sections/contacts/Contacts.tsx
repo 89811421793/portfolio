@@ -5,16 +5,19 @@ import { Icon } from "../../../../../components/icon/Icon";
 import { SectionTitle } from "../../../../../components/SectionTitle";
 import { StyledHash } from "../../../../../components/StyledHash";
 import { theme } from "../../../../../styles/Theme";
+import { Link } from "react-router-dom";
 
 export const Contacts: React.FC = () => {
   return (
     <StyledContacts>
       <Container>
         <SectionTitle>
+          <Link to='/contacts'>
           <SectionTitleLink href="#">
             <StyledHash>#</StyledHash>
             contacts
           </SectionTitleLink>
+          </Link>
         </SectionTitle>
         <FlexContainer>
           <MessageInvitation>

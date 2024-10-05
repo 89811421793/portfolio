@@ -6,15 +6,18 @@ import { Button } from "../../../../../components/Button";
 import { Container } from "../../../../../components/Container";
 import { StyledHash } from "../../../../../components/StyledHash";
 import { theme } from "../../../../../styles/Theme";
+import { Link } from "react-router-dom";
 
 export const About: React.FC = () => {
   return (
     <StyledAbout>
       <Container>
         <SectionTitle>
+          <Link to='/about'>
           <SectionTitleLink href="#">
             <StyledHash>#</StyledHash>about-me
           </SectionTitleLink>
+          </Link>
         </SectionTitle>
         <AboutWrapper>
           <AboutInfo>

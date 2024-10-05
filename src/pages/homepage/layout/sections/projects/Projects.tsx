@@ -9,6 +9,7 @@ import { FlexWrapper } from "../../../../../components/FlexWrapper";
 import { Container } from "../../../../../components/Container";
 import { StyledHash } from "../../../../../components/StyledHash";
 import { theme } from "../../../../../styles/Theme";
+import { Link } from "react-router-dom";
 
 
 
@@ -19,11 +20,11 @@ export const Projects: React.FC = () => {
       <Container>
         <FlexContainer>
           <SectionTitle>
-          
+          <Link to='/projects'>
               <SectionTitleLink href="#">
                 <StyledHash>#</StyledHash>projects
               </SectionTitleLink>
-            
+              </Link>
           </SectionTitle>
           <ViewAllLink href="#">View all ~~&gt;</ViewAllLink>
         </FlexContainer>
