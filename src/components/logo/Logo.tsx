@@ -4,7 +4,7 @@ import { Icon } from "../icon/Icon";
 
 export const Logo: React.FC = () => {
   return (
-    <LogoContainer href="#">
+    <LogoContainer href="/">
       <Icon iconId={"union"} viewBox="0 0 25 14" />
       <LogoName>Elias</LogoName>
     </LogoContainer>
