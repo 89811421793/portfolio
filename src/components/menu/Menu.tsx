@@ -4,30 +4,24 @@ import { Langswitcher } from "../Langswitcher";
 import { theme } from "../../styles/Theme";
 
 export const Menu = (props: { menuItems: Array<string> }) => {
-
-
-
-
   return (
     <StyledMenu>
       <ul>
         {props.menuItems.map((tabItem, index) => {
           return (
             <li key={index}>
-              <StyledLink href='#'
-             
-             onClick={(e) => {
-                e.preventDefault();
-                const sectionId = tabItem.slice(1);
-                const section = document.getElementById(sectionId);
-                if (section) {
-                  section.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-              
-              >
+              <StyledLink
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const sectionId = tabItem.slice(1);
+                  const section = document.getElementById(sectionId);
+                  if (section) {
+                    section.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}>
                 <StyledHash>#</StyledHash>
-                {tabItem.slice(1)} 
+                {tabItem.slice(1)}
               </StyledLink>
             </li>
           );
@@ -57,9 +51,13 @@ const StyledLink = styled.a`
   font-size: 16px;
   line-height: 21px;
 
+   &:hover {   // или просто  :hover
+    color: ${theme.colors.font}; 
+    transition: .2s;
+  }
 `;
 
 const StyledHash = styled.span`
   color: ${theme.colors.accent};
-  margin-right: 1px; 
+  margin-right: 1px;
 `;

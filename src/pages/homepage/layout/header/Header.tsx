@@ -5,27 +5,16 @@ import { FlexWrapper } from "../../../../components/FlexWrapper";
 import { Menu } from "../../../../components/menu/Menu";
 import { Logo } from "../../../../components/logo/Logo";
 
-
-
-
 const items = ["#home", "#works", "#about-me", "#contacts"];
 
 export const Header: React.FC = () => {
 
-
-
-
-
-  return (
+ return (
     <StyledHeader>
       <Container>
       <FlexWrapper justify='space-between'>
       <Logo />
-      <Menu menuItems={items} 
-      
-      
-      
-      />
+      <Menu menuItems={items} />
       </FlexWrapper>
       </Container>
     </StyledHeader>
