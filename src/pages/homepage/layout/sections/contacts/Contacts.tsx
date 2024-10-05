@@ -11,7 +11,7 @@ export const Contacts: React.FC = () => {
   return (
     <StyledContacts>
       <Container>
-        <SectionTitle>
+        <SectionTitle id='contacts'>
           <Link to='/contacts'>
           <SectionTitleLink href="#">
             <StyledHash>#</StyledHash>

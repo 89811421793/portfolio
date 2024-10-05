@@ -12,7 +12,7 @@ export const About: React.FC = () => {
   return (
     <StyledAbout>
       <Container>
-        <SectionTitle>
+        <SectionTitle id='about-me'>
           <Link to='/about'>
           <SectionTitleLink href="#">
             <StyledHash>#</StyledHash>about-me

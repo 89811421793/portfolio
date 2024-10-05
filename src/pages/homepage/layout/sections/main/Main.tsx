@@ -13,12 +13,17 @@ import { Contacts } from "../contacts/Contacts";
 
 
 
+
 export const Main: React.FC = () => {
+  
+    
+
+
   return (
     <StyledMain>
       <Container>
         <FlexWrapper align="center" justify="space-around">
-          <ContentWrapper>
+          <ContentWrapper id='home'>
             <MainTitle>
               Elias is a <Skill>web designer</Skill> and{" "}
               <Skill>front-end developer</Skill>
@@ -53,7 +58,7 @@ export const Main: React.FC = () => {
           </AuthorCite>
         </QuoteGrid>
       </Container>
-      <Projects/>
+      <Projects />
       <Skills/>
       <About/>
       <Contacts/>

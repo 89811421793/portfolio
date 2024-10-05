@@ -7,15 +7,25 @@ import { Logo } from "../../../../components/logo/Logo";
 
 
 
+
 const items = ["#home", "#works", "#about-me", "#contacts"];
 
 export const Header: React.FC = () => {
+
+
+
+
+
   return (
     <StyledHeader>
       <Container>
       <FlexWrapper justify='space-between'>
       <Logo />
-      <Menu menuItems={items} />
+      <Menu menuItems={items} 
+      
+      
+      
+      />
       </FlexWrapper>
       </Container>
     </StyledHeader>

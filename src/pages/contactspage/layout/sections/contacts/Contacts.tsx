@@ -16,7 +16,7 @@ export const Contacts: React.FC = () => {
   React.useEffect(() => {
     const sectionTitle = document.getElementById('contacts');
     if (sectionTitle) {
-      sectionTitle.scrollIntoView({ behavior: 'smooth' });
+      sectionTitle.scrollIntoView();
     }
   }, [location.pathname]);
  

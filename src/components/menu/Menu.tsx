@@ -4,13 +4,28 @@ import { Langswitcher } from "../Langswitcher";
 import { theme } from "../../styles/Theme";
 
 export const Menu = (props: { menuItems: Array<string> }) => {
+
+
+
+
   return (
     <StyledMenu>
       <ul>
         {props.menuItems.map((tabItem, index) => {
           return (
             <li key={index}>
-              <StyledLink href="#">
+              <StyledLink href='#'
+             
+             onClick={(e) => {
+                e.preventDefault();
+                const sectionId = tabItem.slice(1);
+                const section = document.getElementById(sectionId);
+                if (section) {
+                  section.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              
+              >
                 <StyledHash>#</StyledHash>
                 {tabItem.slice(1)} 
               </StyledLink>

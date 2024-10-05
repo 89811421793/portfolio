@@ -15,11 +15,14 @@ import { Link } from "react-router-dom";
 
 
 export const Projects: React.FC = () => {
+
+
+
   return (
     <StyledProjects>
       <Container>
         <FlexContainer>
-          <SectionTitle>
+          <SectionTitle id='works'>
           <Link to='/projects'>
               <SectionTitleLink href="#">
                 <StyledHash>#</StyledHash>projects
