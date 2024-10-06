@@ -16,6 +16,7 @@ export const Skills: React.FC = () => {
             <StyledHash>#</StyledHash>skills
           </SectionTitleLink>
         </SectionTitle>
+        <EmptyBetween></EmptyBetween>
         <FlexWrapper align={"center"} justify={"space-around"}>
           <SkillsDecor></SkillsDecor>
           <SkillsGroup>
@@ -80,4 +81,22 @@ const SkillsDecor = styled.div`
 
 const SectionTitleLink = styled.a`
   color: ${theme.colors.font};
+
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 240px;
+    height: 1px;
+    background-color: ${theme.colors.accent};
+    position: absolute;
+    top: 55%;
+    left: 148px;
+    transform: translateY(-50%);
+  }
+`;
+
+const EmptyBetween = styled.div`
+  height: 40px;
 `;
