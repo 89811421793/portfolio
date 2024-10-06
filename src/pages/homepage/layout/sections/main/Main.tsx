@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import mainimg from "../../../../../assets/images/MainImg.png";
+import fivedotsimg from "../../../../../assets/images/Dots.png";
 import { FlexWrapper } from "../../../../../components/FlexWrapper";
 import { Button } from "../../../../../components/Button";
 import { Container } from "../../../../../components/Container";
@@ -26,14 +27,15 @@ export const Main: React.FC = () => {
             </Description>
             <StyledButton>Contact me!!</StyledButton>
           </ContentWrapper>
-          <figure>
+          <StyledFigure>
+            <DotsImage src={fivedotsimg}/>
             <MainImage src={mainimg} alt="" />
             <StyledFigcaption>
               <Square></Square>
               <Status>Currently working on</Status>{" "}
               <Portfolio>Portfolio</Portfolio>
             </StyledFigcaption>
-          </figure>
+          </StyledFigure>
         </FlexWrapper>
         <QuoteGrid>
           <Quotation>
@@ -73,6 +75,19 @@ const StyledMain = styled.section``;
 const MainImage = styled.img`
   width: 457px;
   height: 386px;
+`;
+
+const DotsImage = styled.img`
+width: 84px;
+height: 84px;
+position: absolute;
+bottom: 100px;
+right: 22px;
+`;
+
+const StyledFigure = styled.figure`
+  position: relative;
+  margin-left: 30px;
 `;
 
 const MainTitle = styled.h1`
@@ -202,3 +217,5 @@ const Status = styled.span`
   line-height: 21px;
   color: ${theme.colors.borderColor};
 `;
+
+
