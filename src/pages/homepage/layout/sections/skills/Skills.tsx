@@ -7,6 +7,8 @@ import { Container } from "../../../../../components/Container";
 import { StyledHash } from "../../../../../components/StyledHash";
 import { theme } from "../../../../../styles/Theme";
 import fivedotsimg from "../../../../../assets/images/Dots.png";
+import rect from "../../../../../assets/images/rectangle.png";
+import logosign from "../../../../../assets/images/Logo.png";
 
 
 export const Skills: React.FC = () => {
@@ -23,6 +25,9 @@ export const Skills: React.FC = () => {
           <SkillsDecor>
             <DotsImageFirst src={fivedotsimg} alt=''/>
             <DotsImageSecond src={fivedotsimg} alt=''/>
+            <DecorSquareBig src={rect} alt=''/>
+            <DecorSquareSmall src={rect} alt=''/>
+            <LogoImage src={logosign} alt=''/>
           </SkillsDecor>
           <SkillsGroup>
             <Skill
@@ -81,7 +86,7 @@ const SkillsDecor = styled.div`
 position:relative;
   min-width: 350px;
   height: 282px;
-  margin-right: 50px;
+  margin-right: 65px;
 `;
 
 const DotsImageFirst = styled.img`
@@ -96,11 +101,33 @@ const DotsImageSecond = styled.img`
 width: 63px;
 height: 63px;
 position: absolute;
-bottom: 90px;
+bottom: 120px;
 right: 90px;
 `;
 
+const DecorSquareBig = styled.img`
+width: 91px;
+height: 91px;
+position: absolute;
+top: -46px;
+right: 25px;
+`;
 
+const DecorSquareSmall = styled.img`
+width: 52px;
+height: 52px;
+position: absolute;
+bottom: 60px;
+right: -15px;
+`;
+
+const LogoImage = styled.img`
+width: 113px;
+height: 113px;
+position: absolute;
+bottom: 12px;
+left: 44px;
+`;
 
 const SectionTitleLink = styled.a`
   color: ${theme.colors.font};
