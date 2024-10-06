@@ -5,10 +5,15 @@ import { Container } from "../../../../../components/Container";
 import { SmallProject } from "./smallproject/SmallProject";
 import { StyledHash } from "../../../../../components/StyledHash";
 import { theme } from "../../../../../styles/Theme";
+import fivedotsimg from "../../../../../assets/images/Dots.png";
+import rect from "../../../../../assets/images/rectangle.png";
 
 export const SmallProjects: React.FC = () => {
   return (
     <StyledProjects>
+      <DecorRect src={rect} alt=''/>
+      <DotsImageLeft src={fivedotsimg} alt=''/>
+      <DotsImageRight src={fivedotsimg} alt=''/>
       <Container>
         <SectionTitle>
           <SectionTitleLink href="#">
@@ -70,7 +75,10 @@ export const SmallProjects: React.FC = () => {
   );
 };
 
-const StyledProjects = styled.section``;
+const StyledProjects = styled.section`
+  position: relative;
+  min-height: 50vh;
+`;
 
 const FlexContainer = styled.div`
   display: flex;
@@ -81,4 +89,28 @@ const FlexContainer = styled.div`
 
 const SectionTitleLink = styled.a`
   color: ${theme.colors.font};
+`;
+
+
+const DecorRect = styled.img`
+width: 155px;
+height: 155px;
+position: absolute;
+top: -2px;
+left: -82px;
+`;
+
+const DotsImageLeft = styled.img`
+width: 103px;
+height: 103px;
+position: absolute;
+bottom: 210px;
+left: -50px;
+`;
+const DotsImageRight = styled.img`
+width: 103px;
+height: 103px;
+position: absolute;
+top: 140px;
+right: -18px;
 `;

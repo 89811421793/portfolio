@@ -5,6 +5,8 @@ import protectX from "./../../../../../assets/images/protectX.jpeg";
 import kahoot from "./../../../../../assets/images/kahoot.png";
 import cat from "./../../../../../assets/images/kotik.png";
 import elias from "./../../../../../assets/images/Elias.png";
+import fourdotsimg from "../../../../../assets/images/FDots.png";
+import rect from "../../../../../assets/images/rectangle.png"
 import { SectionTitle } from "../../../../../components/SectionTitle";
 import { Container } from "../../../../../components/Container";
 import { Project } from "../../../../homepage/layout/sections/projects/project/Project";
@@ -12,23 +14,22 @@ import { StyledHash } from "../../../../../components/StyledHash";
 import { StyledSlash } from "../../../../../components/StyledSlash";
 import { theme } from "../../../../../styles/Theme";
 import { SmallProjects } from "../smallprojects/SmallProjects";
-import { useLocation } from 'react-router-dom';
-
-
+import { useLocation } from "react-router-dom";
 
 export const CompleteApps: React.FC = () => {
   const location = useLocation();
 
   React.useLayoutEffect(() => {
-    const sectionTitle = document.getElementById('projects');
+    const sectionTitle = document.getElementById("projects");
     if (sectionTitle) {
       sectionTitle.scrollIntoView();
     }
   }, [location.pathname]);
 
-
   return (
     <StyledProjects>
+      <FDotsImage src={fourdotsimg} alt="" />
+      <DecorRect src={rect} alt=''/>
       <Container>
         <SectionTitle>
           <SectionTitleLink id="projects" href="#">
@@ -81,15 +82,13 @@ export const CompleteApps: React.FC = () => {
           />
         </ProjectsContainer>
       </Container>
-      <SmallProjects/>
+      <SmallProjects />
     </StyledProjects>
-    
   );
 };
 
-
-
 const StyledProjects = styled.section`
+  position: relative;
   min-height: 40vh;
 `;
 
@@ -113,4 +112,20 @@ const ProjectsListText = styled.span`
 
 const SectionTitleLink = styled.a`
   color: ${theme.colors.font};
+`;
+
+const FDotsImage = styled.img`
+  width: 109px;
+  height: 49px;
+  position: absolute;
+  top: 300px;
+  left: -10px;
+`;
+
+const DecorRect = styled.img`
+width: 155px;
+height: 155px;
+position: absolute;
+top: 155px;
+right: -55px;
 `;
