@@ -10,6 +10,7 @@ import { Container } from "../../../../../components/Container";
 import { StyledHash } from "../../../../../components/StyledHash";
 import { theme } from "../../../../../styles/Theme";
 import { Link } from "react-router-dom";
+import rect from "../../../../../assets/images/rectangle.png";
 
 export const Projects: React.FC = () => {
   return (
@@ -51,11 +52,14 @@ export const Projects: React.FC = () => {
           />
         </FlexWrapper>
       </Container>
+    <DecorSquare src={rect} alt=''/>
     </StyledProjects>
   );
 };
 
-const StyledProjects = styled.section``;
+const StyledProjects = styled.section`
+position: relative;
+`;
 
 const FlexContainer = styled.div`
   display: flex;
@@ -89,4 +93,13 @@ const SectionTitleLink = styled.a`
     left:185px; 
     transform: translateY(-50%);
   }
+`;
+
+const DecorSquare = styled.img`
+width: 155px;
+height: 155px;
+position: absolute;
+bottom:135px;
+right: -80px;
+
 `;
