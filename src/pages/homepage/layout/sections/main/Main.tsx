@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import mainimg from "../../../../../assets/images/MainImg.png";
 import fivedotsimg from "../../../../../assets/images/Dots.png";
+import rect from "../../../../../assets/images/rectangle.png";
 import { FlexWrapper } from "../../../../../components/FlexWrapper";
 import { Button } from "../../../../../components/Button";
 import { Container } from "../../../../../components/Container";
@@ -48,6 +49,7 @@ export const Main: React.FC = () => {
               />
             </QuoteMark>
             <p>With great power comes great electricity bill</p>
+            <Rect src={rect} alt=''/>
           </Quotation>
           <AuthorCite>
             <CiteMark>
@@ -62,7 +64,7 @@ export const Main: React.FC = () => {
           </AuthorCite>
         </QuoteGrid>
       </Container>
-      <Projects />
+     <Projects />
       <Skills />
       <About />
       <Contacts />
@@ -89,6 +91,15 @@ const StyledFigure = styled.figure`
   position: relative;
   margin-left: 30px;
 `;
+
+const Rect = styled.img`
+width: 91px;
+height: 91px;
+position: absolute;
+top:10px;
+right: -400px;
+`;
+
 
 const MainTitle = styled.h1`
   font-family: Fira Code;
