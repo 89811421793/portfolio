@@ -110,4 +110,18 @@ const EmailLink = styled.a`
 
 const SectionTitleLink = styled.a`
   color: ${theme.colors.font};
+
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 128px;
+    height: 1px;
+    background-color: ${theme.colors.accent};
+    position: absolute;
+    top: 55%;
+    left: 186px;
+    transform: translateY(-50%);
+  }
 `;
