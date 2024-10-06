@@ -9,7 +9,6 @@ import { AboutSkills } from "../skills/AboutSkills";
 import { MyFunFacts } from "../myfunfacts/MyFunFacts";
 import { useLocation } from 'react-router-dom';
 
-
 export const AboutInfo: React.FC = () => {
   const location = useLocation();
 
@@ -20,8 +19,6 @@ export const AboutInfo: React.FC = () => {
     }
   }, [location.pathname]);
  
-
-
   return (
     <StyledAbout>
       <Container>
@@ -93,7 +90,6 @@ const AboutText = styled.p`
   margin-bottom: 50px;
 `;
 
-
 const AboutImage = styled.img`
   width: 339px;
   height: 507px;
@@ -110,7 +106,6 @@ const AboutImageWrapper = styled.div`
     height: 1px;
     left: 47px;
     border-bottom: 1px solid ${theme.colors.accent};
-    
   }
 `;
 

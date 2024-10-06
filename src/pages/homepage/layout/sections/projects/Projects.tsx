@@ -62,7 +62,7 @@ const FlexContainer = styled.div`
   padding-right: 20px;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 15px;
+  margin-bottom: 50px;
 `;
 
 const ViewAllLink = styled.a`
@@ -75,4 +75,18 @@ const ViewAllLink = styled.a`
 
 const SectionTitleLink = styled.a`
   color: ${theme.colors.font};
+
+  position: relative; 
+
+  &::before { 
+    content: "";
+    display: block;
+    width: 511px;
+    height: 1px; 
+    background-color: ${theme.colors.accent};
+    position: absolute;
+    top: 55%; 
+    left:185px; 
+    transform: translateY(-50%);
+  }
 `;
