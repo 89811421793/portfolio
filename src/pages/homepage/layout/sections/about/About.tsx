@@ -89,7 +89,22 @@ const StyledButton = styled(Button)`
 
 const SectionTitleLink = styled.a`
   color: ${theme.colors.font};
+
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 326px;
+    height: 1px;
+    background-color: ${theme.colors.accent};
+    position: absolute;
+    top: 55%;
+    left: 190px;
+    transform: translateY(-50%);
+  }
 `;
+
 
 
 
