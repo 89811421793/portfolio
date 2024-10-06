@@ -85,16 +85,16 @@ position:relative;
 `;
 
 const DotsImageFirst = styled.img`
-width: 84px;
-height: 84px;
+width: 63px;
+height: 63px;
 position: absolute;
 top: -14px;
 left: 33px;
 
 `;
 const DotsImageSecond = styled.img`
-width: 84px;
-height: 84px;
+width: 63px;
+height: 63px;
 position: absolute;
 bottom: 90px;
 right: 90px;

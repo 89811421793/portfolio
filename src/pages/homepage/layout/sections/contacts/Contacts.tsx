@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import fivedotsimg from "../../../../../assets/images/Dots.png";
 import { Container } from "../../../../../components/Container";
 import { Icon } from "../../../../../components/icon/Icon";
 import { SectionTitle } from "../../../../../components/SectionTitle";
@@ -37,11 +38,22 @@ export const Contacts: React.FC = () => {
           </MyContacts>
         </FlexContainer>
       </Container>
+<DotsImage src={fivedotsimg} alt=''/>
     </StyledContacts>
   );
 };
 
-const StyledContacts = styled.section``;
+const StyledContacts = styled.section`
+position: relative
+`;
+
+const DotsImage = styled.img`
+width: 103px;
+height: 103px;
+position: absolute;
+bottom: 62px;
+left: -52px;
+`;
 
 const FlexContainer = styled.div`
   display: flex;
