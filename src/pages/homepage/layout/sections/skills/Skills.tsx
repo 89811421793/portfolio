@@ -6,6 +6,8 @@ import { FlexWrapper } from "../../../../../components/FlexWrapper";
 import { Container } from "../../../../../components/Container";
 import { StyledHash } from "../../../../../components/StyledHash";
 import { theme } from "../../../../../styles/Theme";
+import fivedotsimg from "../../../../../assets/images/Dots.png";
+
 
 export const Skills: React.FC = () => {
   return (
@@ -18,7 +20,10 @@ export const Skills: React.FC = () => {
         </SectionTitle>
         <EmptyBetween></EmptyBetween>
         <FlexWrapper align={"center"} justify={"space-around"}>
-          <SkillsDecor></SkillsDecor>
+          <SkillsDecor>
+            <DotsImageFirst src={fivedotsimg} alt=''/>
+            <DotsImageSecond src={fivedotsimg} alt=''/>
+          </SkillsDecor>
           <SkillsGroup>
             <Skill
               title={"Languages"}
@@ -73,11 +78,29 @@ const SkillsGroup = styled.div`
 `;
 
 const SkillsDecor = styled.div`
+position:relative;
   min-width: 350px;
   height: 282px;
-  border: 1px dashed;
   margin-right: 50px;
 `;
+
+const DotsImageFirst = styled.img`
+width: 84px;
+height: 84px;
+position: absolute;
+top: -14px;
+left: 33px;
+
+`;
+const DotsImageSecond = styled.img`
+width: 84px;
+height: 84px;
+position: absolute;
+bottom: 90px;
+right: 90px;
+`;
+
+
 
 const SectionTitleLink = styled.a`
   color: ${theme.colors.font};
@@ -100,3 +123,5 @@ const SectionTitleLink = styled.a`
 const EmptyBetween = styled.div`
   height: 40px;
 `;
+
+
