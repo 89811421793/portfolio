@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import mainimg from "../../../../../assets/images/MainImg.png";
+import logosign from "../../../../../assets/images/Logo.png";
 import fivedotsimg from "../../../../../assets/images/Dots.png";
 import rect from "../../../../../assets/images/rectangle.png";
 import { FlexWrapper } from "../../../../../components/FlexWrapper";
@@ -29,6 +30,7 @@ export const Main: React.FC = () => {
             <StyledButton>Contact me!!</StyledButton>
           </ContentWrapper>
           <StyledFigure>
+            <LogoEmblemImage src={logosign} alt=''/>
             <DotsImage src={fivedotsimg} alt=""/>
             <MainImage src={mainimg} alt="" />
             <StyledFigcaption>
@@ -86,6 +88,16 @@ position: absolute;
 bottom: 100px;
 right: 22px;
 `;
+
+const LogoEmblemImage = styled.img`
+width: 155px;
+height: 155px;
+position: absolute;
+z-index: -1;
+top: 86px;
+left: -15px;
+`;
+
 
 const StyledFigure = styled.figure`
   position: relative;
