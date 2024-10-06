@@ -60,6 +60,7 @@ const AboutWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 20px;
+
 `;
 
 const InfoWrapper = styled.div`
@@ -95,8 +96,11 @@ const AboutImage = styled.img`
   height: 507px;
 `;
 
+
+
 const AboutImageWrapper = styled.div`
   position: relative;
+
   &::after {
     content: '';
     display: block;

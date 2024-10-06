@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import aboutimg from "../../../../../assets/images/AboutImg.png";
+import fivedotsimg from "../../../../../assets/images/Dots.png"
+import fourdotsimg from "../../../../../assets/images/FDots.png"
 import { SectionTitle } from "../../../../../components/SectionTitle";
 import { Button } from "../../../../../components/Button";
 import { Container } from "../../../../../components/Container";
@@ -38,10 +40,14 @@ export const About: React.FC = () => {
             </Link>
           </AboutInfo>
           <AboutImageWrapper>
-          <AboutImage src={aboutimg} alt="" />
+            <DotsImageFirst src={fivedotsimg} alt=''/>
+            <AboutImage src={aboutimg} alt="" />
+          <DotsImageSecond src={fivedotsimg} alt=''/>
+          <FDotsImage src={fourdotsimg} alt=''/>
           </AboutImageWrapper>
         </AboutWrapper>
       </Container>
+      
     </StyledAbout>
   );
 };
@@ -77,6 +83,30 @@ const AboutText = styled.p`
   max-width: 515px;
   margin-bottom: 5px;
 `;
+
+const DotsImageFirst = styled.img`
+width: 84px;
+height: 84px;
+position: absolute;
+top: 61px;
+`;  
+
+const DotsImageSecond = styled.img`
+width: 103px;
+height: 103px;
+position: absolute;
+bottom: 126px;
+right: -250px;
+`; 
+
+const FDotsImage = styled.img`
+width: 104px;
+height: 56px;
+position: absolute;
+bottom:172px;
+right: 15px;
+`;
+
 const AboutImage = styled.img`
   width: 339px;
   height: 507px;

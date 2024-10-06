@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import mainimg from "../../../../../assets/images/MainImg.png";
 import fivedotsimg from "../../../../../assets/images/Dots.png";
-import decorsquareimg from "../../../../../assets/images/decorsquare.png";
 import { FlexWrapper } from "../../../../../components/FlexWrapper";
 import { Button } from "../../../../../components/Button";
 import { Container } from "../../../../../components/Container";
@@ -62,7 +61,6 @@ export const Main: React.FC = () => {
             <span>- Dr. Who</span>
           </AuthorCite>
         </QuoteGrid>
-        {/* <DecorSquareImage src={decorsquareimg}/> */}
       </Container>
       <Projects />
       <Skills />
@@ -91,9 +89,6 @@ const StyledFigure = styled.figure`
   position: relative;
   margin-left: 30px;
 `;
-
-const DecorSquareImage = styled.img``;
-
 
 const MainTitle = styled.h1`
   font-family: Fira Code;
