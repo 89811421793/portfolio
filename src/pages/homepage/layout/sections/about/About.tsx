@@ -3,6 +3,7 @@ import styled from "styled-components";
 import aboutimg from "../../../../../assets/images/AboutImg.png";
 import fivedotsimg from "../../../../../assets/images/Dots.png"
 import fourdotsimg from "../../../../../assets/images/FDots.png"
+import rect from "../../../../../assets/images/rectangle.png"
 import { SectionTitle } from "../../../../../components/SectionTitle";
 import { Button } from "../../../../../components/Button";
 import { Container } from "../../../../../components/Container";
@@ -13,6 +14,7 @@ import { Link } from "react-router-dom";
 export const About: React.FC = () => {
   return (
     <StyledAbout>
+      <DecorRect src={rect} alt=''/>
       <Container>
         <SectionTitle id="about-me">
           <Link to="/about">
@@ -52,7 +54,18 @@ export const About: React.FC = () => {
   );
 };
 
-const StyledAbout = styled.section``;
+const StyledAbout = styled.section`
+min-height: 50vh;
+position:relative;
+`;
+
+const DecorRect = styled.img`
+width: 155px;
+height: 155px;
+position: absolute;
+top: 222px;
+left: -80px;
+`;
 
 const AboutWrapper = styled.div`
   display: grid;
@@ -105,6 +118,14 @@ height: 56px;
 position: absolute;
 bottom:172px;
 right: 15px;
+`;
+
+const DecorSquare = styled.img`
+width: 155px;
+height: 155px;
+position: absolute;
+bottom:135px;
+right: -145px;
 `;
 
 const AboutImage = styled.img`

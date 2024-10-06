@@ -74,7 +74,9 @@ export const Main: React.FC = () => {
   );
 };
 
-const StyledMain = styled.section``;
+const StyledMain = styled.section`
+min-height: 50vh;
+`;
 
 const MainImage = styled.img`
   width: 457px;
@@ -109,7 +111,7 @@ width: 91px;
 height: 91px;
 position: absolute;
 top:10px;
-right: -400px;
+right: -460px;
 `;
 
 

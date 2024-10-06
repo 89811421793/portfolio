@@ -51,7 +51,9 @@ export const Skills: React.FC = () => {
   );
 };
 
-const StyledSkills = styled.section``;
+const StyledSkills = styled.section`
+min-height: 50vh;
+`;
 
 const SkillsGroup = styled.div`
   display: grid;

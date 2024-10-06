@@ -58,6 +58,7 @@ export const Projects: React.FC = () => {
 };
 
 const StyledProjects = styled.section`
+min-height: 50vh;
 position: relative;
 `;
 
@@ -100,6 +101,5 @@ width: 155px;
 height: 155px;
 position: absolute;
 bottom:135px;
-right: -80px;
-
+right: -145px;
 `;

@@ -44,6 +44,7 @@ export const Contacts: React.FC = () => {
 };
 
 const StyledContacts = styled.section`
+min-height: 30vh;
 position: relative
 `;
 
