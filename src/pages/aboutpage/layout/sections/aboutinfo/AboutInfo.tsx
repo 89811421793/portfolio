@@ -46,7 +46,9 @@ export const AboutInfo: React.FC = () => {
               the newest technologies and frameworks.
             </AboutText>
           </InfoWrapper>
+         <AboutImageWrapper>
           <AboutImage src={aboutimg} alt="About Elias" />
+          </AboutImageWrapper>
         </AboutWrapper>
       </Container>
       <AboutSkills/>
@@ -91,9 +93,25 @@ const AboutText = styled.p`
   margin-bottom: 50px;
 `;
 
+
 const AboutImage = styled.img`
   width: 339px;
   height: 507px;
+`;
+
+const AboutImageWrapper = styled.div`
+  position: relative;
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 271px;
+    height: 1px;
+    left: 47px;
+    border-bottom: 1px solid ${theme.colors.accent};
+    
+  }
 `;
 
 const WhoAmIText = styled.span`

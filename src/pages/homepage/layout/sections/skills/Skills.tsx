@@ -7,17 +7,14 @@ import { Container } from "../../../../../components/Container";
 import { StyledHash } from "../../../../../components/StyledHash";
 import { theme } from "../../../../../styles/Theme";
 
-
 export const Skills: React.FC = () => {
   return (
     <StyledSkills>
       <Container>
         <SectionTitle>
-        
-            <SectionTitleLink href="#">
-              <StyledHash>#</StyledHash>skills
-            </SectionTitleLink>
-          
+          <SectionTitleLink href="#">
+            <StyledHash>#</StyledHash>skills
+          </SectionTitleLink>
         </SectionTitle>
         <FlexWrapper align={"center"} justify={"space-around"}>
           <SkillsDecor></SkillsDecor>

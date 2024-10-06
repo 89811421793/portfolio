@@ -38,7 +38,8 @@ const Container = styled.div`
 
 const ArrowDown = styled.div`
   font-size: 16px; 
-  margin-left: 2px; 
+  margin-left: 2px;
+  font-weight: 300; 
 `;
 
 const Dropdown = styled.div<{ isOpen: boolean }>`

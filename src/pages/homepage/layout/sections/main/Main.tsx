@@ -11,19 +11,12 @@ import { Skills } from "../skills/Skills";
 import { About } from "../about/About";
 import { Contacts } from "../contacts/Contacts";
 
-
-
-
 export const Main: React.FC = () => {
-  
-    
-
-
   return (
     <StyledMain>
       <Container>
         <FlexWrapper align="center" justify="space-around">
-          <ContentWrapper id='home'>
+          <ContentWrapper id="home">
             <MainTitle>
               Elias is a <Skill>web designer</Skill> and{" "}
               <Skill>front-end developer</Skill>
@@ -42,26 +35,35 @@ export const Main: React.FC = () => {
             </StyledFigcaption>
           </figure>
         </FlexWrapper>
-
         <QuoteGrid>
           <Quotation>
             <QuoteMark>
-              <Icon iconId="quotes" width="40" height="40" viewBox="0 0 38 40" />
+              <Icon
+                iconId="quotes"
+                width="40"
+                height="40"
+                viewBox="0 0 38 40"
+              />
             </QuoteMark>
             <p>With great power comes great electricity bill</p>
           </Quotation>
           <AuthorCite>
             <CiteMark>
-              <Icon iconId="quotes" width="40" height="40" viewBox="0 0 38 40"/>
+              <Icon
+                iconId="quotes"
+                width="40"
+                height="40"
+                viewBox="0 0 38 40"
+              />
             </CiteMark>
             <span>- Dr. Who</span>
           </AuthorCite>
         </QuoteGrid>
       </Container>
       <Projects />
-      <Skills/>
-      <About/>
-      <Contacts/>
+      <Skills />
+      <About />
+      <Contacts />
     </StyledMain>
   );
 };
