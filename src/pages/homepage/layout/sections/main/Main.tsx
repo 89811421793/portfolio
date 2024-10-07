@@ -30,8 +30,8 @@ export const Main: React.FC = () => {
             <StyledButton>Contact me!!</StyledButton>
           </ContentWrapper>
           <StyledFigure>
-            <LogoEmblemImage src={logosign} alt=''/>
-            <DotsImage src={fivedotsimg} alt=""/>
+            <LogoEmblemImage src={logosign} alt="" />
+            <DotsImage src={fivedotsimg} alt="" />
             <MainImage src={mainimg} alt="" />
             <StyledFigcaption>
               <Square></Square>
@@ -51,7 +51,7 @@ export const Main: React.FC = () => {
               />
             </QuoteMark>
             <p>With great power comes great electricity bill</p>
-            <Rect src={rect} alt=''/>
+            <Rect src={rect} alt="" />
           </Quotation>
           <AuthorCite>
             <CiteMark>
@@ -66,7 +66,7 @@ export const Main: React.FC = () => {
           </AuthorCite>
         </QuoteGrid>
       </Container>
-     <Projects />
+      <Projects />
       <Skills />
       <About />
       <Contacts />
@@ -75,7 +75,7 @@ export const Main: React.FC = () => {
 };
 
 const StyledMain = styled.section`
-min-height: 50vh;
+  min-height: 50vh;
 `;
 
 const MainImage = styled.img`
@@ -84,22 +84,21 @@ const MainImage = styled.img`
 `;
 
 const DotsImage = styled.img`
-width: 84px;
-height: 84px;
-position: absolute;
-bottom: 100px;
-right: 22px;
+  width: 84px;
+  height: 84px;
+  position: absolute;
+  bottom: 23%;
+  right: 3%;
 `;
 
 const LogoEmblemImage = styled.img`
-width: 155px;
-height: 155px;
-position: absolute;
-z-index: -1;
-top: 86px;
-left: -15px;
+  width: 155px;
+  height: 155px;
+  position: absolute;
+  z-index: -1;
+  top: 20%;
+  left: -3%;
 `;
-
 
 const StyledFigure = styled.figure`
   position: relative;
@@ -107,13 +106,12 @@ const StyledFigure = styled.figure`
 `;
 
 const Rect = styled.img`
-width: 91px;
-height: 91px;
-position: absolute;
-top:10px;
-right: -460px;
+  width: 91px;
+  height: 91px;
+  position: absolute;
+  top: 15%;
+  right: -50%;
 `;
-
 
 const MainTitle = styled.h1`
   font-family: Fira Code;
@@ -242,5 +240,3 @@ const Status = styled.span`
   line-height: 21px;
   color: ${theme.colors.borderColor};
 `;
-
-

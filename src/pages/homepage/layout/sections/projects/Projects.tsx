@@ -52,14 +52,14 @@ export const Projects: React.FC = () => {
           />
         </FlexWrapper>
       </Container>
-    <DecorSquare src={rect} alt=''/>
+      <DecorSquare src={rect} alt="" />
     </StyledProjects>
   );
 };
 
 const StyledProjects = styled.section`
-min-height: 50vh;
-position: relative;
+  min-height: 50vh;
+  position: relative;
 `;
 
 const FlexContainer = styled.div`
@@ -81,25 +81,25 @@ const ViewAllLink = styled.a`
 const SectionTitleLink = styled.a`
   color: ${theme.colors.font};
 
-  position: relative; 
+  position: relative;
 
-  &::before { 
+  &::before {
     content: "";
     display: block;
     width: 511px;
-    height: 1px; 
+    height: 1px;
     background-color: ${theme.colors.accent};
     position: absolute;
-    top: 55%; 
-    left:185px; 
+    top: 55%;
+    left: 185px;
     transform: translateY(-50%);
   }
 `;
 
 const DecorSquare = styled.img`
-width: 155px;
-height: 155px;
-position: absolute;
-bottom:135px;
-right: -145px;
+  width: 155px;
+  height: 155px;
+  position: absolute;
+  bottom: 25%;
+  right: -10%;
 `;

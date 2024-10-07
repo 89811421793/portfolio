@@ -91,26 +91,26 @@ const SectionTitleLink = styled.a`
   color: ${theme.colors.font};
 `;
 
-
 const DecorRect = styled.img`
 width: 155px;
 height: 155px;
 position: absolute;
-top: -2px;
-left: -82px;
+top: -1%;
+left: -3%;
 `;
 
 const DotsImageLeft = styled.img`
 width: 103px;
 height: 103px;
 position: absolute;
-bottom: 210px;
-left: -50px;
+bottom: 22%;
+left: -3%;
 `;
+
 const DotsImageRight = styled.img`
 width: 103px;
 height: 103px;
 position: absolute;
-top: 140px;
-right: -18px;
+top: 16%;
+right: -1%;
 `;

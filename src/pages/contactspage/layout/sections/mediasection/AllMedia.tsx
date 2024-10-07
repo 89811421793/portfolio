@@ -10,11 +10,11 @@ import fourdotsimg from "../../../../../assets/images/FDots.png";
 export const AllMedia: React.FC = () => {
   return (
     <StyledMedia>
-      <FDotsImage src={fourdotsimg} alt=''/>
+      <FDotsImage src={fourdotsimg} alt="" />
       <Container>
         <SectionTitle>
-          <SectionTitleLink href='#'>
-          <StyledHash>#</StyledHash>all-media
+          <SectionTitleLink href="#">
+            <StyledHash>#</StyledHash>all-media
           </SectionTitleLink>
         </SectionTitle>
         <MediaItem>
@@ -54,11 +54,10 @@ const SectionTitleLink = styled.a`
   color: ${theme.colors.font};
 `;
 
-
 const FDotsImage = styled.img`
   width: 109px;
   height: 49px;
   position: absolute;
- top: 15%;
- left: -3%; 
+  top: 15%;
+  left: -3%;
 `;

@@ -33,14 +33,14 @@ export const AboutSkills: React.FC = () => {
           />
         </SkillsGroup>
       </Container>
-      <DotsImage src={fivedotsimg} alt=''/>
+      <DotsImage src={fivedotsimg} alt="" />
     </StyledSkills>
   );
 };
 
 const StyledSkills = styled.section`
-min-height: 30vh;
-position: relative;
+  min-height: 30vh;
+  position: relative;
 `;
 
 const SkillsGroup = styled.div`

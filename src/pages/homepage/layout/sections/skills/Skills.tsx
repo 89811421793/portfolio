@@ -10,7 +10,6 @@ import fivedotsimg from "../../../../../assets/images/Dots.png";
 import rect from "../../../../../assets/images/rectangle.png";
 import logosign from "../../../../../assets/images/Logo.png";
 
-
 export const Skills: React.FC = () => {
   return (
     <StyledSkills>
@@ -23,11 +22,11 @@ export const Skills: React.FC = () => {
         <EmptyBetween></EmptyBetween>
         <FlexWrapper align={"center"} justify={"space-around"}>
           <SkillsDecor>
-            <DotsImageFirst src={fivedotsimg} alt=''/>
-            <DotsImageSecond src={fivedotsimg} alt=''/>
-            <DecorSquareBig src={rect} alt=''/>
-            <DecorSquareSmall src={rect} alt=''/>
-            <LogoImage src={logosign} alt=''/>
+            <DotsImageFirst src={fivedotsimg} alt="" />
+            <DotsImageSecond src={fivedotsimg} alt="" />
+            <DecorSquareBig src={rect} alt="" />
+            <DecorSquareSmall src={rect} alt="" />
+            <LogoImage src={logosign} alt="" />
           </SkillsDecor>
           <SkillsGroup>
             <Skill
@@ -52,7 +51,7 @@ export const Skills: React.FC = () => {
 };
 
 const StyledSkills = styled.section`
-min-height: 50vh;
+  min-height: 50vh;
 `;
 
 const SkillsGroup = styled.div`
@@ -72,7 +71,7 @@ const SkillsGroup = styled.div`
   & > :nth-child(3) {
     grid-column: 2;
     grid-row: 2;
-    margin-top: -20px; /* Уменьшение расстояния между other и databases */
+    margin-top: -20px; 
   }
   & > :nth-child(4) {
     grid-column: 3;
@@ -85,50 +84,49 @@ const SkillsGroup = styled.div`
 `;
 
 const SkillsDecor = styled.div`
-position:relative;
+  position: relative;
   min-width: 350px;
   height: 282px;
   margin-right: 65px;
 `;
 
 const DotsImageFirst = styled.img`
-width: 63px;
-height: 63px;
-position: absolute;
-top: -14px;
-left: 33px;
-
+  width: 63px;
+  height: 63px;
+  position: absolute;
+  top: -8%;
+  left: 10%;
 `;
 const DotsImageSecond = styled.img`
-width: 63px;
-height: 63px;
-position: absolute;
-bottom: 120px;
-right: 90px;
+  width: 63px;
+  height: 63px;
+  position: absolute;
+  bottom: 40%;
+  right: 25%;
 `;
 
 const DecorSquareBig = styled.img`
-width: 91px;
-height: 91px;
-position: absolute;
-top: -46px;
-right: 25px;
+  width: 91px;
+  height: 91px;
+  position: absolute;
+  top: -20%;
+  right: 2%;
 `;
 
 const DecorSquareSmall = styled.img`
-width: 52px;
-height: 52px;
-position: absolute;
-bottom: 60px;
-right: -15px;
+  width: 52px;
+  height: 52px;
+  position: absolute;
+  bottom: 25%;
+  right: -8%;
 `;
 
 const LogoImage = styled.img`
-width: 113px;
-height: 113px;
-position: absolute;
-bottom: 12px;
-left: 44px;
+  width: 113px;
+  height: 113px;
+  position: absolute;
+  bottom: 14%;
+  left: 12%;
 `;
 
 const SectionTitleLink = styled.a`
@@ -150,7 +148,5 @@ const SectionTitleLink = styled.a`
 `;
 
 const EmptyBetween = styled.div`
-  height: 40px;
+  height: 40px;   /*вынужденный отступ - просто пустой div*/
 `;
-
-

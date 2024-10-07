@@ -6,7 +6,7 @@ import kahoot from "./../../../../../assets/images/kahoot.png";
 import cat from "./../../../../../assets/images/kotik.png";
 import elias from "./../../../../../assets/images/Elias.png";
 import fourdotsimg from "../../../../../assets/images/FDots.png";
-import rect from "../../../../../assets/images/rectangle.png"
+import rect from "../../../../../assets/images/rectangle.png";
 import { SectionTitle } from "../../../../../components/SectionTitle";
 import { Container } from "../../../../../components/Container";
 import { Project } from "../../../../homepage/layout/sections/projects/project/Project";
@@ -29,7 +29,7 @@ export const CompleteApps: React.FC = () => {
   return (
     <StyledProjects>
       <FDotsImage src={fourdotsimg} alt="" />
-      <DecorRect src={rect} alt=''/>
+      <DecorRect src={rect} alt="" />
       <Container>
         <SectionTitle>
           <SectionTitleLink id="projects" href="#">
@@ -118,14 +118,14 @@ const FDotsImage = styled.img`
   width: 109px;
   height: 49px;
   position: absolute;
-  top: 300px;
-  left: -10px;
+  top: 15%;
+  left: -1%;
 `;
 
 const DecorRect = styled.img`
-width: 155px;
-height: 155px;
-position: absolute;
-top: 155px;
-right: -55px;
+  width: 155px;
+  height: 155px;
+  position: absolute;
+  top: 8%;
+  right: -5%;
 `;

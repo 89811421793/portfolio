@@ -10,24 +10,24 @@ import { SectionTitle } from "../../../../../components/SectionTitle";
 import { StyledSlash } from "../../../../../components/StyledSlash";
 import { AboutSkills } from "../skills/AboutSkills";
 import { MyFunFacts } from "../myfunfacts/MyFunFacts";
-import { useLocation } from 'react-router-dom';
+import { useLocation } from "react-router-dom";
 
 export const AboutInfo: React.FC = () => {
   const location = useLocation();
 
   useEffect(() => {
-    const sectionTitle = document.querySelector('#about-me');
+    const sectionTitle = document.querySelector("#about-me");
     if (sectionTitle) {
       sectionTitle.scrollIntoView();
     }
   }, [location.pathname]);
- 
+
   return (
     <StyledAbout>
-      <FDotsImageLeft src={fourdotsimg} alt=""/>
+      <FDotsImageLeft src={fourdotsimg} alt="" />
       <Container>
         <SectionTitle>
-          <SectionTitleLink  href="#" id="about-me">
+          <SectionTitleLink href="#" id="about-me">
             <StyledSlash>/</StyledSlash>about-me
           </SectionTitleLink>
         </SectionTitle>
@@ -47,30 +47,29 @@ export const AboutInfo: React.FC = () => {
               the newest technologies and frameworks.
             </AboutText>
           </InfoWrapper>
-         <AboutImageWrapper>
-          <DotsImage src={fivedotsimg} alt=''/>
-          <DecorRect src={rect} alt=''/>
-          <FDotsImageRight src={fourdotsimg} alt=''/>
-          <AboutImage src={aboutimg} alt="About Elias" />
+          <AboutImageWrapper>
+            <DotsImage src={fivedotsimg} alt="" />
+            <DecorRect src={rect} alt="" />
+            <FDotsImageRight src={fourdotsimg} alt="" />
+            <AboutImage src={aboutimg} alt="About Elias" />
           </AboutImageWrapper>
         </AboutWrapper>
       </Container>
-      <AboutSkills/>
-      <MyFunFacts/>
+      <AboutSkills />
+      <MyFunFacts />
     </StyledAbout>
   );
 };
 
 const StyledAbout = styled.section`
-min-height: 50vh;
-position: relative;
+  min-height: 50vh;
+  position: relative;
 `;
 
 const AboutWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 20px;
-
 `;
 
 const InfoWrapper = styled.div`
@@ -106,13 +105,11 @@ const AboutImage = styled.img`
   height: 507px;
 `;
 
-
-
 const AboutImageWrapper = styled.div`
   position: relative;
 
   &::after {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     bottom: 0;
@@ -142,31 +139,28 @@ const FDotsImageLeft = styled.img`
   position: absolute;
   left: -3%;
   bottom: 70%;
- 
 `;
 
 const FDotsImageRight = styled.img`
   width: 104px;
   height: 56px;
   position: absolute;
- bottom: 34%;
- right: 6%; 
+  bottom: 34%;
+  right: 6%;
 `;
 
 const DotsImage = styled.img`
-width: 84px;
-height: 84px;
-position: absolute;
-top: 12%;
-left: -2%;
+  width: 84px;
+  height: 84px;
+  position: absolute;
+  top: 12%;
+  left: -2%;
 `;
 
 const DecorRect = styled.img`
-width: 155px;
-height: 155px;
-position: absolute;
-top: 11%;
-right: -60%;
-
+  width: 155px;
+  height: 155px;
+  position: absolute;
+  top: 11%;
+  right: -60%;
 `;
-

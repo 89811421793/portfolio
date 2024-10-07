@@ -12,7 +12,7 @@ import streaksimg from "../../../../../assets/images/streaks.png";
 export const MyFunFacts: React.FC = () => {
   return (
     <StyledFacts>
-      <DecorRect src={rect} alt=''/>
+      <DecorRect src={rect} alt="" />
       <Container>
         <SectionTitle>
           <SectionTitleLink href="#">
@@ -37,19 +37,17 @@ export const MyFunFacts: React.FC = () => {
           <Fact className="div6">I am still in school</Fact>
           <Fact className="div7">I don’t have any siblings</Fact>
         </FactsGrid>
-       
-          <StreaksImage src={streaksimg} alt="" />
-          <LogoImage src={logosign} alt="" />
-          <DotsImage src={fivedotsimg} alt="" />
-       
+        <StreaksImage src={streaksimg} alt="" />
+        <LogoImage src={logosign} alt="" />
+        <DotsImage src={fivedotsimg} alt="" />
       </Container>
     </StyledFacts>
   );
 };
 
 const StyledFacts = styled.section`
-position: relative;
-margin-bottom: 100px;
+  position: relative;
+  margin-bottom: 100px;
 `;
 
 const FactsGrid = styled.div`
@@ -108,13 +106,12 @@ const SectionTitleLink = styled.a`
   color: ${theme.colors.font};
 `;
 
-
 const DotsImage = styled.img`
   width: 103px;
   height: 103px;
   position: absolute;
- right: -2%;
- bottom: -18%;
+  right: -2%;
+  bottom: -18%;
 `;
 
 const DecorRect = styled.img`
@@ -137,6 +134,6 @@ const StreaksImage = styled.img`
   width: 125px;
   height: 90px;
   position: absolute;
- right: 17%;
- top: 28%;
+  right: 17%;
+  top: 28%;
 `;

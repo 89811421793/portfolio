@@ -12,12 +12,12 @@ export const Contacts: React.FC = () => {
   return (
     <StyledContacts>
       <Container>
-        <SectionTitle id='contacts'>
-          <Link to='/contacts'>
-          <SectionTitleLink href="#">
-            <StyledHash>#</StyledHash>
-            contacts
-          </SectionTitleLink>
+        <SectionTitle id="contacts">
+          <Link to="/contacts">
+            <SectionTitleLink href="#">
+              <StyledHash>#</StyledHash>
+              contacts
+            </SectionTitleLink>
           </Link>
         </SectionTitle>
         <FlexContainer>
@@ -38,22 +38,22 @@ export const Contacts: React.FC = () => {
           </MyContacts>
         </FlexContainer>
       </Container>
-<DotsImage src={fivedotsimg} alt=''/>
+      <DotsImage src={fivedotsimg} alt="" />
     </StyledContacts>
   );
 };
 
 const StyledContacts = styled.section`
-min-height: 30vh;
-position: relative
+  min-height: 30vh;
+  position: relative;
 `;
 
 const DotsImage = styled.img`
-width: 103px;
-height: 103px;
-position: absolute;
-bottom: 62px;
-left: -52px;
+  width: 103px;
+  height: 103px;
+  position: absolute;
+  bottom: 18%;
+  left: -2%;
 `;
 
 const FlexContainer = styled.div`

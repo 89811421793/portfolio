@@ -7,21 +7,18 @@ import { theme } from "../../../../../styles/Theme";
 import { SectionTitle } from "../../../../../components/SectionTitle";
 import { StyledSlash } from "../../../../../components/StyledSlash";
 import { AllMedia } from "../mediasection/AllMedia";
-import { useLocation } from 'react-router-dom';
+import { useLocation } from "react-router-dom";
 import rect from "../../../../../assets/images/rectangle.png";
-
 
 export const Contacts: React.FC = () => {
   const location = useLocation();
 
   React.useEffect(() => {
-    const sectionTitle = document.getElementById('contacts');
+    const sectionTitle = document.getElementById("contacts");
     if (sectionTitle) {
       sectionTitle.scrollIntoView();
     }
   }, [location.pathname]);
- 
-
 
   return (
     <StyledContacts>
@@ -56,16 +53,14 @@ export const Contacts: React.FC = () => {
           </FlexWrapper>
         </FlexWrapper>
       </Container>
-      <AllMedia/>
-      <DecorRect src={rect} alt=''/>
-    </StyledContacts>   
+      <AllMedia />
+      <DecorRect src={rect} alt="" />
+    </StyledContacts>
   );
 };
 
-
-
 const StyledContacts = styled.section`
-position: relative;
+  position: relative;
 `;
 
 const DiscordContact = styled.div`

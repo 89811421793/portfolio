@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import aboutimg from "../../../../../assets/images/AboutImg.png";
-import fivedotsimg from "../../../../../assets/images/Dots.png"
-import fourdotsimg from "../../../../../assets/images/FDots.png"
-import rect from "../../../../../assets/images/rectangle.png"
+import fivedotsimg from "../../../../../assets/images/Dots.png";
+import fourdotsimg from "../../../../../assets/images/FDots.png";
+import rect from "../../../../../assets/images/rectangle.png";
 import { SectionTitle } from "../../../../../components/SectionTitle";
 import { Button } from "../../../../../components/Button";
 import { Container } from "../../../../../components/Container";
@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 export const About: React.FC = () => {
   return (
     <StyledAbout>
-      <DecorRect src={rect} alt=''/>
+      <DecorRect src={rect} alt="" />
       <Container>
         <SectionTitle id="about-me">
           <Link to="/about">
@@ -42,29 +42,28 @@ export const About: React.FC = () => {
             </Link>
           </AboutInfo>
           <AboutImageWrapper>
-            <DotsImageFirst src={fivedotsimg} alt=''/>
+            <DotsImageFirst src={fivedotsimg} alt="" />
             <AboutImage src={aboutimg} alt="" />
-          <DotsImageSecond src={fivedotsimg} alt=''/>
-          <FDotsImage src={fourdotsimg} alt=''/>
+            <DotsImageSecond src={fivedotsimg} alt="" />
+            <FDotsImage src={fourdotsimg} alt="" />
           </AboutImageWrapper>
         </AboutWrapper>
       </Container>
-      
     </StyledAbout>
   );
 };
 
 const StyledAbout = styled.section`
-min-height: 50vh;
-position:relative;
+  min-height: 50vh;
+  position: relative;
 `;
 
 const DecorRect = styled.img`
-width: 155px;
-height: 155px;
-position: absolute;
-top: 222px;
-left: -80px;
+  width: 155px;
+  height: 155px;
+  position: absolute;
+  top: 40%;
+  left: -6%;
 `;
 
 const AboutWrapper = styled.div`
@@ -98,34 +97,26 @@ const AboutText = styled.p`
 `;
 
 const DotsImageFirst = styled.img`
-width: 84px;
-height: 84px;
-position: absolute;
-top: 61px;
-`;  
-
-const DotsImageSecond = styled.img`
-width: 103px;
-height: 103px;
-position: absolute;
-bottom: 126px;
-right: -250px;
-`; 
-
-const FDotsImage = styled.img`
-width: 104px;
-height: 56px;
-position: absolute;
-bottom:172px;
-right: 15px;
+  width: 84px;
+  height: 84px;
+  position: absolute;
+  top: 11%;
 `;
 
-const DecorSquare = styled.img`
-width: 155px;
-height: 155px;
-position: absolute;
-bottom:135px;
-right: -145px;
+const DotsImageSecond = styled.img`
+  width: 103px;
+  height: 103px;
+  position: absolute;
+  bottom: 18%;
+  right: -45%;
+`;
+
+const FDotsImage = styled.img`
+  width: 104px;
+  height: 56px;
+  position: absolute;
+  bottom: 31%;
+  right: 3%;
 `;
 
 const AboutImage = styled.img`
@@ -136,7 +127,7 @@ const AboutImage = styled.img`
 const AboutImageWrapper = styled.div`
   position: relative;
   &::after {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     bottom: 0;
@@ -171,7 +162,3 @@ const SectionTitleLink = styled.a`
     transform: translateY(-50%);
   }
 `;
-
-
-
-
