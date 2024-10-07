@@ -101,5 +101,5 @@ const DecorSquare = styled.img`
   height: 155px;
   position: absolute;
   bottom: 25%;
-  right: -10%;
+  right: 8%;
 `;

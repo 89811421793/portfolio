@@ -119,7 +119,7 @@ const DecorRect = styled.img`
   height: 155px;
   position: absolute;
   top: 32%;
-  left: -8%;
+  left: -1%;
 `;
 
 const LogoImage = styled.img`
