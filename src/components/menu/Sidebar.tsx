@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Icon } from './../icon/Icon';
+import { theme } from '../../styles/Theme';
 
 interface SidebarProps {
   items: {
@@ -11,15 +12,24 @@ interface SidebarProps {
 const SidebarContainer = styled.aside`
 display: flex;
   position: absolute;
-  top: 8%; 
+  top: 23%; 
   flex-direction: column;
   align-items: center;
-  width: fit-content;
   margin-left: 15px;
+
+   &::before {
+    content: '';
+    position: absolute;
+    top: -145%; 
+    left: 50%;
+    width: 1px;
+    height: 191px;
+    background-color: ${theme.colors.borderColor};
+  }
 `;
 
 const SidebarItem = styled.a`
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   text-decoration: none;
   color: #333;
   transition: color 0.2s ease;
