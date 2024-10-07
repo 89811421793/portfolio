@@ -5,10 +5,12 @@ import { SectionTitle } from "../../../../../components/SectionTitle";
 import { Container } from "../../../../../components/Container";
 import { StyledHash } from "../../../../../components/StyledHash";
 import { theme } from "../../../../../styles/Theme";
+import fourdotsimg from "../../../../../assets/images/FDots.png";
 
 export const AllMedia: React.FC = () => {
   return (
     <StyledMedia>
+      <FDotsImage src={fourdotsimg} alt=''/>
       <Container>
         <SectionTitle>
           <SectionTitleLink href='#'>
@@ -30,6 +32,7 @@ export const AllMedia: React.FC = () => {
 
 const StyledMedia = styled.section`
   min-height: 30vh;
+  position: relative;
 `;
 
 const MediaItem = styled.div`
@@ -49,4 +52,13 @@ const MediaItemLink = styled.a`
 
 const SectionTitleLink = styled.a`
   color: ${theme.colors.font};
+`;
+
+
+const FDotsImage = styled.img`
+  width: 109px;
+  height: 49px;
+  position: absolute;
+ top: 15%;
+ left: -3%; 
 `;

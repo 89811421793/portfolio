@@ -8,6 +8,7 @@ import { SectionTitle } from "../../../../../components/SectionTitle";
 import { StyledSlash } from "../../../../../components/StyledSlash";
 import { AllMedia } from "../mediasection/AllMedia";
 import { useLocation } from 'react-router-dom';
+import rect from "../../../../../assets/images/rectangle.png";
 
 
 export const Contacts: React.FC = () => {
@@ -56,13 +57,16 @@ export const Contacts: React.FC = () => {
         </FlexWrapper>
       </Container>
       <AllMedia/>
+      <DecorRect src={rect} alt=''/>
     </StyledContacts>   
   );
 };
 
 
 
-const StyledContacts = styled.section``;
+const StyledContacts = styled.section`
+position: relative;
+`;
 
 const DiscordContact = styled.div`
   display: flex;
@@ -150,4 +154,12 @@ const EmailLinkText = styled.a`
 
 const SectionTitleLink = styled.a`
   color: ${theme.colors.font};
+`;
+
+const DecorRect = styled.img`
+  width: 155px;
+  height: 155px;
+  position: absolute;
+  top: 28%;
+  right: -1%;
 `;
