@@ -4,14 +4,19 @@ import { SectionTitle } from "../../../../../components/SectionTitle";
 import { Container } from "../../../../../components/Container";
 import { theme } from "../../../../../styles/Theme";
 import { StyledHash } from "../../../../../components/StyledHash";
+import fivedotsimg from "../../../../../assets/images/Dots.png";
+import rect from "../../../../../assets/images/rectangle.png";
+import logosign from "../../../../../assets/images/Logo.png";
+import streaksimg from "../../../../../assets/images/streaks.png";
 
 export const MyFunFacts: React.FC = () => {
   return (
     <StyledFacts>
+      <DecorRect src={rect} alt=''/>
       <Container>
         <SectionTitle>
-          <SectionTitleLink href='#'>
-          <StyledHash>#</StyledHash>my-fun-facts
+          <SectionTitleLink href="#">
+            <StyledHash>#</StyledHash>my-fun-facts
           </SectionTitleLink>
         </SectionTitle>
         <FactsGrid>
@@ -32,14 +37,19 @@ export const MyFunFacts: React.FC = () => {
           <Fact className="div6">I am still in school</Fact>
           <Fact className="div7">I don’t have any siblings</Fact>
         </FactsGrid>
+       
+          <StreaksImage src={streaksimg} alt="" />
+          <LogoImage src={logosign} alt="" />
+          <DotsImage src={fivedotsimg} alt="" />
+       
       </Container>
     </StyledFacts>
   );
 };
 
 const StyledFacts = styled.section`
-  display: flex;
-  justify-content: flex-start;
+position: relative;
+margin-bottom: 100px;
 `;
 
 const FactsGrid = styled.div`
@@ -96,4 +106,37 @@ const FontHighLight = styled.span`
 
 const SectionTitleLink = styled.a`
   color: ${theme.colors.font};
+`;
+
+
+const DotsImage = styled.img`
+  width: 103px;
+  height: 103px;
+  position: absolute;
+ right: -2%;
+ bottom: -18%;
+`;
+
+const DecorRect = styled.img`
+  width: 155px;
+  height: 155px;
+  position: absolute;
+  top: 32%;
+  left: -8%;
+`;
+
+const LogoImage = styled.img`
+  width: 113px;
+  height: 113px;
+  position: absolute;
+  right: 14%;
+  bottom: 22%;
+`;
+
+const StreaksImage = styled.img`
+  width: 125px;
+  height: 90px;
+  position: absolute;
+ right: 17%;
+ top: 28%;
 `;

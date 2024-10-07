@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { theme } from "../../../../../../styles/Theme";
 
+
 type SkillPropsType = {
   title: string;
   list: string;
@@ -40,3 +41,5 @@ const StyledSkill = styled.div`
   font-weight: 400;
   padding: 14px;
 `;
+
+

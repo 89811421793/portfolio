@@ -1,6 +1,9 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 import aboutimg from "../../../../../assets/images/AboutImg.png";
+import fivedotsimg from "../../../../../assets/images/Dots.png";
+import fourdotsimg from "../../../../../assets/images/FDots.png";
+import rect from "../../../../../assets/images/rectangle.png";
 import { Container } from "../../../../../components/Container";
 import { theme } from "../../../../../styles/Theme";
 import { SectionTitle } from "../../../../../components/SectionTitle";
@@ -21,6 +24,7 @@ export const AboutInfo: React.FC = () => {
  
   return (
     <StyledAbout>
+      <FDotsImageLeft src={fourdotsimg} alt=""/>
       <Container>
         <SectionTitle>
           <SectionTitleLink  href="#" id="about-me">
@@ -44,6 +48,9 @@ export const AboutInfo: React.FC = () => {
             </AboutText>
           </InfoWrapper>
          <AboutImageWrapper>
+          <DotsImage src={fivedotsimg} alt=''/>
+          <DecorRect src={rect} alt=''/>
+          <FDotsImageRight src={fourdotsimg} alt=''/>
           <AboutImage src={aboutimg} alt="About Elias" />
           </AboutImageWrapper>
         </AboutWrapper>
@@ -54,7 +61,10 @@ export const AboutInfo: React.FC = () => {
   );
 };
 
-const StyledAbout = styled.section``;
+const StyledAbout = styled.section`
+min-height: 50vh;
+position: relative;
+`;
 
 const AboutWrapper = styled.div`
   display: grid;
@@ -125,3 +135,38 @@ const WhoAmIText = styled.span`
 const SectionTitleLink = styled.a`
   color: ${theme.colors.font};
 `;
+
+const FDotsImageLeft = styled.img`
+  width: 109px;
+  height: 49px;
+  position: absolute;
+  left: -3%;
+  bottom: 70%;
+ 
+`;
+
+const FDotsImageRight = styled.img`
+  width: 104px;
+  height: 56px;
+  position: absolute;
+ bottom: 34%;
+ right: 6%; 
+`;
+
+const DotsImage = styled.img`
+width: 84px;
+height: 84px;
+position: absolute;
+top: 12%;
+left: -2%;
+`;
+
+const DecorRect = styled.img`
+width: 155px;
+height: 155px;
+position: absolute;
+top: 11%;
+right: -60%;
+
+`;
+
