@@ -41,7 +41,7 @@ export const BurgerMenu = (props: { menuItems: Array<string> }) => {
 };
 
 const StyledBurgerMenu = styled.nav`
-   display:none;
+  display: none;
 
   @media ${theme.media.tablet} {
     display: block;
@@ -69,63 +69,66 @@ const BurgerMenuPopup = styled.div<{ isOpen: boolean }>`
   ul {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     gap: 25px;
   }
 `;
 
 const BurgerButton = styled.button<{ isOpen: boolean }>`
-position: fixed;
-width: 24px;
-height: 24px;
-top: 16px;
-right: 16px;
+  position: fixed;
+  width: 0;
+  height: 0;
+  top: 16px;
+  right: 16px;
+  z-index: 999;
+   background-color: transparent;
+   border: none;
+   padding: 0;
 
-span {
-   display: block;
-   width: 24px;
-   height: 2px;
-   color: ${theme.colors.burger};
-   position: absolute;
-   top: 20px;
-   right: 16px;
-       ${(props) =>
-         props.isOpen &&
-         css<{ isOpen: boolean }>`
-           transform: translateY(0) rotate(45deg);
-         `}
-  
-&::before {
-       content: '';
-       display: block;
-       width: 24px;
-       height: 2px;
-       color: transparent;
-       position: absolute;
-       transform: translateY(-5px);
-          ${(props) =>
-            props.isOpen &&
-            css<{ isOpen: boolean }>`
-              transform: translateY(0) rotate(-45deg);
-              color: ${theme.colors.burger};
-            `}
+  &::before, &::after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: ${theme.colors.burger};
+    position: absolute;
+    top: 10px;
+    right: 0;
+    transition: 0.2s;
+  }
 
-    &::after {
-       content: '';
-       display: block;
-       width: 15px;
-       height: 2px;
-       color: ${theme.colors.burger};
-       position: absolute;
-       transform: translateY(5px);
+  &::before {
+    transform: translateY(-5px);
+  }
 
-          ${(props) =>
-            props.isOpen &&
-            css<{ isOpen: boolean }>`
-              color: transparent;
-            `}
-   }
-}
+  &::after {
+    transform: translateY(5px);
+  }
+
+  span {
+    display: none;
+  }
+
+  ${(props) =>
+    props.isOpen &&
+    css<{ isOpen: boolean }>`
+      &::before {
+        transform: translateY(0) rotate(45deg);
+      }
+
+      &::after {
+        transform: translateY(0) rotate(-45deg);
+      }
+    `}
+
+  ${(props) =>
+    !props.isOpen &&
+    css<{ isOpen: boolean }>`
+      &::before, &::after {
+        background-color: ${theme.colors.burger};
+      }
+    `}
 `;
 
 const StyledLink = styled.a`
