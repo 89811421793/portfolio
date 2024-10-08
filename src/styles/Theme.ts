@@ -4,6 +4,7 @@ export const theme = {
         accent: '#C778DD',
         font: '#FFFFFF',
         borderColor: '#ABB2BF',
+        burger: '#D9D9D9'
     },
 
     media: {

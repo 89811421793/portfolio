@@ -40,6 +40,10 @@ const StyledMenu = styled.nav`
     align-items: center;
     gap: 25px;
   }
+
+  @media ${theme.media.tablet} {
+  display: none;
+  }
 `;
 
 const StyledLink = styled.a`
