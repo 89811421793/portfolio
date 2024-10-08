@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Icon } from './../icon/Icon';
 import { theme } from '../../styles/Theme';
 
-interface SidebarProps {
+interface SidebarProps {   /*можно и через type*/
   items: {
     iconId: string;
   }[];
