@@ -108,7 +108,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
     &::after {
       content: '';
       display: block;
-      width: 24px;
+      width: 15px;
       height: 2px;
       background-color: ${theme.colors.burger};
       position: absolute;
@@ -127,6 +127,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
 
         &::after {
           transform: translateY(0) rotate(-45deg);
+          width: 24px;
         }
       }
     `}
