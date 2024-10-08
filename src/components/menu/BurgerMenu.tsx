@@ -14,7 +14,7 @@ export const BurgerMenu = (props: { menuItems: Array<string> }) => {
       <BurgerButton isOpen={menuIsOpen} onClick = {onBurgerBtnClick}>
         <span></span>
       </BurgerButton>
-      <BurgerMenuPopup isOpen={menuIsOpen}>
+      <BurgerMenuPopup isOpen={menuIsOpen} onClick = {()=> setmenuIsOpen(false)}>
         <ul>
           {props.menuItems.map((tabItem, index) => {
             return (
