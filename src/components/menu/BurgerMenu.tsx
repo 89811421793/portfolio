@@ -77,56 +77,57 @@ const BurgerMenuPopup = styled.div<{ isOpen: boolean }>`
 
 const BurgerButton = styled.button<{ isOpen: boolean }>`
   position: fixed;
-  width: 0;
-  height: 0;
+  width: 40px;
+  height: 40px;
   top: 16px;
   right: 16px;
   z-index: 999;
-   background-color: transparent;
-   border: none;
-   padding: 0;
+  background-color: transparent;
+  border: none;
+  padding: 0;
 
-  &::before, &::after {
-    content: '';
+  span {
     display: block;
     width: 24px;
     height: 2px;
     background-color: ${theme.colors.burger};
     position: absolute;
-    top: 10px;
-    right: 0;
-    transition: 0.2s;
-  }
+    left: 8px;
+    top: 18px;
 
-  &::before {
-    transform: translateY(-5px);
-  }
+    &::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 2px;
+      background-color: ${theme.colors.burger};
+      position: absolute;
+      transform: translateY(-5px);
+    }
 
-  &::after {
-    transform: translateY(5px);
-  }
-
-  span {
-    display: none;
+    &::after {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 2px;
+      background-color: ${theme.colors.burger};
+      position: absolute;
+      transform: translateY(5px);
+    }
   }
 
   ${(props) =>
     props.isOpen &&
     css<{ isOpen: boolean }>`
-      &::before {
-        transform: translateY(0) rotate(45deg);
-      }
+      span {
+        background-color: transparent; // сделать span невидимым
+        &::before {
+          transform: translateY(0) rotate(45deg);
+        }
 
-      &::after {
-        transform: translateY(0) rotate(-45deg);
-      }
-    `}
-
-  ${(props) =>
-    !props.isOpen &&
-    css<{ isOpen: boolean }>`
-      &::before, &::after {
-        background-color: ${theme.colors.burger};
+        &::after {
+          transform: translateY(0) rotate(-45deg);
+        }
       }
     `}
 `;
