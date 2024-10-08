@@ -4,12 +4,17 @@ import { Langswitcher } from "../Langswitcher";
 import { theme } from "../../styles/Theme";
 
 export const BurgerMenu = (props: { menuItems: Array<string> }) => {
+  const [menuIsOpen, setmenuIsOpen] = React.useState(false)
+  const onBurgerBtnClick = () => {
+    setmenuIsOpen(!menuIsOpen)
+  }
+
   return (
     <StyledBurgerMenu>
-      <BurgerButton isOpen={true}>
+      <BurgerButton isOpen={menuIsOpen} onClick = {onBurgerBtnClick}>
         <span></span>
       </BurgerButton>
-      <BurgerMenuPopup isOpen={true}>
+      <BurgerMenuPopup isOpen={menuIsOpen}>
         <ul>
           {props.menuItems.map((tabItem, index) => {
             return (
