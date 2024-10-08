@@ -6,10 +6,10 @@ import { theme } from "../../styles/Theme";
 export const BurgerMenu = (props: { menuItems: Array<string> }) => {
   return (
     <StyledBurgerMenu>
-      <BurgerButton isOpen={false}>
+      <BurgerButton isOpen={true}>
         <span></span>
       </BurgerButton>
-      <BurgerMenuPopup isOpen={false}>
+      <BurgerMenuPopup isOpen={true}>
         <ul>
           {props.menuItems.map((tabItem, index) => {
             return (
