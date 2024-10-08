@@ -6,10 +6,10 @@ import { theme } from "../../styles/Theme";
 export const BurgerMenu = (props: { menuItems: Array<string> }) => {
   return (
     <StyledBurgerMenu>
-      <BurgerButton isOpen={true}>
+      <BurgerButton isOpen={false}>
         <span></span>
       </BurgerButton>
-      <BurgerMenuPopup isOpen={true}>
+      <BurgerMenuPopup isOpen={false}>
         <ul>
           {props.menuItems.map((tabItem, index) => {
             return (
@@ -96,22 +96,23 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
     top: 18px;
 
     &::before {
-      content: '';
+      content: "";
       display: block;
       width: 24px;
       height: 2px;
-      background-color: ${theme.colors.burger};
+      background-color: transparent;
       position: absolute;
       transform: translateY(-5px);
     }
 
     &::after {
-      content: '';
+      content: "";
       display: block;
       width: 15px;
       height: 2px;
       background-color: ${theme.colors.burger};
       position: absolute;
+      right: 1%;
       transform: translateY(5px);
     }
   }
@@ -122,6 +123,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       span {
         background-color: transparent; // сделать span невидимым
         &::before {
+          background-color: ${theme.colors.burger};
           transform: translateY(0) rotate(45deg);
         }
 
