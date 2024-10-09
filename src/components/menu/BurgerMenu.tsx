@@ -3,6 +3,15 @@ import styled, { css } from "styled-components";
 import { Langswitcher } from "../Langswitcher";
 import { theme } from "../../styles/Theme";
 import { Logo } from "../logo/Logo";
+import { MobileSidebar } from "./MobileSidebar";
+
+
+
+const sidebarItems = [
+  { iconId: 'github' },
+  { iconId: 'dribble' },
+  { iconId: 'figma' },
+];
 
 export const BurgerMenu = (props: { menuItems: Array<string> }) => {
   const [menuIsOpen, setmenuIsOpen] = React.useState(false);
@@ -46,7 +55,8 @@ export const BurgerMenu = (props: { menuItems: Array<string> }) => {
             <Langswitcher/>
           </li>
         </ul>
-       
+  
+       <MobileSidebar items={sidebarItems}/>
       </BurgerMenuPopup>
     </StyledBurgerMenu>
    
@@ -70,21 +80,23 @@ const BurgerMenuPopup = styled.div<{ isOpen: boolean }>`
   z-index: 99;
   background-color: ${theme.colors.primaryBg};
   padding-left: 16px;
+  padding-top: 20px;
   display: none;
 
   ${(props) =>
     props.isOpen &&
     css<{ isOpen: boolean }>`
       display: flex;
-      justify-content: flex-start;
-      align-items: center;
+      // align-items: center;
+      flex-direction: column;
+   
     `}
 
   ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: flex-start;
+    align-items: center;
     gap: 32px;
     margin-top: 47px;
   }

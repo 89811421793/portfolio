@@ -4,6 +4,7 @@ import { Footer } from '../pages/homepage/layout/footer/Footer';
 import { FC } from 'react';
 import { Sidebar } from './menu/Sidebar';
 
+
 interface LayoutProps {
     children: ReactNode; 
 }

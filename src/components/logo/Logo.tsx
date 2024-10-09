@@ -17,9 +17,9 @@ const LogoContainer = styled.a`
   align-items: center;
 
   @media ${theme.media.tablet} {
-    position: absolute;
-    top: 20px;
-    left: 16px;
+    // position: absolute;
+    // top: 20px;
+    // left: 16px;
   }
 `;
 

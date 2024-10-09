@@ -6,7 +6,9 @@ import { Menu } from "../../../../components/menu/Menu";
 import { Logo } from "../../../../components/logo/Logo";
 import { BurgerMenu } from "../../../../components/menu/BurgerMenu";
 
+
 const items = ["#home", "#works", "#about-me", "#contacts"];
+
 
 export const Header: React.FC = () => {
 

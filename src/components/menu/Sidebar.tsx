@@ -11,10 +11,11 @@ interface SidebarProps {
   }[];
 }
 
-const SidebarContainer = styled.aside`
+export const SidebarContainer = styled.aside`
   @media ${theme.media.tablet} {
-    display: none;
+     display:none;
   }
+
 
   ul {
     display: flex;
@@ -50,7 +51,7 @@ const SidebarItem = styled.a`
   }
 `;
 
-export const Sidebar: React.FC<SidebarProps> = ({ items }) => {
+export const Sidebar: React.FC<SidebarProps> = ({ items}) => {
   return (
     <SidebarContainer>
       <ul>
