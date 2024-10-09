@@ -61,7 +61,7 @@ const BurgerMenuPopup = styled.div<{ isOpen: boolean }>`
   bottom: 0;
   z-index: 99;
   background-color: ${theme.colors.primaryBg};
-  padding: 16px;
+  padding-left: 16px;
   display: none;
 
   ${(props) =>
@@ -78,6 +78,7 @@ const BurgerMenuPopup = styled.div<{ isOpen: boolean }>`
     justify-content: flex-start;
     align-items: flex-start;
     gap: 32px;
+    margin-top: 47px;
   
   }
 `;
@@ -92,6 +93,8 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
   background-color: transparent;
   border: none;
   padding: 0;
+  margin-top: 16px;
+  margin-right: 8px;
 
   span {
     display: block;

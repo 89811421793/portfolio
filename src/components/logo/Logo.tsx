@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Icon } from "../icon/Icon";
+import { theme } from "../../styles/Theme";
 
 export const Logo: React.FC = () => {
   return (
@@ -14,6 +15,11 @@ export const Logo: React.FC = () => {
 const LogoContainer = styled.a`
   display: flex;
   align-items: center;
+
+    @media ${theme.media.tablet} {
+    margin-left: 16px;
+    mergin-top: 20px;
+  }
 `;
 
 const LogoName = styled.span`
