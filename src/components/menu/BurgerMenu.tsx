@@ -81,25 +81,32 @@ const BurgerMenuPopup = styled.div<{ isOpen: boolean }>`
   background-color: ${theme.colors.primaryBg};
   padding-left: 16px;
   padding-top: 20px;
+  padding-bottom: 36px;
   display: none;
 
   ${(props) =>
     props.isOpen &&
     css<{ isOpen: boolean }>`
       display: flex;
-      // align-items: center;
+    justify-content: space-between;
       flex-direction: column;
-   
     `}
 
-  ul {
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: flex-start;
-    align-items: center;
-    gap: 32px;
-    margin-top: 47px;
+  ul>li {
+  margin-top: 35px;
   }
+
+  > *:nth-child(3) {
+    margin: auto;
+  }
+
+   > *:nth-child(2) { 
+    margin-top: 47px; 
+    margin-bottom: 100px;
+  }
+
+ 
+
 `;
 
 const BurgerButton = styled.button<{ isOpen: boolean }>`

@@ -15,9 +15,7 @@ export const MobileSidebarContainer = styled.ul`
 
 li{
 margin-right: 20px;
-
 }
-  
 `;
 
 const SidebarItem = styled.a`
