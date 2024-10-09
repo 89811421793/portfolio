@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Langswitcher } from "../Langswitcher";
 import { theme } from "../../styles/Theme";
+import { Logo } from "../logo/Logo";
 
 export const Menu = (props: { menuItems: Array<string> }) => {
   return (

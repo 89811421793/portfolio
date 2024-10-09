@@ -4,17 +4,17 @@ import { Langswitcher } from "../Langswitcher";
 import { theme } from "../../styles/Theme";
 
 export const BurgerMenu = (props: { menuItems: Array<string> }) => {
-  const [menuIsOpen, setmenuIsOpen] = React.useState(false)
+  const [menuIsOpen, setmenuIsOpen] = React.useState(false);
   const onBurgerBtnClick = () => {
-    setmenuIsOpen(!menuIsOpen)
-  }
+    setmenuIsOpen(!menuIsOpen);
+  };
 
   return (
     <StyledBurgerMenu>
-      <BurgerButton isOpen={menuIsOpen} onClick = {onBurgerBtnClick}>
+      <BurgerButton isOpen={menuIsOpen} onClick={onBurgerBtnClick}>
         <span></span>
       </BurgerButton>
-      <BurgerMenuPopup isOpen={menuIsOpen} onClick = {()=> setmenuIsOpen(false)}>
+      <BurgerMenuPopup isOpen={menuIsOpen} onClick={() => setmenuIsOpen(false)}>
         <ul>
           {props.menuItems.map((tabItem, index) => {
             return (
@@ -37,7 +37,7 @@ export const BurgerMenu = (props: { menuItems: Array<string> }) => {
             );
           })}
           <li>
-            <Langswitcher />
+            <Langswitcher/>
           </li>
         </ul>
       </BurgerMenuPopup>
@@ -61,6 +61,7 @@ const BurgerMenuPopup = styled.div<{ isOpen: boolean }>`
   bottom: 0;
   z-index: 99;
   background-color: ${theme.colors.primaryBg};
+  padding: 16px;
   display: none;
 
   ${(props) =>
@@ -75,8 +76,9 @@ const BurgerMenuPopup = styled.div<{ isOpen: boolean }>`
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
-    gap: 25px;
+    align-items: flex-start;
+    gap: 32px;
+  
   }
 `;
 
@@ -146,13 +148,14 @@ const StyledLink = styled.a`
   align-items: center;
   font-family: Fira Code;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 21px;
+  font-size: 32px;
+  line-height: 42px;
 
   &:hover {
     // или просто  :hover
     color: ${theme.colors.font};
     transition: 0.2s;
+    font-weight: 500;
   }
 `;
 
@@ -160,3 +163,6 @@ const StyledHash = styled.span`
   color: ${theme.colors.accent};
   margin-right: 1px;
 `;
+
+
+
