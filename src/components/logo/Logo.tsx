@@ -16,9 +16,10 @@ const LogoContainer = styled.a`
   display: flex;
   align-items: center;
 
-    @media ${theme.media.tablet} {
-    margin-left: 16px;
-    mergin-top: 20px;
+  @media ${theme.media.tablet} {
+    position: absolute;
+    top: 20px;
+    left: 16px;
   }
 `;
 

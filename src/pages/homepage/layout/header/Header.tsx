@@ -14,9 +14,9 @@ export const Header: React.FC = () => {
     <StyledHeader>
       <Container>
       <FlexWrapper justify='space-between'>
-      <Logo />
+      <Logo/>
       <Menu menuItems={items} />
-      <BurgerMenu menuItems={items}/>
+      <BurgerMenu menuItems={items} />
       </FlexWrapper>
       </Container>
     </StyledHeader>

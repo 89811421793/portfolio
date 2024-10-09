@@ -1,7 +1,8 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Icon } from "./../icon/Icon";
 import { theme } from "../../styles/Theme";
+
 
 interface SidebarProps {
   /*можно и через type*/
@@ -11,6 +12,10 @@ interface SidebarProps {
 }
 
 const SidebarContainer = styled.aside`
+  @media ${theme.media.tablet} {
+    display: none;
+  }
+
   ul {
     display: flex;
     position: absolute;

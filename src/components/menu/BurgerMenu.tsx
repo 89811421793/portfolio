@@ -2,6 +2,7 @@ import React from "react";
 import styled, { css } from "styled-components";
 import { Langswitcher } from "../Langswitcher";
 import { theme } from "../../styles/Theme";
+import { Logo } from "../logo/Logo";
 
 export const BurgerMenu = (props: { menuItems: Array<string> }) => {
   const [menuIsOpen, setmenuIsOpen] = React.useState(false);
@@ -10,11 +11,16 @@ export const BurgerMenu = (props: { menuItems: Array<string> }) => {
   };
 
   return (
+
     <StyledBurgerMenu>
+  
       <BurgerButton isOpen={menuIsOpen} onClick={onBurgerBtnClick}>
         <span></span>
       </BurgerButton>
       <BurgerMenuPopup isOpen={menuIsOpen} onClick={() => setmenuIsOpen(false)}>
+        
+      <Logo/>
+      
         <ul>
           {props.menuItems.map((tabItem, index) => {
             return (
@@ -40,8 +46,10 @@ export const BurgerMenu = (props: { menuItems: Array<string> }) => {
             <Langswitcher/>
           </li>
         </ul>
+       
       </BurgerMenuPopup>
     </StyledBurgerMenu>
+   
   );
 };
 
@@ -79,7 +87,6 @@ const BurgerMenuPopup = styled.div<{ isOpen: boolean }>`
     align-items: flex-start;
     gap: 32px;
     margin-top: 47px;
-  
   }
 `;
 
@@ -88,13 +95,11 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
   width: 40px;
   height: 40px;
   top: 16px;
-  right: 16px;
+  right: 8px;
   z-index: 999;
   background-color: transparent;
   border: none;
   padding: 0;
-  margin-top: 16px;
-  margin-right: 8px;
 
   span {
     display: block;
@@ -142,6 +147,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
           width: 24px;
         }
       }
+
     `}
 `;
 
@@ -166,6 +172,5 @@ const StyledHash = styled.span`
   color: ${theme.colors.accent};
   margin-right: 1px;
 `;
-
 
 
