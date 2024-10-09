@@ -5,12 +5,10 @@ import { theme } from "../../styles/Theme";
 import { Logo } from "../logo/Logo";
 import { MobileSidebar } from "./MobileSidebar";
 
-
-
 const sidebarItems = [
-  { iconId: 'github' },
-  { iconId: 'dribble' },
-  { iconId: 'figma' },
+  { iconId: "github" },
+  { iconId: "dribble" },
+  { iconId: "figma" },
 ];
 
 export const BurgerMenu = (props: { menuItems: Array<string> }) => {
@@ -20,16 +18,12 @@ export const BurgerMenu = (props: { menuItems: Array<string> }) => {
   };
 
   return (
-
     <StyledBurgerMenu>
-  
       <BurgerButton isOpen={menuIsOpen} onClick={onBurgerBtnClick}>
         <span></span>
       </BurgerButton>
       <BurgerMenuPopup isOpen={menuIsOpen} onClick={() => setmenuIsOpen(false)}>
-        
-      <Logo/>
-      
+        <Logo />
         <ul>
           {props.menuItems.map((tabItem, index) => {
             return (
@@ -52,14 +46,12 @@ export const BurgerMenu = (props: { menuItems: Array<string> }) => {
             );
           })}
           <li>
-            <Langswitcher/>
+            <Langswitcher />
           </li>
         </ul>
-  
-       <MobileSidebar items={sidebarItems}/>
+        <MobileSidebar items={sidebarItems} />
       </BurgerMenuPopup>
     </StyledBurgerMenu>
-   
   );
 };
 
@@ -88,25 +80,22 @@ const BurgerMenuPopup = styled.div<{ isOpen: boolean }>`
     props.isOpen &&
     css<{ isOpen: boolean }>`
       display: flex;
-    justify-content: space-between;
+      justify-content: space-between;
       flex-direction: column;
     `}
 
   ul>li {
-  margin-top: 35px;
+    margin-top: 35px;
   }
 
   > *:nth-child(3) {
     margin: auto;
   }
 
-   > *:nth-child(2) { 
-    margin-top: 47px; 
+  > *:nth-child(2) {
+    margin-top: 100px;
     margin-bottom: 100px;
   }
-
- 
-
 `;
 
 const BurgerButton = styled.button<{ isOpen: boolean }>`
@@ -166,7 +155,6 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
           width: 24px;
         }
       }
-
     `}
 `;
 
@@ -191,5 +179,3 @@ const StyledHash = styled.span`
   color: ${theme.colors.accent};
   margin-right: 1px;
 `;
-
-

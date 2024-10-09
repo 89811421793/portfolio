@@ -2,20 +2,18 @@ import React from "react";
 import styled from "styled-components";
 import { Icon } from "./../icon/Icon";
 
-
-
 type SidebarProps = {
   items: {
     iconId: string;
   }[];
-}
+};
 
 export const MobileSidebarContainer = styled.ul`
   display: flex;
 
-li{
-margin-right: 20px;
-}
+  li {
+    margin-right: 20px;
+  }
 `;
 
 const SidebarItem = styled.a`
@@ -28,18 +26,16 @@ const SidebarItem = styled.a`
   }
 `;
 
-export const MobileSidebar: React.FC<SidebarProps> = ({ items}) => {
+export const MobileSidebar: React.FC<SidebarProps> = ({ items }) => {
   return (
-    
-      <MobileSidebarContainer>
-        {items.map((item) => (
-          <li key={item.iconId}>
-            <SidebarItem href="#">
-              <Icon iconId={item.iconId} width="42" height="40" />
-            </SidebarItem>
-          </li>
-        ))}
-      </MobileSidebarContainer>
-    
+    <MobileSidebarContainer>
+      {items.map((item) => (
+        <li key={item.iconId}>
+          <SidebarItem href="#">
+            <Icon iconId={item.iconId} width="42" height="40" />
+          </SidebarItem>
+        </li>
+      ))}
+    </MobileSidebarContainer>
   );
 };

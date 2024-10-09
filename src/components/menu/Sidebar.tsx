@@ -3,7 +3,6 @@ import styled, { css } from "styled-components";
 import { Icon } from "./../icon/Icon";
 import { theme } from "../../styles/Theme";
 
-
 interface SidebarProps {
   /*можно и через type*/
   items: {
@@ -16,8 +15,7 @@ export const SidebarContainer = styled.aside`
      display:none;
   }
 
-
-  ul {
+ ul {
     display: flex;
     position: absolute;
     top: 23%;
