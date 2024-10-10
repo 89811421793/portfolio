@@ -12,11 +12,13 @@ import { Projects } from "../projects/Projects";
 import { Skills } from "../skills/Skills";
 import { About } from "../about/About";
 import { Contacts } from "../contacts/Contacts";
+import { Form } from "../../../../../components/form/Form";
 
 export const Main: React.FC = () => {
   return (
     <StyledMain>
       <Container>
+      <Form/>
         <FlexContainer>
           <ContentWrapper id="home">
             <MainTitle>
