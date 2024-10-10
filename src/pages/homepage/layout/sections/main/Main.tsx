@@ -12,8 +12,23 @@ import { Projects } from "../projects/Projects";
 import { Skills } from "../skills/Skills";
 import { About } from "../about/About";
 import { Contacts } from "../contacts/Contacts";
+import { Form } from "../../../../../components/form/Form";
 
 export const Main: React.FC = () => {
+  const [showForm, setShowForm] = React.useState(false);
+
+  const handleContactClick = () => {
+    setShowForm(true);
+  };
+
+  const handleEscapeKey = (event: KeyboardEvent) => {
+    if (event.key === "Escape") {
+      setShowForm(false);
+    }
+  };
+
+  document.addEventListener("keydown", handleEscapeKey);
+
   return (
     <StyledMain>
       <Container>
@@ -26,7 +41,9 @@ export const Main: React.FC = () => {
             <Description>
               He crafts responsive websites where technologies meet creativity
             </Description>
-            <StyledButton>Contact me!!</StyledButton>
+            <StyledButton onClick={handleContactClick}>
+              Contact me!!
+            </StyledButton>
           </ContentWrapper>
           <StyledFigure>
             <LogoEmblemImage src={logosign} alt="" />
@@ -69,6 +86,11 @@ export const Main: React.FC = () => {
       <Skills />
       <About />
       <Contacts />
+      {showForm && (
+        <FormContainer>
+          <Form />
+        </FormContainer>
+      )}
     </StyledMain>
   );
 };
@@ -292,4 +314,16 @@ const Status = styled.span`
   font-size: 16px;
   line-height: 21px;
   color: ${theme.colors.borderColor};
+`;
+
+const FormContainer = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, .5);
 `;
