@@ -85,6 +85,7 @@ const FlexContainer = styled.div`
 
   @media ${theme.media.tablet} {
     flex-wrap: wrap;
+    margin-top: 34px;
   }
 `;
 
@@ -108,6 +109,8 @@ const DotsImage = styled.img`
   @media ${theme.media.tablet} {
     width: 56px;
     height: 56px;
+    bottom: 33%;
+    right: 9%;
   }
 `;
 
@@ -130,7 +133,7 @@ const StyledFigure = styled.figure`
   margin-left: 30px;
 
   @media ${theme.media.tablet} {
-   margin-left: 22px;
+    margin-left: 16px;
   }
 `;
 
@@ -186,7 +189,6 @@ const ContentWrapper = styled.div`
 
   @media ${theme.media.tablet} {
     margin-left: 16px;
-    margin-top: 34px;
   }
 `;
 
@@ -252,11 +254,6 @@ const CiteMark = styled.span`
 const StyledFigcaption = styled.figcaption`
   border: 2px solid #abb2bf;
   padding: 8px;
-
-  @media ${theme.media.tablet} {
-    max-width: 320px;
-    margin-left: 20px;
-  }
 `;
 
 const Square = styled.span`
