@@ -32,7 +32,7 @@ export const MobileSidebar: React.FC<SidebarProps> = ({ items }) => {
       {items.map((item) => (
         <li key={item.iconId}>
           <SidebarItem href="#">
-            <Icon iconId={item.iconId} width="42" height="40" />
+            <Icon iconId={item.iconId} width="90" height="100"/>
           </SidebarItem>
         </li>
       ))}
