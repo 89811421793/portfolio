@@ -24,7 +24,7 @@ const StyledForm = styled.form`
   max-width: 570px;
   width: 100%;
   display: grid;
-grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   margin: 0 auto;
   gap: 16px;
 
@@ -40,6 +40,9 @@ const Field = styled.input`
   background-color: ${theme.colors.primaryBg};
   padding: 8px;
 
+  font-family: Fira Code, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
   color: ${theme.colors.font};
 
   &::placeholder {
@@ -50,7 +53,6 @@ const Field = styled.input`
     outline: 1px solid ${theme.colors.font};
   }
 
-  
   &[name="user_name"] {
     grid-column: 1;
     grid-row: 1;
@@ -72,12 +74,15 @@ const Field = styled.input`
     grid-row: 4;
   }
 
-  /*такой же эффект дает и эта запись: grid-column: ${({ name }) => (name === "user_name" || name === "user_email" ? "span 1" : "span 2")};*/
+  /*такой же эффект дает и эта запись: grid-column: ${({ name }) =>
+    name === "user_name" || name === "user_email" ? "span 1" : "span 2"};*/
 `;
 
 const FormButton = styled(Button)`
-width: fit-content;
-padding: 8px 16px;
-`
+  width: fit-content;
+  padding: 8px 16px;
 
-
+  font-family: Fira Code;
+  font-weight: 500;
+  font-size: 16px;
+`;
