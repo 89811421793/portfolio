@@ -4,7 +4,6 @@ import mainimg from "../../../../../assets/images/MainImg.png";
 import logosign from "../../../../../assets/images/Logo.png";
 import fivedotsimg from "../../../../../assets/images/Dots.png";
 import rect from "../../../../../assets/images/rectangle.png";
-import { FlexWrapper } from "../../../../../components/FlexWrapper";
 import { Button } from "../../../../../components/Button";
 import { Container } from "../../../../../components/Container";
 import { theme } from "../../../../../styles/Theme";
@@ -18,7 +17,7 @@ export const Main: React.FC = () => {
   return (
     <StyledMain>
       <Container>
-        <FlexWrapper align="center" justify="space-around">
+        <FlexContainer>
           <ContentWrapper id="home">
             <MainTitle>
               Elias is a <Skill>web designer</Skill> and{" "}
@@ -39,7 +38,7 @@ export const Main: React.FC = () => {
               <Portfolio>Portfolio</Portfolio>
             </StyledFigcaption>
           </StyledFigure>
-        </FlexWrapper>
+        </FlexContainer>
         <QuoteGrid>
           <Quotation>
             <QuoteMark>
@@ -76,11 +75,27 @@ export const Main: React.FC = () => {
 
 const StyledMain = styled.section`
   min-height: 50vh;
+  }
+`;
+
+const FlexContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  @media ${theme.media.tablet} {
+    flex-wrap: wrap;
+  }
 `;
 
 const MainImage = styled.img`
   width: 457px;
   height: 386px;
+
+  @media ${theme.media.tablet} {
+    width: 308px;
+    height: 260px;
+  }
 `;
 
 const DotsImage = styled.img`
@@ -89,6 +104,11 @@ const DotsImage = styled.img`
   position: absolute;
   bottom: 23%;
   right: 3%;
+
+  @media ${theme.media.tablet} {
+    width: 56px;
+    height: 56px;
+  }
 `;
 
 const LogoEmblemImage = styled.img`
@@ -98,11 +118,20 @@ const LogoEmblemImage = styled.img`
   z-index: -1;
   top: 20%;
   left: -3%;
+
+  @media ${theme.media.tablet} {
+    width: 104px;
+    height: 104px;
+  }
 `;
 
 const StyledFigure = styled.figure`
   position: relative;
   margin-left: 30px;
+
+  @media ${theme.media.tablet} {
+   margin-left: 22px;
+  }
 `;
 
 const Rect = styled.img`
@@ -130,6 +159,10 @@ const Description = styled.p`
   margin: 15px 0;
   color: ${theme.colors.borderColor};
   max-width: 465px;
+
+  @media ${theme.media.tablet} {
+    line-height: 21px;
+  }
 `;
 
 const StyledButton = styled(Button)`
@@ -138,6 +171,10 @@ const StyledButton = styled(Button)`
   font-size: 16px;
   line-height: 21px;
   margin-top: 30px;
+
+  @media ${theme.media.tablet} {
+    display: none;
+  }
 `;
 
 const ContentWrapper = styled.div`
@@ -146,6 +183,11 @@ const ContentWrapper = styled.div`
   justify-content: center;
   align-items: flex-start;
   height: 100%;
+
+  @media ${theme.media.tablet} {
+    margin-left: 16px;
+    margin-top: 34px;
+  }
 `;
 
 const QuoteGrid = styled.div`
@@ -210,6 +252,11 @@ const CiteMark = styled.span`
 const StyledFigcaption = styled.figcaption`
   border: 2px solid #abb2bf;
   padding: 8px;
+
+  @media ${theme.media.tablet} {
+    max-width: 320px;
+    margin-left: 20px;
+  }
 `;
 
 const Square = styled.span`
@@ -219,6 +266,11 @@ const Square = styled.span`
   height: 20px;
   margin-right: 10px;
   vertical-align: middle;
+
+  @media ${theme.media.tablet} {
+    display: inline-block;
+    transform: translateY(50%);
+  }
 `;
 
 const Skill = styled.span`
@@ -231,6 +283,10 @@ const Portfolio = styled.span`
   font-size: 16px;
   line-height: 21px;
   color: "#FFF";
+
+  @media ${theme.media.tablet} {
+    margin-left: 31px;
+  }
 `;
 
 const Status = styled.span`
