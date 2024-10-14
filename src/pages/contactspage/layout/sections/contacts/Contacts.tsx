@@ -12,6 +12,7 @@ import rect from "../../../../../assets/images/rectangle.png";
 
 export const Contacts: React.FC = () => {
   const location = useLocation();
+  const [showPaycard, setShowPaycard] = React.useState(true);
 
   React.useEffect(() => {
     const sectionTitle = document.getElementById("contacts");
@@ -19,6 +20,15 @@ export const Contacts: React.FC = () => {
       sectionTitle.scrollIntoView();
     }
   }, [location.pathname]);
+
+
+  const toggleDonate = () => {
+    setShowPaycard(!showPaycard);
+  };
+
+  const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    event.stopPropagation();
+  };
 
   return (
     <StyledContacts>
@@ -35,9 +45,19 @@ export const Contacts: React.FC = () => {
             other request or question, don’t hesitate to contact me
           </InviteText>
           <FlexWrapper>
-            <SupportBlock>
+            <SupportBlock onClick={toggleDonate}>
               <SupportText>Support me here</SupportText>
-              <WalletLink href="">4149500120690030</WalletLink>
+              {showPaycard ? (
+                <Donate>
+                  <Icon iconId={"paycard"} />
+                  <WalletLink href="" onClick={handleLinkClick}>4149500120690030</WalletLink>
+                </Donate>
+              ) : (
+                <Donate>
+                  <Icon iconId={"bitcoin"} />
+                  <WalletLink href="" onClick={handleLinkClick}>3E8ociqZa9mZUSwGdSmAEMAoAxBK3FNDcd</WalletLink>
+                </Donate>
+              )}
             </SupportBlock>
             <MessageBlock>
               <MessageMeText>Message me here</MessageMeText>
@@ -117,6 +137,12 @@ const SupportText = styled.span`
   line-height: 20px;
   margin-bottom: 5px;
 `;
+
+const Donate= styled.div`
+display: flex; 
+  margin-top: 21px;
+`;
+
 
 const WalletLink = styled.a`
   font-family: Fira Code;
