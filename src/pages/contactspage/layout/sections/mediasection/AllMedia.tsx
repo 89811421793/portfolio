@@ -18,12 +18,16 @@ export const AllMedia: React.FC = () => {
           </SectionTitleLink>
         </SectionTitle>
         <MediaItem>
-          <Icon iconId={"twitter"} />
-          <MediaItemLink href="">@elias</MediaItemLink>
+          <MediaItemLink href="">
+            <Icon iconId={"twitter"} />
+            @elias
+          </MediaItemLink>
         </MediaItem>
         <MediaItem>
-          <Icon iconId={"twitter"} />
-          <MediaItemLink href="">@elias</MediaItemLink>
+          <MediaItemLink href="">
+            <Icon iconId={"twitter"} />
+            @elias
+          </MediaItemLink>
         </MediaItem>
       </Container>
     </StyledMedia>
@@ -43,11 +47,22 @@ const MediaItem = styled.div`
 `;
 
 const MediaItemLink = styled.a`
+  display: inline-flex;
   font-family: Fira Code;
   font-weight: 400;
   font-size: 16px;
   line-height: 21px;
   margin-left: 5px;
+  align-items: center;
+
+
+  &:hover {
+    color: ${theme.colors.font};
+
+    svg {
+      color: ${theme.colors.font}; // This will change the icon color on hover
+    }
+  }
 `;
 
 const SectionTitleLink = styled.a`
