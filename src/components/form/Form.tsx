@@ -5,6 +5,7 @@ import { Button } from "../Button";
 
 export const Form: React.FC = () => {
   return (
+    <FormWrapper>
     <StyledForm>
       <Field placeholder={"Name"} name={"user_name"} required />
       <Field placeholder={"Email"} name={"user_email"} required />
@@ -17,11 +18,19 @@ export const Form: React.FC = () => {
       />
       <FormButton type="submit">Send</FormButton>
     </StyledForm>
+    </FormWrapper>
   );
 };
 
+const FormWrapper = styled.div`
+padding: 32px;
+border: no;
+max-width: 569px;
+background-color: ${theme.colors.primaryBg};
+`;
+
 const StyledForm = styled.form`
-  max-width: 570px;
+  max-width: 505px;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
